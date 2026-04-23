@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Analytics 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+               background: #0a0a1a; color: #fff; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+                  padding: 30px; border-radius: 20px; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5em; background: linear-gradient(45deg, #00d4ff, #7b2ff7);
+                      -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .header .subtitle { color: #888; margin-top: 5px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: #1a1a2e; padding: 25px; border-radius: 15px; text-align: center;
+                     border: 1px solid rgba(255,255,255,0.05); }
+        .stat-card .num { font-size: 2.5em; font-weight: bold; background: linear-gradient(45deg, #00d4ff, #7b2ff7);
+                          -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .stat-card .lbl { color: #888; margin-top: 5px; }
+        .charts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 30px; }
+        .chart-box { background: #1a1a2e; padding: 20px; border-radius: 15px;
+                     border: 1px solid rgba(255,255,255,0.05); }
+        .chart-box h3 { margin-bottom: 15px; color: #00d4ff; }
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #16213e; padding: 12px; text-align: left; color: #00d4ff; }
+        td { padding: 12px; border-bottom: 1px solid #1a1a2e; }
+        tr:hover { background: rgba(0,212,255,0.05); }
+        .team-info { display: flex; align-items: center; gap: 10px; }
+        .team-logo { width: 28px; height: 28px; }
+        .win-bar { height: 8px; border-radius: 4px; background: linear-gradient(90deg, #00d4ff, #7b2ff7); }
+        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .news-card { background: #1a1a2e; padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
+        .news-card h4 { color: #00d4ff; margin-bottom: 10px; }
+        .news-card p { color: #888; font-size: 0.9em; }
+        .news-card .date { color: #555; font-size: 0.8em; display: block; margin-top: 10px; }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; }
+            .charts { grid-template-columns: 1fr; } .news-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏈 NFL Analytics 2025</h1>
+            <div class="subtitle">Semana 5 · Análisis de Equipos · 32 Equipos</div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card"><div class="num">32</div><div class="lbl">Equipos</div></div>
+            <div class="stat-card"><div class="num">0</div><div class="lbl">Victorias</div></div>
+            <div class="stat-card"><div class="num">0%</div><div class="lbl">Win % Promedio</div></div>
+            <div class="stat-card"><div class="num">ARI</div><div class="lbl">Mejor (0%)</div></div>
+        </div>
+        
+        <div class="charts">
+            <div class="chart-box">
+                <h3>📊 Victorias por Equipo</h3>
+                <canvas id="chartWins"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>🏆 Top 10 Win %</h3>
+                <canvas id="chartWinPct"></canvas>
+            </div>
+        </div>
+        
+        <div class="chart-box" style="margin-bottom:30px">
+            <h3>📋 Todos los Equipos</h3>
+            <table>
+                <thead><tr><th>Equipo</th><th>W</th><th>L</th><th>Win%</th><th>Rendimiento</th></tr></thead>
+                <tbody>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ari.png" alt="Arizona Cardinals">Arizona Cardinals</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Atlanta Falcons">Atlanta Falcons</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Baltimore Ravens">Baltimore Ravens</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Buffalo Bills">Buffalo Bills</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/car.png" alt="Carolina Panthers">Carolina Panthers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/chi.png" alt="Chicago Bears">Chicago Bears</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/cin.png" alt="Cincinnati Bengals">Cincinnati Bengals</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/cle.png" alt="Cleveland Browns">Cleveland Browns</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png" alt="Dallas Cowboys">Dallas Cowboys</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/den.png" alt="Denver Broncos">Denver Broncos</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/det.png" alt="Detroit Lions">Detroit Lions</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/gb.png" alt="Green Bay Packers">Green Bay Packers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/hou.png" alt="Houston Texans">Houston Texans</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ind.png" alt="Indianapolis Colts">Indianapolis Colts</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/jax.png" alt="Jacksonville Jaguars">Jacksonville Jaguars</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/kc.png" alt="Kansas City Chiefs">Kansas City Chiefs</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lv.png" alt="Las Vegas Raiders">Las Vegas Raiders</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Los Angeles Chargers">Los Angeles Chargers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="Los Angeles Rams">Los Angeles Rams</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="Miami Dolphins">Miami Dolphins</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/min.png" alt="Minnesota Vikings">Minnesota Vikings</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="New England Patriots">New England Patriots</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" alt="New Orleans Saints">New Orleans Saints</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyg.png" alt="New York Giants">New York Giants</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/nyj.png" alt="New York Jets">New York Jets</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Philadelphia Eagles">Philadelphia Eagles</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/pit.png" alt="Pittsburgh Steelers">Pittsburgh Steelers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sf.png" alt="San Francisco 49ers">San Francisco 49ers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="Seattle Seahawks">Seattle Seahawks</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" alt="Tampa Bay Buccaneers">Tampa Bay Buccaneers</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ten.png" alt="Tennessee Titans">Tennessee Titans</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr>
+    <tr>
+        <td><div class="team-info"><img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png" alt="Washington Commanders">Washington Commanders</div></td>
+        <td>0</td>
+        <td>0</td>
+        <td>0%</td>
+        <td><div class="win-bar" style="width:0%"></div></td>
+    </tr></tbody>
+            </table>
+        </div>
+        
+        <div class="chart-box">
+            <h3>📰 Noticias NFL</h3>
+            <div class="news-grid">
+    <div class="news-card">
+        <h4>Falcons' James Pearce offered intervention program to avoid trial</h4>
+        <p>The Falcons' James Pearce Jr. has agreed to enter an intervention program, allowing him to avoid trial on felony charges stemming from an alleged inci...</p>
+        <span class="date">2026-04-23</span>
+    </div>
+    <div class="news-card">
+        <h4>Stephen A. emphatically calls on the Steelers to draft Ty Simpson</h4>
+        <p>Stephen A. Smith makes the case for the Steelers to draft Alabama quarterback Ty Simpson.  ...</p>
+        <span class="date">2026-04-23</span>
+    </div>
+    <div class="news-card">
+        <h4>Jordan Rodgers: 'Ty Simpson will be a first-round pick'</h4>
+        <p>Jordan Rodgers and Dan Orlovsky are in agreement on their evaluation of Ty Simpson ahead of the first round of the NFL draft....</p>
+        <span class="date">2026-04-23</span>
+    </div>
+    <div class="news-card">
+        <h4>Orlovsky: We need to stop overthinking Jeremiyah Love's draft position</h4>
+        <p>Dan Orlovsky argues with the "Get Up" crew over how early Jeremiyah Love should go in the NFL draft....</p>
+        <span class="date">2026-04-23</span>
+    </div>
+    <div class="news-card">
+        <h4>Bettors divided on Bailey, Reese as No. 2 pick in NFL draft</h4>
+        <p>The betting market has been set on Fernando Mendoza going first in Thursday's NFL draft for months. But who will be the second pick, a selection owned...</p>
+        <span class="date">2026-04-23</span>
+    </div>
+    <div class="news-card">
+        <h4>How working with Travis Kelce's coach ignited Seydou Traore's NFL dream</h4>
+        <p>While many of the NFL's International Player Pathway Program (IPPP) players have entered the program with little to no knowledge of American football,...</p>
+        <span class="date">2026-04-23</span>
+    </div></div>
+        </div>
+    </div>
+    
+    <script>
+    new Chart(document.getElementById('chartWins'), {
+        type: 'bar',
+        data: {
+            labels: ["ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE", "DAL", "DEN", "DET", "GB", "HOU", "IND", "JAX", "KC", "LV", "LAC", "LAR", "MIA", "MIN", "NE", "NO", "NYG", "NYJ", "PHI", "PIT", "SF", "SEA", "TB", "TEN", "WSH"],
+            datasets: [{ label: 'Victorias', data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                backgroundColor: ["a40227", "a71930", "29126f", "00338d", "0085ca", "0b1c3a", "fb4f14", "472a08", "002a5c", "0a2343", "0076b6", "204e32", "00143f", "003b75", "007487", "e31837", "000000", "0080c6", "003594", "008e97", "4f2683", "002a5c", "d3bc8d", "003c7f", "115740", "06424d", "000000", "aa0000", "002a5c", "bd1c36", "4495d2", "5a1414"] + '88', borderColor: ["a40227", "a71930", "29126f", "00338d", "0085ca", "0b1c3a", "fb4f14", "472a08", "002a5c", "0a2343", "0076b6", "204e32", "00143f", "003b75", "007487", "e31837", "000000", "0080c6", "003594", "008e97", "4f2683", "002a5c", "d3bc8d", "003c7f", "115740", "06424d", "000000", "aa0000", "002a5c", "bd1c36", "4495d2", "5a1414"], borderWidth: 1 }]
+        },
+        options: { responsive: true, plugins: { legend: { labels: { color: '#fff' } } },
+            scales: { x: { ticks: { color: '#888' } }, y: { ticks: { color: '#888' } } } }
+    });
+    
+    new Chart(document.getElementById('chartWinPct'), {
+        type: 'doughnut',
+        data: {
+            labels: ["ARI", "ATL", "BAL", "BUF", "CAR", "CHI", "CIN", "CLE", "DAL", "DEN"],
+            datasets: [{ data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                backgroundColor: ['#00d4ff','#7b2ff7','#ff6b6b','#ffd93d','#6bcb77',
+                                  '#4d96ff','#ffa94d','#74c0fc','#da77f2','#20c997'] }]
+        },
+        options: { responsive: true, plugins: { legend: { labels: { color: '#fff' } } } }
+    });
+    </script>
+</body>
+</html>
