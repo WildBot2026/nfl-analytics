@@ -7,7 +7,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:1rem}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:1.1rem}
 .w{max-width:1100px;margin:0 auto;padding:10px}
 h1{font-size:1.4rem;color:#fff;margin-bottom:5px}
 .ctrls{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;align-items:center}
@@ -21,7 +21,7 @@ h1{font-size:1.4rem;color:#fff;margin-bottom:5px}
 .gc img{width:22px;height:22px;border-radius:3px}
 .gc .tx{font-size:.78rem;line-height:1.15}
 .gc .tx .mu{color:#fff;font-weight:600;font-size:.82rem}
-.gc .tx .inf{color:#999;font-size:.68rem}
+.gc .tx .inf{color:#999;font-size:.8rem}
 #an{display:none;animation:fi .3s}
 @keyframes fi{from{opacity:0}to{opacity:1}}
 .gd{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
@@ -37,7 +37,7 @@ h1{font-size:1.4rem;color:#fff;margin-bottom:5px}
 .th{display:flex;align-items:center;gap:5px;margin-bottom:4px;flex-wrap:wrap}
 .th img{width:22px;height:22px;border-radius:3px}
 .th .nm{font-weight:600;font-size:.9rem}
-.b{display:inline-block;padding:3px 8px;border-radius:4px;font-size:.7rem;font-weight:600}
+.b{display:inline-block;padding:3px 8px;border-radius:4px;font-size:.82rem;font-weight:600}
 .bg{background:#1b5e20;color:#81c784}
 .br{background:#b71c1c;color:#ef9a9a}
 .by{background:#f57f17;color:#fff176}
@@ -45,7 +45,7 @@ h1{font-size:1.4rem;color:#fff;margin-bottom:5px}
 .pb .sc{font-size:.95rem;font-weight:700;color:#fff;margin:3px 0}
 .wb{display:flex;align-items:center;gap:4px;padding:4px 6px;background:rgba(255,255,255,.03);border-radius:4px;font-size:.8rem;margin:3px 0;flex-wrap:wrap}
 .nd{color:#999;font-size:.8rem;font-style:italic}
-.sm{font-size:.75rem;color:#bbb}
+.sm{font-size:.85rem;color:#bbb}
 .it{color:#999;font-size:.8rem;line-height:1.35}
 .mt{font-size:.82rem;color:#888;padding:5px;background:rgba(255,255,255,.02);border-radius:4px;line-height:1.4}
 </style>
@@ -77,7 +77,19 @@ function loadDraftData(cb){
   x.open('GET','https://site.api.espn.com/apis/site/v2/sports/football/nfl/draft?year=2026',true);
   x.onload=function(){
     if(x.status==200){
-      try{var d=JSON.parse(x.responseText);DRAFT_CACHE=d;cb(d);}
+      try{
+        var d=JSON.parse(x.responseText);
+        // Map position IDs to abbreviations
+        var posMap={};
+        if(d.positions)d.positions.forEach(function(p){posMap[p.id]=p.abbreviation;});
+        // Enrich picks with position abbreviation and team mapping
+        if(d.picks)d.picks.forEach(function(pick){
+          var ath=pick.athlete||{};
+          var posId=ath.position?ath.position.id||'':'';
+          if(posId&&posMap[posId])pick.position=posMap[posId];
+        });
+        DRAFT_CACHE=d;cb(d);
+      }
       catch(e){cb(null);}
     }else{cb(null);}
   };
@@ -85,11 +97,13 @@ function loadDraftData(cb){
   x.send();
 }
 function draftTeamPicks(draft,ta){
-  if(!draft||!draft.picks)return[];
+  if(!draft||!draft.picks||!draft.teams)return[];
+  var tmMap={};
+  draft.teams.forEach(function(t){tmMap[t.id]=t.abbreviation.toUpperCase();});
   return draft.picks.filter(function(p){
-    var dest=p.destination||p.team||{};
-    var tab=(dest.abbreviation||dest.abbrev||'').toUpperCase();
-    return tab===ta.toUpperCase();
+    var tmId=String(p.teamId||'');
+    var tmAbbr=tmMap[tmId]||'';
+    return tmAbbr===ta.toUpperCase();
   });
 }
 function renderDraftBody(ta,i){
@@ -101,28 +115,24 @@ function renderDraftBody(ta,i){
     if(picks.length===0){
       h+='<div class="nd">Sin selecciones registradas</div>';
     }else{
-      h+='<table style="width:100%;border-collapse:collapse;font-size:.78rem">';
-      h+='<tr style="color:#bbb;border-bottom:1px solid #333"><td style="padding:3px 6px">Rd</td><td style="padding:3px 6px">Pick</td><td style="padding:3px 6px">Player</td><td style="padding:3px 6px">Pos</td><td style="padding:3px 6px">College</td><td style="padding:3px 6px">Status</td></tr>';
-      picks.sort(function(a,b){return(a.round||99)-(b.round||99)||(a.selection||a.pick||0)-(b.selection||b.pick||0);});
+      h+='<table style="width:100%;border-collapse:collapse;font-size:.85rem">';
+      h+='<tr style="color:#bbb;border-bottom:1px solid #333"><td style="padding:4px 8px;font-size:.78rem">Rd</td><td style="padding:4px 8px;font-size:.78rem">#</td><td style="padding:4px 8px;font-size:.78rem">Jugador</td><td style="padding:4px 8px;font-size:.78rem">Pos</td><td style="padding:4px 8px;font-size:.78rem">Universidad</td></tr>';
+      picks.sort(function(a,b){return(a.round||99)-(b.round||99)||((a.selection||a.pick||a.overall||0)-(b.selection||b.pick||b.overall||0));});
       picks.forEach(function(p){
-        var rd=p.round||'&mdash;';
-        var pk=p.selection||p.pick||p.overall||'&mdash;';
-        var nm=p.firstName&&p.lastName?p.firstName+' '+p.lastName:p.name||'&mdash;';
-        var ps=p.position||p.pos||'&mdash;';
-        var cl=(p.college||p.school||{}).name||p.collegeName||'&mdash;';
-        var inj=p.injuries||p.injury||{};
-        var st=inj.status||inj.type||(p.status||'');
-        var stt=st?st:'&mdash;';
-        var stc='#bbb';
-        if(stt==='Active')stc='#4caf50';
-        else if(stt==='IR'||stt==='PUP'||stt==='NFI')stc='#f44336';
+        var ath=p.athlete||{};
+        var nm=ath.displayName||ath.fullName||p.name||'?';
+        var posId=ath.position?(ath.position.id||ath.position.abbreviation):'';
+        var ps=p.position||posId||'?';
+        var colTeam=ath.team||{};
+        var cl=colTeam.name||colTeam.displayName||'?';
+        var rd=p.round||'?';
+        var pk=p.selection||p.pick||p.overall||'?';
         h+='<tr style="border-bottom:1px solid rgba(255,255,255,.04)">';
-        h+='<td style="padding:3px 6px;color:#bbb">Rd '+rd+'</td>';
-        h+='<td style="padding:3px 6px;color:#ddd">#'+pk+'</td>';
-        h+='<td style="padding:3px 6px;color:#fff;font-weight:500">'+nm+'</td>';
-        h+='<td style="padding:3px 6px;color:#bbb">'+ps+'</td>';
-        h+='<td style="padding:3px 6px;color:#999">'+cl+'</td>';
-        h+='<td style="padding:3px 6px;color:'+stc+'">'+stt+'</td></tr>';
+        h+='<td style="padding:4px 8px;color:#bbb;font-size:.78rem">R'+rd+'</td>';
+        h+='<td style="padding:4px 8px;color:#ddd;font-size:.78rem">#'+pk+'</td>';
+        h+='<td style="padding:4px 8px;color:#fff;font-weight:500;font-size:.85rem">'+nm+'</td>';
+        h+='<td style="padding:4px 8px;color:#bbb;font-size:.78rem">'+ps+'</td>';
+        h+='<td style="padding:4px 8px;color:#999;font-size:.78rem">'+cl+'</td></tr>';
       });
       h+='</table>';
     }
@@ -135,7 +145,7 @@ function glist(w){
   document.getElementById('gl').innerHTML=gs.map(function(g){
     var idx=G.indexOf(g);
     return '<div class="gc" onclick="sel('+idx+')" data-i="'+idx+'">'+
-      '<img src="'+LO[g.away]+'"><span style="color:#666;font-size:.65rem"> @ </span><img src="'+LO[g.home]+'">'+
+      '<img src="'+LO[g.away]+'"><span style="color:#666;font-size:.78rem"> @ </span><img src="'+LO[g.home]+'">'+
       '<div class="tx"><div class="mu">'+g.away+' '+g.as+' @ '+g.home+' '+g.hs+'</div>'+
       '<div class="inf">'+g.date+(g.time?' '+g.time:'')+'</div></div></div>';
   }).join('');
@@ -177,7 +187,7 @@ function render(i){
       '<div class="th"><img src="'+LO[a]+'"><span class="nm">'+a+'</span><span class="it">'+g.arec+'</span>'+
       '<span style="margin:0 4px;color:#444">@</span>'+
       '<img src="'+LO[h]+'"><span class="nm">'+h+'</span><span class="it">'+g.hrec+'</span></div>'+
-      '<div style="font-size:1rem;font-weight:700;color:#fff">'+a+' '+as+' - '+hs+' '+h+'</div>'+
+      '<div style="font-size:1.1rem;font-weight:700;color:#fff">'+a+' '+as+' - '+hs+' '+h+'</div>'+
       '<div class="it">'+g.date+(g.time?' '+g.time:'')+' | '+g.venue+' | '+g.city+' | Att: '+(g.att||'N/A')+'<br>TV: '+(g.bcast||'N/A')+'</div>'+
     '</div>'+
     '<div class="gd">'+
@@ -210,7 +220,7 @@ function render(i){
       '<div class="sr"><span class="l">'+a+' Record</span><span class="v">'+g.arec+'</span></div>'+
       '<div class="sr"><span class="l">'+h+' Record</span><span class="v">'+g.hrec+'</span></div>'+
       '<div class="sr"><span class="l">Margin</span><span class="v">'+(Math.abs(parseInt(hs)-parseInt(as)))+' pts</span></div>'+
-      '<div class="pb"><div style="font-size:.72rem;color:#bbb">Result</div>'+
+      '<div class="pb"><div style="font-size:.82rem;color:#bbb">Result</div>'+
       '<div class="sc"><span style="color:'+TC[win]+'">'+win+'</span> defeats <span style="color:'+TC[lose]+'">'+lose+'</span></div></div>'+
       '</div>'+
 
