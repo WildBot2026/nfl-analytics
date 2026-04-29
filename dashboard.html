@@ -7,47 +7,47 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:1rem}
 .w{max-width:1100px;margin:0 auto;padding:10px}
-h1{font-size:1.1rem;color:#fff;margin-bottom:5px}
-.ctrls{display:flex;gap:5px;margin-bottom:6px;flex-wrap:wrap;align-items:center}
-.ctrls select{padding:3px 7px;background:#16162a;color:#ddd;border:1px solid #333;border-radius:4px;font-size:.75rem}
-.ctrls button{background:#16162a;border:1px solid #333;color:#ddd;padding:3px 7px;border-radius:4px;cursor:pointer;font-size:.75rem}
+h1{font-size:1.4rem;color:#fff;margin-bottom:5px}
+.ctrls{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;align-items:center}
+.ctrls select{padding:5px 10px;background:#16162a;color:#ddd;border:1px solid #333;border-radius:4px;font-size:.85rem}
+.ctrls button{background:#16162a;border:1px solid #333;color:#ddd;padding:5px 10px;border-radius:4px;cursor:pointer;font-size:.85rem}
 .ctrls button:hover{background:#222}
-.ctrls span{color:#aaa;font-size:.7rem}
-#gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:3px;margin-bottom:6px}
-.gc{background:#16162a;border:1px solid #28283e;border-radius:3px;padding:4px;cursor:pointer;display:flex;align-items:center;gap:3px;transition:all .1s}
+.ctrls span{color:#aaa;font-size:.82rem}
+#gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:5px;margin-bottom:8px}
+.gc{background:#16162a;border:1px solid #28283e;border-radius:5px;padding:6px;cursor:pointer;display:flex;align-items:center;gap:5px;transition:all .1s}
 .gc:hover,.gc.sel{border-color:#4a9eff;background:#1b1b30}
-.gc img{width:16px;height:16px;border-radius:2px}
-.gc .tx{font-size:.65rem;line-height:1.05}
-.gc .tx .mu{color:#fff;font-weight:600;font-size:.68rem}
-.gc .tx .inf{color:#999;font-size:.55rem}
+.gc img{width:22px;height:22px;border-radius:3px}
+.gc .tx{font-size:.78rem;line-height:1.15}
+.gc .tx .mu{color:#fff;font-weight:600;font-size:.82rem}
+.gc .tx .inf{color:#999;font-size:.68rem}
 #an{display:none;animation:fi .3s}
 @keyframes fi{from{opacity:0}to{opacity:1}}
-.gd{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px}
+.gd{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
 @media(max-width:700px){.gd{grid-template-columns:1fr}}
-.ct{background:#16162a;border:1px solid #28283e;border-radius:4px;padding:6px}
+.ct{background:#16162a;border:1px solid #28283e;border-radius:5px;padding:8px}
 .ct.fw{grid-column:1/-1}
-.ct h3{font-size:.75rem;color:#4a9eff;margin-bottom:3px;padding-bottom:2px;border-bottom:1px solid #28283e;display:flex;align-items:center;gap:5px}
-.sr{display:flex;justify-content:space-between;padding:1px 0;font-size:.68rem;border-bottom:1px solid rgba(255,255,255,.02)}
+.ct h3{font-size:.85rem;color:#4a9eff;margin-bottom:5px;padding-bottom:3px;border-bottom:1px solid #28283e;display:flex;align-items:center;gap:5px}
+.sr{display:flex;justify-content:space-between;padding:3px 0;font-size:.8rem;border-bottom:1px solid rgba(255,255,255,.04)}
 .sr .l{color:#bbb}
 .sr .v{color:#fff;font-weight:500}
 .sr .vb{color:#4caf50}
 .sr .vr{color:#f44336}
-.th{display:flex;align-items:center;gap:3px;margin-bottom:2px;flex-wrap:wrap}
-.th img{width:15px;height:15px;border-radius:2px}
-.th .nm{font-weight:600;font-size:.74rem}
-.b{display:inline-block;padding:1px 4px;border-radius:2px;font-size:.55rem;font-weight:600}
+.th{display:flex;align-items:center;gap:5px;margin-bottom:4px;flex-wrap:wrap}
+.th img{width:22px;height:22px;border-radius:3px}
+.th .nm{font-weight:600;font-size:.9rem}
+.b{display:inline-block;padding:3px 8px;border-radius:4px;font-size:.7rem;font-weight:600}
 .bg{background:#1b5e20;color:#81c784}
 .br{background:#b71c1c;color:#ef9a9a}
 .by{background:#f57f17;color:#fff176}
-.pb{text-align:center;padding:3px;margin-top:2px}
-.pb .sc{font-size:.82rem;font-weight:700;color:#fff;margin:2px 0}
-.wb{display:flex;align-items:center;gap:2px;padding:2px 3px;background:rgba(255,255,255,.02);border-radius:3px;font-size:.68rem;margin:2px 0;flex-wrap:wrap}
-.nd{color:#999;font-size:.65rem;font-style:italic}
-.sm{font-size:.6rem;color:#bbb}
-.it{color:#999;font-size:.66rem;line-height:1.25}
-.mt{font-size:.7rem;color:#888;padding:3px;background:rgba(255,255,255,.02);border-radius:3px;line-height:1.35}
+.pb{text-align:center;padding:5px;margin-top:4px}
+.pb .sc{font-size:.95rem;font-weight:700;color:#fff;margin:3px 0}
+.wb{display:flex;align-items:center;gap:4px;padding:4px 6px;background:rgba(255,255,255,.03);border-radius:4px;font-size:.8rem;margin:3px 0;flex-wrap:wrap}
+.nd{color:#999;font-size:.8rem;font-style:italic}
+.sm{font-size:.75rem;color:#bbb}
+.it{color:#999;font-size:.8rem;line-height:1.35}
+.mt{font-size:.82rem;color:#888;padding:5px;background:rgba(255,255,255,.02);border-radius:4px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -101,8 +101,8 @@ function renderDraftBody(ta,i){
     if(picks.length===0){
       h+='<div class="nd">Sin selecciones registradas</div>';
     }else{
-      h+='<table style="width:100%;border-collapse:collapse;font-size:.65rem">';
-      h+='<tr style="color:#bbb;border-bottom:1px solid #333"><td style="padding:2px 4px">Rd</td><td style="padding:2px 4px">Pick</td><td style="padding:2px 4px">Player</td><td style="padding:2px 4px">Pos</td><td style="padding:2px 4px">College</td><td style="padding:2px 4px">Status</td></tr>';
+      h+='<table style="width:100%;border-collapse:collapse;font-size:.78rem">';
+      h+='<tr style="color:#bbb;border-bottom:1px solid #333"><td style="padding:3px 6px">Rd</td><td style="padding:3px 6px">Pick</td><td style="padding:3px 6px">Player</td><td style="padding:3px 6px">Pos</td><td style="padding:3px 6px">College</td><td style="padding:3px 6px">Status</td></tr>';
       picks.sort(function(a,b){return(a.round||99)-(b.round||99)||(a.selection||a.pick||0)-(b.selection||b.pick||0);});
       picks.forEach(function(p){
         var rd=p.round||'&mdash;';
@@ -117,12 +117,12 @@ function renderDraftBody(ta,i){
         if(stt==='Active')stc='#4caf50';
         else if(stt==='IR'||stt==='PUP'||stt==='NFI')stc='#f44336';
         h+='<tr style="border-bottom:1px solid rgba(255,255,255,.04)">';
-        h+='<td style="padding:2px 4px;color:#bbb">Rd '+rd+'</td>';
-        h+='<td style="padding:2px 4px;color:#ddd">#'+pk+'</td>';
-        h+='<td style="padding:2px 4px;color:#fff;font-weight:500">'+nm+'</td>';
-        h+='<td style="padding:2px 4px;color:#bbb">'+ps+'</td>';
-        h+='<td style="padding:2px 4px;color:#999">'+cl+'</td>';
-        h+='<td style="padding:2px 4px;color:'+stc+'">'+stt+'</td></tr>';
+        h+='<td style="padding:3px 6px;color:#bbb">Rd '+rd+'</td>';
+        h+='<td style="padding:3px 6px;color:#ddd">#'+pk+'</td>';
+        h+='<td style="padding:3px 6px;color:#fff;font-weight:500">'+nm+'</td>';
+        h+='<td style="padding:3px 6px;color:#bbb">'+ps+'</td>';
+        h+='<td style="padding:3px 6px;color:#999">'+cl+'</td>';
+        h+='<td style="padding:3px 6px;color:'+stc+'">'+stt+'</td></tr>';
       });
       h+='</table>';
     }
@@ -135,7 +135,7 @@ function glist(w){
   document.getElementById('gl').innerHTML=gs.map(function(g){
     var idx=G.indexOf(g);
     return '<div class="gc" onclick="sel('+idx+')" data-i="'+idx+'">'+
-      '<img src="'+LO[g.away]+'"><span style="color:#444;font-size:.5rem">@</span><img src="'+LO[g.home]+'">'+
+      '<img src="'+LO[g.away]+'"><span style="color:#666;font-size:.65rem"> @ </span><img src="'+LO[g.home]+'">'+
       '<div class="tx"><div class="mu">'+g.away+' '+g.as+' @ '+g.home+' '+g.hs+'</div>'+
       '<div class="inf">'+g.date+(g.time?' '+g.time:'')+'</div></div></div>';
   }).join('');
@@ -177,7 +177,7 @@ function render(i){
       '<div class="th"><img src="'+LO[a]+'"><span class="nm">'+a+'</span><span class="it">'+g.arec+'</span>'+
       '<span style="margin:0 4px;color:#444">@</span>'+
       '<img src="'+LO[h]+'"><span class="nm">'+h+'</span><span class="it">'+g.hrec+'</span></div>'+
-      '<div style="font-size:.85rem;font-weight:700;color:#fff">'+a+' '+as+' - '+hs+' '+h+'</div>'+
+      '<div style="font-size:1rem;font-weight:700;color:#fff">'+a+' '+as+' - '+hs+' '+h+'</div>'+
       '<div class="it">'+g.date+(g.time?' '+g.time:'')+' | '+g.venue+' | '+g.city+' | Att: '+(g.att||'N/A')+'<br>TV: '+(g.bcast||'N/A')+'</div>'+
     '</div>'+
     '<div class="gd">'+
@@ -224,10 +224,12 @@ function render(i){
       '<b>Context:</b> Week '+g.week+' regular season at '+g.city+'.<br>'+
       '<b>Impact:</b> '+win+' moves to '+(win==h?g.hrec:g.arec)+', '+lose+' drops to '+(lose==h?g.hrec:g.arec)+'.'+
       '</div></div>'+
-      '<div class="ct fw" id="draft-'+i+'"><h3>Draft 2026 — '+G[i].home+'</h3><div class="sm">Loading draft data...</div></div>'+
+      '<div class="ct fw" id="draft-h-'+i+'"><h3>Draft 2026 — '+G[i].home+'</h3><div class="sm">Loading draft data...</div></div>'+
+      '<div class="ct fw" id="draft-a-'+i+'"><h3>Draft 2026 — '+G[i].away+'</h3><div class="sm">Loading draft data...</div></div>'+
     '</div>';
 
-  renderDraftBody(G[i].home,i);
+  renderDraftBody(G[i].home,'h-'+i);
+  renderDraftBody(G[i].away,'a-'+i);
   window.scrollTo(0,0);
 }
 
