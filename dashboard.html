@@ -14,14 +14,14 @@ h1{font-size:1.1rem;color:#fff;margin-bottom:5px}
 .ctrls select{padding:3px 7px;background:#16162a;color:#ddd;border:1px solid #333;border-radius:4px;font-size:.75rem}
 .ctrls button{background:#16162a;border:1px solid #333;color:#ddd;padding:3px 7px;border-radius:4px;cursor:pointer;font-size:.75rem}
 .ctrls button:hover{background:#222}
-.ctrls span{color:#555;font-size:.7rem}
+.ctrls span{color:#aaa;font-size:.7rem}
 #gl{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:3px;margin-bottom:6px}
 .gc{background:#16162a;border:1px solid #28283e;border-radius:3px;padding:4px;cursor:pointer;display:flex;align-items:center;gap:3px;transition:all .1s}
 .gc:hover,.gc.sel{border-color:#4a9eff;background:#1b1b30}
 .gc img{width:16px;height:16px;border-radius:2px}
 .gc .tx{font-size:.65rem;line-height:1.05}
 .gc .tx .mu{color:#fff;font-weight:600;font-size:.68rem}
-.gc .tx .inf{color:#555;font-size:.55rem}
+.gc .tx .inf{color:#999;font-size:.55rem}
 #an{display:none;animation:fi .3s}
 @keyframes fi{from{opacity:0}to{opacity:1}}
 .gd{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:5px}
@@ -30,7 +30,7 @@ h1{font-size:1.1rem;color:#fff;margin-bottom:5px}
 .ct.fw{grid-column:1/-1}
 .ct h3{font-size:.75rem;color:#4a9eff;margin-bottom:3px;padding-bottom:2px;border-bottom:1px solid #28283e;display:flex;align-items:center;gap:5px}
 .sr{display:flex;justify-content:space-between;padding:1px 0;font-size:.68rem;border-bottom:1px solid rgba(255,255,255,.02)}
-.sr .l{color:#555}
+.sr .l{color:#bbb}
 .sr .v{color:#fff;font-weight:500}
 .sr .vb{color:#4caf50}
 .sr .vr{color:#f44336}
@@ -44,9 +44,9 @@ h1{font-size:1.1rem;color:#fff;margin-bottom:5px}
 .pb{text-align:center;padding:3px;margin-top:2px}
 .pb .sc{font-size:.82rem;font-weight:700;color:#fff;margin:2px 0}
 .wb{display:flex;align-items:center;gap:2px;padding:2px 3px;background:rgba(255,255,255,.02);border-radius:3px;font-size:.68rem;margin:2px 0;flex-wrap:wrap}
-.nd{color:#333;font-size:.65rem;font-style:italic}
-.sm{font-size:.6rem;color:#555}
-.it{color:#666;font-size:.66rem;line-height:1.25}
+.nd{color:#999;font-size:.65rem;font-style:italic}
+.sm{font-size:.6rem;color:#bbb}
+.it{color:#999;font-size:.66rem;line-height:1.25}
 .mt{font-size:.7rem;color:#888;padding:3px;background:rgba(255,255,255,.02);border-radius:3px;line-height:1.35}
 </style>
 </head>
@@ -68,6 +68,67 @@ var SW={"AT&T Stadium":[72,5,"Indoor/Retractable","Minimal","g"],"Acrisure Stadi
 var OD={"401772510":{"sp":3,"ou":35,"ml":170},"401772714":{"sp":5,"ou":42,"ml":135},"401772830":{"sp":3,"ou":52,"ml":122},"401772829":{"sp":8,"ou":36,"ml":107},"401772719":{"sp":3,"ou":41,"ml":159},"401772720":{"sp":2,"ou":52,"ml":150},"401772718":{"sp":8,"ou":42,"ml":214},"401772721":{"sp":6,"ou":35,"ml":140},"401772827":{"sp":8,"ou":45,"ml":171},"401772828":{"sp":4,"ou":41,"ml":186},"401772832":{"sp":3,"ou":37,"ml":197},"401772831":{"sp":3,"ou":46,"ml":188},"401772722":{"sp":6,"ou":36,"ml":217},"401772723":{"sp":3,"ou":47,"ml":120},"401772918":{"sp":6,"ou":46,"ml":247},"401772810":{"sp":5,"ou":37,"ml":111},"401772936":{"sp":5,"ou":44,"ml":120},"401772725":{"sp":5,"ou":38,"ml":197},"401772834":{"sp":6,"ou":49,"ml":262},"401772835":{"sp":7,"ou":40,"ml":194},"401772724":{"sp":7,"ou":41,"ml":271},"401772728":{"sp":6,"ou":37,"ml":255},"401772833":{"sp":4,"ou":52,"ml":162},"401772727":{"sp":4,"ou":49,"ml":197},"401772836":{"sp":6,"ou":52,"ml":156},"401772726":{"sp":7,"ou":36,"ml":158},"401772729":{"sp":2,"ou":45,"ml":202},"401772730":{"sp":6,"ou":37,"ml":154},"401772837":{"sp":7,"ou":41,"ml":267},"401772919":{"sp":9,"ou":47,"ml":264},"401772715":{"sp":9,"ou":39,"ml":167},"401772811":{"sp":4,"ou":42,"ml":243},"401772937":{"sp":6,"ou":48,"ml":249},"401772842":{"sp":8,"ou":46,"ml":156},"401772733":{"sp":4,"ou":51,"ml":226},"401772731":{"sp":3,"ou":36,"ml":128},"401772732":{"sp":4,"ou":40,"ml":274},"401772839":{"sp":8,"ou":37,"ml":198},"401772840":{"sp":8,"ou":49,"ml":235},"401772841":{"sp":6,"ou":52,"ml":102},"401772838":{"sp":3,"ou":52,"ml":168},"401772734":{"sp":7,"ou":38,"ml":175},"401772735":{"sp":8,"ou":40,"ml":216},"401772736":{"sp":2,"ou":43,"ml":228},"401772844":{"sp":4,"ou":51,"ml":127},"401772843":{"sp":6,"ou":51,"ml":255},"401772920":{"sp":5,"ou":39,"ml":195},"401772812":{"sp":4,"ou":52,"ml":235},"401772938":{"sp":2,"ou":45,"ml":225},"401772632":{"sp":2,"ou":38,"ml":192},"401772739":{"sp":6,"ou":42,"ml":114},"401772740":{"sp":5,"ou":37,"ml":121},"401772846":{"sp":9,"ou":37,"ml":236},"401772847":{"sp":4,"ou":39,"ml":268},"401772737":{"sp":9,"ou":52,"ml":142},"401772845":{"sp":6,"ou":51,"ml":255},"401772738":{"sp":8,"ou":41,"ml":238},"401772849":{"sp":5,"ou":44,"ml":202},"401772848":{"sp":7,"ou":49,"ml":232},"401772741":{"sp":9,"ou":38,"ml":163},"401772742":{"sp":5,"ou":37,"ml":186},"401772921":{"sp":2,"ou":52,"ml":158},"401772813":{"sp":5,"ou":35,"ml":118},"401772716":{"sp":2,"ou":42,"ml":117},"401772939":{"sp":2,"ou":45,"ml":118},"401772633":{"sp":5,"ou":43,"ml":271},"401772851":{"sp":9,"ou":41,"ml":238},"401772744":{"sp":4,"ou":50,"ml":162},"401772850":{"sp":9,"ou":48,"ml":148},"401772745":{"sp":3,"ou":38,"ml":268},"401772852":{"sp":8,"ou":46,"ml":208},"401772743":{"sp":8,"ou":49,"ml":113},"401772747":{"sp":3,"ou":36,"ml":203},"401772746":{"sp":7,"ou":38,"ml":163},"401772854":{"sp":5,"ou":41,"ml":237},"401772853":{"sp":9,"ou":39,"ml":208},"401772922":{"sp":4,"ou":43,"ml":218},"401772814":{"sp":5,"ou":37,"ml":213},"401772940":{"sp":3,"ou":36,"ml":266},"401772634":{"sp":2,"ou":37,"ml":160},"401772856":{"sp":4,"ou":48,"ml":224},"401772750":{"sp":9,"ou":41,"ml":202},"401772751":{"sp":2,"ou":40,"ml":197},"401772748":{"sp":2,"ou":47,"ml":167},"401772858":{"sp":9,"ou":44,"ml":208},"401772857":{"sp":9,"ou":39,"ml":148},"401772855":{"sp":6,"ou":41,"ml":114},"401772859":{"sp":2,"ou":45,"ml":114},"401772752":{"sp":2,"ou":50,"ml":228},"401772749":{"sp":4,"ou":36,"ml":230},"401772923":{"sp":3,"ou":40,"ml":117},"401772815":{"sp":3,"ou":42,"ml":203},"401772717":{"sp":3,"ou":42,"ml":248},"401772941":{"sp":2,"ou":37,"ml":207},"401772635":{"sp":7,"ou":43,"ml":152},"401772861":{"sp":7,"ou":42,"ml":167},"401772754":{"sp":8,"ou":39,"ml":271},"401772755":{"sp":6,"ou":49,"ml":180},"401772753":{"sp":3,"ou":35,"ml":217},"401772862":{"sp":3,"ou":37,"ml":237},"401772860":{"sp":5,"ou":51,"ml":167},"401772757":{"sp":4,"ou":46,"ml":117},"401772756":{"sp":5,"ou":46,"ml":172},"401772864":{"sp":4,"ou":49,"ml":239},"401772863":{"sp":6,"ou":51,"ml":102},"401772924":{"sp":6,"ou":38,"ml":134},"401772816":{"sp":6,"ou":38,"ml":127},"401772826":{"sp":4,"ou":43,"ml":172},"401772942":{"sp":5,"ou":45,"ml":152},"401772760":{"sp":6,"ou":51,"ml":225},"401772758":{"sp":6,"ou":36,"ml":123},"401772868":{"sp":8,"ou":43,"ml":111},"401772867":{"sp":2,"ou":45,"ml":133},"401772865":{"sp":6,"ou":40,"ml":213},"401772759":{"sp":8,"ou":52,"ml":102},"401772866":{"sp":3,"ou":37,"ml":276},"401772869":{"sp":4,"ou":52,"ml":109},"401772762":{"sp":7,"ou":52,"ml":137},"401772761":{"sp":8,"ou":39,"ml":110},"401772925":{"sp":6,"ou":46,"ml":110},"401772817":{"sp":7,"ou":41,"ml":274},"401772943":{"sp":5,"ou":38,"ml":190},"401772765":{"sp":8,"ou":39,"ml":160},"401772871":{"sp":4,"ou":40,"ml":205},"401772872":{"sp":2,"ou":40,"ml":185},"401772764":{"sp":8,"ou":42,"ml":168},"401772763":{"sp":4,"ou":38,"ml":197},"401772767":{"sp":2,"ou":50,"ml":156},"401772766":{"sp":5,"ou":49,"ml":189},"401772870":{"sp":6,"ou":42,"ml":157},"401772873":{"sp":2,"ou":41,"ml":202},"401772874":{"sp":7,"ou":43,"ml":117},"401772768":{"sp":6,"ou":46,"ml":264},"401772926":{"sp":8,"ou":52,"ml":184},"401772818":{"sp":2,"ou":38,"ml":166},"401772944":{"sp":4,"ou":43,"ml":109},"401772636":{"sp":3,"ou":48,"ml":188},"401772875":{"sp":7,"ou":48,"ml":255},"401772771":{"sp":3,"ou":47,"ml":247},"401772876":{"sp":5,"ou":43,"ml":111},"401772769":{"sp":8,"ou":35,"ml":233},"401772772":{"sp":5,"ou":46,"ml":210},"401772877":{"sp":3,"ou":45,"ml":259},"401772770":{"sp":7,"ou":38,"ml":176},"401772773":{"sp":6,"ou":48,"ml":183},"401772879":{"sp":8,"ou":44,"ml":241},"401772878":{"sp":4,"ou":41,"ml":207},"401772927":{"sp":8,"ou":40,"ml":257},"401772630":{"sp":6,"ou":47,"ml":240},"401772945":{"sp":2,"ou":44,"ml":173},"401772631":{"sp":5,"ou":48,"ml":248},"401772882":{"sp":7,"ou":49,"ml":213},"401772776":{"sp":9,"ou":41,"ml":230},"401772881":{"sp":9,"ou":40,"ml":268},"401772880":{"sp":3,"ou":44,"ml":231},"401772883":{"sp":7,"ou":37,"ml":160},"401772774":{"sp":6,"ou":42,"ml":150},"401772775":{"sp":4,"ou":35,"ml":111},"401772884":{"sp":5,"ou":50,"ml":256},"401772885":{"sp":3,"ou":49,"ml":206},"401772777":{"sp":5,"ou":47,"ml":226},"401772778":{"sp":8,"ou":42,"ml":137},"401772928":{"sp":2,"ou":38,"ml":208},"401772819":{"sp":5,"ou":40,"ml":278},"401772946":{"sp":9,"ou":36,"ml":242},"401772780":{"sp":5,"ou":38,"ml":216},"401772781":{"sp":4,"ou":49,"ml":270},"401772888":{"sp":7,"ou":49,"ml":256},"401772887":{"sp":8,"ou":52,"ml":214},"401772886":{"sp":4,"ou":50,"ml":215},"401772779":{"sp":6,"ou":42,"ml":263},"401772782":{"sp":6,"ou":51,"ml":224},"401772784":{"sp":5,"ou":43,"ml":212},"401772783":{"sp":3,"ou":44,"ml":160},"401772890":{"sp":6,"ou":45,"ml":181},"401772889":{"sp":3,"ou":39,"ml":138},"401772929":{"sp":5,"ou":47,"ml":277},"401772820":{"sp":4,"ou":41,"ml":116},"401772891":{"sp":8,"ou":48,"ml":184},"401772694":{"sp":9,"ou":48,"ml":115},"401772930":{"sp":5,"ou":48,"ml":199},"401772621":{"sp":2,"ou":47,"ml":222},"401772785":{"sp":2,"ou":46,"ml":176},"401772786":{"sp":8,"ou":48,"ml":237},"401772787":{"sp":5,"ou":50,"ml":156},"401772892":{"sp":6,"ou":48,"ml":224},"401772893":{"sp":2,"ou":47,"ml":186},"401772895":{"sp":8,"ou":40,"ml":219},"401772894":{"sp":4,"ou":52,"ml":106},"401772896":{"sp":8,"ou":35,"ml":121},"401772789":{"sp":8,"ou":39,"ml":218},"401772788":{"sp":4,"ou":36,"ml":166},"401772931":{"sp":8,"ou":45,"ml":154},"401772821":{"sp":9,"ou":45,"ml":186},"401772947":{"sp":8,"ou":43,"ml":207},"401772900":{"sp":6,"ou":37,"ml":220},"401772902":{"sp":2,"ou":52,"ml":113},"401772898":{"sp":7,"ou":42,"ml":266},"401772899":{"sp":3,"ou":36,"ml":107},"401772790":{"sp":5,"ou":41,"ml":105},"401772792":{"sp":4,"ou":42,"ml":132},"401772793":{"sp":9,"ou":38,"ml":244},"401772791":{"sp":5,"ou":49,"ml":279},"401772794":{"sp":6,"ou":46,"ml":142},"401772897":{"sp":3,"ou":40,"ml":179},"401772901":{"sp":3,"ou":35,"ml":179},"401772932":{"sp":8,"ou":47,"ml":150},"401772822":{"sp":3,"ou":42,"ml":126},"401772948":{"sp":6,"ou":38,"ml":244},"401772904":{"sp":2,"ou":46,"ml":236},"401772796":{"sp":8,"ou":46,"ml":117},"401772798":{"sp":7,"ou":35,"ml":207},"401772795":{"sp":9,"ou":38,"ml":210},"401772905":{"sp":7,"ou":49,"ml":139},"401772906":{"sp":8,"ou":40,"ml":233},"401772797":{"sp":6,"ou":52,"ml":223},"401772903":{"sp":9,"ou":48,"ml":251},"401772800":{"sp":6,"ou":45,"ml":162},"401772909":{"sp":3,"ou":43,"ml":215},"401772908":{"sp":5,"ou":49,"ml":245},"401772907":{"sp":8,"ou":45,"ml":107},"401772799":{"sp":9,"ou":45,"ml":146},"401772933":{"sp":9,"ou":41,"ml":190},"401772823":{"sp":6,"ou":45,"ml":171},"401772949":{"sp":6,"ou":52,"ml":102},"401772612":{"sp":5,"ou":37,"ml":161},"401772613":{"sp":8,"ou":50,"ml":242},"401772802":{"sp":5,"ou":50,"ml":265},"401772910":{"sp":9,"ou":49,"ml":104},"401772803":{"sp":3,"ou":44,"ml":156},"401772934":{"sp":8,"ou":42,"ml":178},"401772801":{"sp":7,"ou":50,"ml":241},"401772911":{"sp":7,"ou":48,"ml":240},"401772912":{"sp":7,"ou":46,"ml":279},"401772913":{"sp":9,"ou":43,"ml":178},"401772914":{"sp":6,"ou":42,"ml":130},"401772806":{"sp":5,"ou":45,"ml":130},"401772805":{"sp":4,"ou":41,"ml":155},"401772804":{"sp":9,"ou":43,"ml":250},"401772824":{"sp":6,"ou":38,"ml":149},"401772710":{"sp":6,"ou":42,"ml":192},"401772711":{"sp":4,"ou":44,"ml":103},"401772622":{"sp":4,"ou":43,"ml":111},"401772951":{"sp":2,"ou":52,"ml":174},"401772953":{"sp":4,"ou":50,"ml":126},"401772954":{"sp":2,"ou":44,"ml":220},"401772807":{"sp":9,"ou":49,"ml":187},"401772809":{"sp":4,"ou":36,"ml":164},"401772915":{"sp":9,"ou":38,"ml":116},"401772916":{"sp":8,"ou":50,"ml":118},"401772808":{"sp":2,"ou":39,"ml":138},"401772952":{"sp":6,"ou":37,"ml":163},"401772950":{"sp":3,"ou":52,"ml":206},"401772917":{"sp":5,"ou":51,"ml":197},"401772935":{"sp":9,"ou":49,"ml":176},"401772825":{"sp":8,"ou":44,"ml":245},"401772969":{"sp":2,"ou":38,"ml":153},"401772961":{"sp":5,"ou":43,"ml":269},"401772966":{"sp":3,"ou":40,"ml":161},"401772964":{"sp":4,"ou":52,"ml":119},"401772968":{"sp":4,"ou":35,"ml":204},"401772963":{"sp":9,"ou":50,"ml":174},"401772970":{"sp":2,"ou":42,"ml":173},"401772962":{"sp":6,"ou":49,"ml":118},"401772967":{"sp":5,"ou":43,"ml":260},"401772965":{"sp":5,"ou":48,"ml":129},"401772956":{"sp":5,"ou":39,"ml":168},"401772957":{"sp":4,"ou":37,"ml":115},"401772955":{"sp":4,"ou":44,"ml":252},"401772958":{"sp":6,"ou":49,"ml":131},"401772959":{"sp":9,"ou":44,"ml":279},"401772960":{"sp":8,"ou":43,"ml":228}};
 var TC={"ARI":"#97233f","ATL":"#a71930","BAL":"#241773","BUF":"#00338d","CAR":"#0085ca","CHI":"#0b162a","CIN":"#fb4f14","CLE":"#311d00","DAL":"#002244","DEN":"#fb4f14","DET":"#0076b6","GB":"#203731","HOU":"#03202f","IND":"#002c5f","JAX":"#006778","KC":"#e31837","LAC":"#0080c6","LAR":"#003594","LV":"#000000","MIA":"#008e97","MIN":"#4f2683","NE":"#002244","NO":"#d3bc8d","NYG":"#0b2265","NYJ":"#125740","PHI":"#004c54","PIT":"#ffb612","SEA":"#002244","SF":"#aa0000","TB":"#d50a0a","TEN":"#0c2340","WAS":"#773141"};
 
+
+// Draft 2026 helper functions
+var DRAFT_CACHE=null;
+function loadDraftData(cb){
+  if(DRAFT_CACHE){cb(DRAFT_CACHE);return;}
+  var x=new XMLHttpRequest();
+  x.open('GET','https://site.api.espn.com/apis/site/v2/sports/football/nfl/draft?year=2026',true);
+  x.onload=function(){
+    if(x.status==200){
+      try{var d=JSON.parse(x.responseText);DRAFT_CACHE=d;cb(d);}
+      catch(e){cb(null);}
+    }else{cb(null);}
+  };
+  x.onerror=function(){cb(null);};
+  x.send();
+}
+function draftTeamPicks(draft,ta){
+  if(!draft||!draft.picks)return[];
+  return draft.picks.filter(function(p){
+    var dest=p.destination||p.team||{};
+    var tab=(dest.abbreviation||dest.abbrev||'').toUpperCase();
+    return tab===ta.toUpperCase();
+  });
+}
+function renderDraftBody(ta,i){
+  loadDraftData(function(draft){
+    var picks=draftTeamPicks(draft,ta);
+    var el=document.getElementById('draft-'+i);
+    if(!el)return;
+    var h='<h3>Draft 2026 &mdash; '+ta+'</h3>';
+    if(picks.length===0){
+      h+='<div class="nd">Sin selecciones registradas</div>';
+    }else{
+      h+='<table style="width:100%;border-collapse:collapse;font-size:.65rem">';
+      h+='<tr style="color:#bbb;border-bottom:1px solid #333"><td style="padding:2px 4px">Rd</td><td style="padding:2px 4px">Pick</td><td style="padding:2px 4px">Player</td><td style="padding:2px 4px">Pos</td><td style="padding:2px 4px">College</td><td style="padding:2px 4px">Status</td></tr>';
+      picks.sort(function(a,b){return(a.round||99)-(b.round||99)||(a.selection||a.pick||0)-(b.selection||b.pick||0);});
+      picks.forEach(function(p){
+        var rd=p.round||'&mdash;';
+        var pk=p.selection||p.pick||p.overall||'&mdash;';
+        var nm=p.firstName&&p.lastName?p.firstName+' '+p.lastName:p.name||'&mdash;';
+        var ps=p.position||p.pos||'&mdash;';
+        var cl=(p.college||p.school||{}).name||p.collegeName||'&mdash;';
+        var inj=p.injuries||p.injury||{};
+        var st=inj.status||inj.type||(p.status||'');
+        var stt=st?st:'&mdash;';
+        var stc='#bbb';
+        if(stt==='Active')stc='#4caf50';
+        else if(stt==='IR'||stt==='PUP'||stt==='NFI')stc='#f44336';
+        h+='<tr style="border-bottom:1px solid rgba(255,255,255,.04)">';
+        h+='<td style="padding:2px 4px;color:#bbb">Rd '+rd+'</td>';
+        h+='<td style="padding:2px 4px;color:#ddd">#'+pk+'</td>';
+        h+='<td style="padding:2px 4px;color:#fff;font-weight:500">'+nm+'</td>';
+        h+='<td style="padding:2px 4px;color:#bbb">'+ps+'</td>';
+        h+='<td style="padding:2px 4px;color:#999">'+cl+'</td>';
+        h+='<td style="padding:2px 4px;color:'+stc+'">'+stt+'</td></tr>';
+      });
+      h+='</table>';
+    }
+    el.innerHTML=h;
+  });
+}
 function glist(w){
   var gs=G.filter(function(g){return g.week==w});
   document.getElementById('gc').textContent=gs.length+' games';
@@ -149,7 +210,7 @@ function render(i){
       '<div class="sr"><span class="l">'+a+' Record</span><span class="v">'+g.arec+'</span></div>'+
       '<div class="sr"><span class="l">'+h+' Record</span><span class="v">'+g.hrec+'</span></div>'+
       '<div class="sr"><span class="l">Margin</span><span class="v">'+(Math.abs(parseInt(hs)-parseInt(as)))+' pts</span></div>'+
-      '<div class="pb"><div style="font-size:.72rem;color:#555">Result</div>'+
+      '<div class="pb"><div style="font-size:.72rem;color:#bbb">Result</div>'+
       '<div class="sc"><span style="color:'+TC[win]+'">'+win+'</span> defeats <span style="color:'+TC[lose]+'">'+lose+'</span></div></div>'+
       '</div>'+
 
@@ -163,9 +224,10 @@ function render(i){
       '<b>Context:</b> Week '+g.week+' regular season at '+g.city+'.<br>'+
       '<b>Impact:</b> '+win+' moves to '+(win==h?g.hrec:g.arec)+', '+lose+' drops to '+(lose==h?g.hrec:g.arec)+'.'+
       '</div></div>'+
-
+      '<div class="ct fw" id="draft-'+i+'"><h3>Draft 2026 — '+G[i].home+'</h3><div class="sm">Loading draft data...</div></div>'+
     '</div>';
 
+  renderDraftBody(G[i].home,i);
   window.scrollTo(0,0);
 }
 
