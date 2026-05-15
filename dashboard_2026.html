@@ -2789,30 +2789,24 @@ s+="<div class=\"row\"><span class=\"lb\">Record</span><span class=\"rv\">"+Stri
 s+="<div class=\"row\"><span class=\"lb\">Record QB</span><span class=\"rv\">"+String(d.qbRecord||"0-0")+"</span></div>";
 if (d.offStats) {
   s+="<h4>Offense</h4>";
-  s+="<div class='row'><span>Pass Yds</span><span class='rv'>"+d.offStats.passYds+"</span></div>";
-  s+="<div class='row'><span>Pass Yds/G</span><span class='rv'>"+d.offStats.passYdsG+"</span></div>";
-  s+="<div class='row'><span>Rush Yds</span><span class='rv'>"+d.offStats.rushYds+"</span></div>";
-  s+="<div class='row'><span>Rush Yds/G</span><span class='rv'>"+d.offStats.rushYdsG+"</span></div>";
-  s+="<div class='row'><span>Pts</span><span class='rv'>"+d.offStats.pts+"</span></div>";
-  s+="<div class='row'><span>Pts/G</span><span class='rv'>"+d.offStats.ptsG+"</span></div>";
+  s+="<div class='row'><span>Pase</span><span class='rv'>"+d.offStats.passYdsG+"</span></div>";
+  s+="<div class='row'><span>Tierra</span><span class='rv'>"+d.offStats.rushYdsG+"</span></div>";
+  s+="<div class='row'><span>Puntos</span><span class='rv'>"+d.offStats.ptsG+"</span></div>";
 }
 if(d.off)for(var i=0;i<d.off.length;i++){s+="<div class=\"row\"><span class=\"rv\">"+d.off[i].n+"</span><span><span class=\"pos\">"+d.off[i].p+"</span> <span class=\"g\">"+d.off[i].g+"</span></span></div>";}
 if (d.defStats) {
   s+="<h4>Defense</h4>";
-  s+="<div class='row'><span>Pass Yds</span><span class='rv'>"+d.defStats.passYds+"</span></div>";
-  s+="<div class='row'><span>Pass Yds/G</span><span class='rv'>"+d.defStats.passYdsG+"</span></div>";
-  s+="<div class='row'><span>Rush Yds</span><span class='rv'>"+d.defStats.rushYds+"</span></div>";
-  s+="<div class='row'><span>Rush Yds/G</span><span class='rv'>"+d.defStats.rushYdsG+"</span></div>";
-  s+="<div class='row'><span>Pts</span><span class='rv'>"+d.defStats.pts+"</span></div>";
-  s+="<div class='row'><span>Pts/G</span><span class='rv'>"+d.defStats.ptsG+"</span></div>";
+  s+="<div class='row'><span>Pase</span><span class='rv'>"+d.defStats.passYdsG+"</span></div>";
+  s+="<div class='row'><span>Tierra</span><span class='rv'>"+d.defStats.rushYdsG+"</span></div>";
+  s+="<div class='row'><span>Puntos</span><span class='rv'>"+d.defStats.ptsG+"</span></div>";
   s+="<div class='row'><span>Sacks</span><span class='rv'>"+d.defStats.sacks+"</span></div>";
 }
 if(d.def)for(var i=0;i<d.def.length;i++){s+="<div class=\"row\"><span class=\"rv\">"+d.def[i].n+"</span><span><span class=\"pos\">"+d.def[i].p+"</span> <span class=\"g\">"+d.def[i].g+"</span></span></div>";}
 if (d.olStats) {
   s+="<h4>O-Line</h4>";
-  s+="<div class='row'><span>Sacks Allow</span><span class='rv'>"+d.olStats.sacksAllowed+"</span></div>";
-  s+="<div class='row'><span>Pressure%</span><span class='rv'>"+d.olStats.pressureRate+"%</span></div>";
-  s+="<div class='row'><span>Yds/Contact</span><span class='rv'>"+d.olStats.ydsBeforeContact+"</span></div>";
+  s+="<div class='row'><span>Sacks</span><span class='rv'>"+(d.olStats.sacksAllowed/17).toFixed(1)+"</span></div>";
+  s+="<div class='row'><span>Presión %</span><span class='rv'>"+d.olStats.pressureRate+"%</span></div>";
+  s+="<div class='row'><span>YBK</span><span class='rv'>"+d.olStats.ydsBeforeContact+"</span></div>";
 }
 if(d.draft&&d.draft.length){s+="<h4>Draft 2026</h4>";
 for(var i=0;i<d.draft.length;i++){s+="<div class=\"row\"><span class=\"rv\">"+d.draft[i].n+"</span><span><span class=\"pos\">"+d.draft[i].p+"</span> <span class=\"rnd\">Rd"+d.draft[i].r+"</span></span></div>";}}
