@@ -895,46 +895,69 @@ function renderUDFA(){
 }
 
 function renderSchedule(){
-  let h = '<div class="ct fw"><h3>📅 Calendario 2026</h3>';
-  h += '<div class="sm">Schedule completo se revela el 15 de mayo 2026 (8PM ET). Juegos confirmados abajo.</div></div>';
+  const weekLabels = {1:'Semana 1 (Sep 9-15)',2:'Semana 2 (Sep 17-22)',3:'Semana 3 (Sep 27-28)',
+    4:'Semana 4 (Oct 1-5)',5:'Semana 5 (Oct 8-12)',6:'Semana 6 (Oct 15-19)',
+    7:'Semana 7 (Oct 22-26)',8:'Semana 8 (Nov 1-2)',9:'Semana 9 (Nov 5-9)',
+    10:'Semana 10 (Nov 12-16)',11:'Semana 11 (Nov 19-23)',12:'Semana 12 (Nov 26-30)',
+    13:'Semana 13 (Dic 3-7)',14:'Semana 14 (Dic 10-14)',15:'Semana 15 (Dic 17-21)',
+    16:'Semana 16 (Dic 24-28)',17:'Semana 17 (Dic 31-Ene 4)',18:'Semana 18 (Ene 10)'};
   
-  // Key dates
-  h += '<div class="ct fw"><h3>📌 Fechas Confirmadas</h3><table>';
-  keyDates.forEach(kd => {
-    const d = new Date(kd.date + 'T00:00:00');
-    const ds = d.toLocaleDateString('es-MX', { weekday: 'short', month: 'short', day: 'numeric' });
-    h += '<tr><td style="color:#4a9eff;white-space:nowrap">' + ds + '</td><td><b>' + kd.event + '</b></td><td style="color:#999;font-size:.75rem">' + kd.detail + '</td></tr>';
+  const dayName = d => { const days=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb']; return days[d.getDay()]; };
+  const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const fmtDate = ds => { const d=new Date(ds+'T12:00:00'); return '<span style="font-size:.7rem;color:#888">'+dayName(d)+' '+d.getDate()+' '+months[d.getMonth()]+'</span>'; };
+
+  let h = '<div class="ct fw"><h3>📅 Calendario NFL 2026</h3>';
+  h += '<div class="sm">' + Object.keys(weeklyGames).length + ' semanas · ~270 juegos · Publicado 14 Mayo 2026</div></div>';
+  
+  // International games highlight
+  h += '<div class="ct fw"><h3>🌍 Juegos Internacionales</h3><table>';
+  season2026.international.forEach(g => {
+    const tAway = teamInfo(g.away); const tHome = teamInfo(g.home);
+    h += '<tr><td style="color:#4a9eff;font-size:.78rem">S' + g.week + '</td><td style="font-size:.78rem">' + tAway.name + ' @ ' + tHome.name + '</td><td style="color:#888;font-size:.7rem">' + g.venue + '</td><td style="font-size:.7rem">' + g.label + '</td></tr>';
   });
   h += '</table></div>';
   
-  // Known games
-  h += '<div class="ct fw"><h3>🏈 Juegos Confirmados</h3>';
-  knownGames.forEach(g => {
-    const away = g.away !== 'TBD' ? teamInfo(g.away) : { name: 'TBD', city: '' };
-    const home = g.home !== 'TBD' ? teamInfo(g.home) : { name: 'TBD', city: '' };
-    h += '<div style="margin:5px 0;padding:6px;background:#1a1a2e;border-radius:4px;display:flex;align-items:center;gap:6px">';
-    if(g.away !== 'TBD') h += '<img src="'+logoUrl(g.away)+'" width="20" height="20" style="border-radius:2px">';
-    else h += '<span style="width:20px;height:20px;display:inline-block;background:#333;border-radius:2px"></span>';
-    h += '<div style="flex:1;font-size:.85rem"><b>' + away.name + '</b> <span style="color:#888">@</span> <b>' + home.name + '</b></div>';
-    if(g.home !== 'TBD') h += '<img src="'+logoUrl(g.home)+'" width="20" height="20" style="border-radius:2px">';
-    else h += '<span style="width:20px;height:20px;display:inline-block;background:#333;border-radius:2px"></span>';
-    h += '<div style="font-size:.7rem;color:#888;text-align:right">' + g.tv + '<br>' + g.venue.slice(0,30) + '...</div>';
-    h += '</div>';
-  });
+  // Week selector
+  const wks = Object.keys(weeklyGames).map(Number).sort((a,b)=>a-b);
+  h += '<div style="display:flex;gap:4px;flex-wrap:wrap;margin:6px 0">';
+  h += '<select id="wkSel" onchange="renderWeekGames()">';
+  wks.forEach(w => h += '<option value="'+w+'">' + weekLabels[w] + ' ('+weeklyGames[w].length+' juegos)</option>');
+  h += '</select>';
+  h += '<button onclick="renderWeekGames()">📋 Ver Semana</button>';
   h += '</div>';
   
-  // Season structure
-  h += '<div class="ct fw"><h3>📐 Estructura de Temporada</h3>';
-  h += '<table>';
-  h += '<tr><td colspan="2" style="font-size:.85rem;color:#fff">18 semanas · 17 juegos por equipo · 272 juegos totales</td></tr>';
-  h += '<tr><td style="color:#4a9eff">Partidos divisionales</td><td>6 (ida/vuelta vs 3 rivales de división)</td></tr>';
-  h += '<tr><td style="color:#4a9eff">Conferencia rotativa</td><td>4 (vs una división de la misma conferencia)</td></tr>';
-  h += '<tr><td style="color:#4a9eff">Cross-conference</td><td>4 (vs una división de la otra conferencia)</td></tr>';
-  h += '<tr><td style="color:#4a9eff">Misma posición</td><td>2 (vs equipos que terminaron en mismo lugar)</td></tr>';
-  h += '<tr><td style="color:#4a9eff">Internacional</td><td>1 (Australia, Brasil, Francia, UK, Alemania, España)</td></tr>';
-  h += '</table></div>';
-  
+  h += '<div id="weekGamesContainer"></div>';
+  h += '</div><script>renderWeekGames()<' + '/script>';
   return h;
+}
+
+function renderWeekGames(){
+  const el = document.getElementById('weekGamesContainer');
+  if(!el) return;
+  const sel = document.getElementById('wkSel');
+  const w = parseInt(sel.value);
+  const gms = weeklyGames[w] || [];
+  const dayName = d => { const days=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb']; return days[d.getDay()]; };
+  const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const fmtDate = ds => { const d=new Date(ds+'T12:00:00'); return dayName(d)+' '+d.getDate()+' '+months[d.getMonth()]; };
+  
+  let h = '<h3 style="margin:6px 0;font-size:1rem;color:#ffd700">Semana ' + w + ' — ' + gms.length + ' juegos</h3>';
+  
+  gms.forEach(g => {
+    const a = teamInfo(g.away);
+    const hm = teamInfo(g.home);
+    const dateStr = fmtDate(g.date);
+    let noteHtml = '';
+    if(g.note) noteHtml = '<span style="font-size:.65rem;color:#ffd700;background:#332200;padding:1px 5px;border-radius:3px;margin-left:4px">' + g.note + '</span>';
+    h += '<div style="margin:4px 0;padding:5px 8px;background:#1a1a2e;border-radius:4px;display:flex;align-items:center;gap:5px;border-left:3px solid #4a9eff">';
+    h += '<img src="'+logoUrl(g.away)+'" width="20" height="20" style="border-radius:2px">';
+    h += '<div style="flex:1;font-size:.82rem"><b>' + a.name + '</b> <span style="color:#888">@</span> <b>' + hm.name + '</b></div>';
+    h += '<img src="'+logoUrl(g.home)+'" width="20" height="20" style="border-radius:2px">';
+    h += '<div style="text-align:right;font-size:.7rem"><span style="color:#999">' + dateStr + '</span>' + noteHtml + '</div>';
+    h += '</div>';
+  });
+  
+  el.innerHTML = h;
 }
 
 function renderRosters(){
