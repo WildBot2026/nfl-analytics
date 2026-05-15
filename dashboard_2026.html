@@ -1395,6 +1395,8 @@ renderBetting();
 }
 function homeTab(){showTab("overview")}
 
+document.addEventListener('click',function(e){var el=e.target.closest('.bgc');if(el){showBettingGame(parseInt(el.dataset.w),el.dataset.a,el.dataset.h);}});
+
 </script>
 </body>
 </html>
