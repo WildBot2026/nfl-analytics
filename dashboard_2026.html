@@ -1347,44 +1347,49 @@ function loadWeek(){cw=parseInt(document.getElementById("weekSel").value);cf="al
 function showAllBetting(){cf="all";renderBetting();}
 function showBettingLocks(){cf="locks";renderBetting();}
 function renderBetting(){
-var gs=wg[cw]||[];if(cf==="locks")gs=gs.filter(function(g){return an(g).isLock});
-document.getElementById("bc").textContent=gs.length+" juegos";
-var h="<div class=\'ct fw\' style=\'padding:8px\'><div style=\'display:flex;gap:6px;flex-wrap:wrap;align-items:center\'><select id=\'weekSel\' onchange=\'loadWeek()\'></select>";
-h+="<button onclick=\'showAllBetting()\' style=\'background:#16162a;border:1px solid #333;color:#ddd;padding:3px 10px;border-radius:4px;cursor:pointer;font-size:.78rem\'>\ud83d\udccb Todos</button>";
-h+="<button onclick=\'showBettingLocks()\' style=\'background:#16162a;border:1px solid #333;color:#ddd;padding:3px 10px;border-radius:4px;cursor:pointer;font-size:.78rem\'>\ud83d\udd12 Locks</button>";
-h+="<span id=\'bc\' style=\'color:#888;font-size:.78rem\'></span></div></div>";
-h+="<div style=\'display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:6px\'>";
+var gs=wg[cw]||[];
+if(cf==="locks")gs=gs.filter(function(g){return an(g).isLock});
+var bcEl=document.getElementById("bc");
+if(bcEl)bcEl.textContent=gs.length+" juegos";
+var h='<div class="ct fw" style="padding:8px"><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">';
+h+='<select id="weekSel" onchange="loadWeek()">';
+for(var wi=1;wi<=18;wi++)h+='<option value="'+wi+'">'+wl[wi]+'</option>';
+h+='</select>';
+h+='<button onclick="showAllBetting()" style="background:#16162a;border:1px solid #333;color:#ddd;padding:3px 10px;border-radius:4px;cursor:pointer;font-size:.78rem">TODOS</button>';
+h+='<button onclick="showBettingLocks()" style="background:#16162a;border:1px solid #333;color:#ddd;padding:3px 10px;border-radius:4px;cursor:pointer;font-size:.78rem">LOCKS</button>';
+h+='<span id="bc" style="color:#888;font-size:.78rem"></span></div></div>';
+h+='<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:6px">';
 gs.forEach(function(g){
 var a1=an(g);
-var ni=g.note&&(g.note.indexOf("TNF")>=0||g.note.indexOf("MNF")>=0)?"\ud83c\udf19":g.note&&g.note.indexOf("Kickoff")>=0?"\ud83c\udfc6":"";
+var ni=g.note&&(g.note.indexOf("TNF")>=0||g.note.indexOf("MNF")>=0)?"M":g.note&&g.note.indexOf("Kickoff")>=0?"K":"";
 h+='<div class="bgc" data-w="'+g.week+'" data-a="'+g.away+'" data-h="'+g.home+'" style="background:#16162a;border:1px solid #28283e;border-radius:5px;padding:8px;cursor:pointer">';
-h+="<div style='display:flex;justify-content:space-between;color:#888;font-size:.72rem;margin-bottom:3px'><span>"+ni+" S"+g.week+"</span><span>"+g.date+"</span></div>";
-h+="<div style='display:flex;align-items:center;gap:6px;margin:2px 0'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.away+".png' width='22' height='22' onerror="this.style.display='none'"><span style='font-size:.82rem'><b>"+g.away+"</b></span></div>";
-h+="<div style='display:flex;align-items:center;gap:6px;margin:2px 0'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.home+".png' width='22' height='22' onerror="this.style.display='none'"><span style='font-size:.82rem'><b>"+g.home+"</b></span></div>";
-var ss=g.spread<0?g.home+" "+g.spread:g.spread>0?g.home+" +"+g.spread:"Pick'em";
-h+="<div style='margin:3px 0'><span class='odd sp'>"+ss+"</span><span class='odd ou'>O/U "+g.ou+"</span></div>";
-h+="<div style='margin-top:2px'>";
-if(a1.mlConf>=65)h+="<span class='odd ml'>\ud83c\udfaf "+a1.mlPick+" ("+a1.mlConf+"%)</span>";
-if(a1.atsConf>=60)h+="<span class='odd ats'>ATS "+a1.atsPick+" ("+a1.atsConf+"%)</span>";
-h+="<span class='odd ou'>"+a1.ouPick+" ("+a1.ouConf+"%)</span>";
-if(a1.isLock)h+="<span class='odd lock'>\ud83d\udd12 LOCK</span>";
-h+="</div></div>";
+h+='<div style="display:flex;justify-content:space-between;color:#888;font-size:.72rem;margin-bottom:3px"><span>'+ni+' S'+g.week+'</span><span>'+g.date+'</span></div>';
+h+='<div style="display:flex;align-items:center;gap:6px;margin:2px 0"><span style="font-size:.82rem"><b>'+g.away+'</b></span><span style="color:#888">@</span><span style="font-size:.82rem"><b>'+g.home+'</b></span></div>';
+var ss=g.spread<0?g.home+" "+g.spread:g.spread>0?g.home+" +"+g.spread:"Pickem";
+h+='<div style="margin:3px 0"><span class="odd sp">'+ss+'</span><span class="odd ou">O/U '+g.ou+'</span></div>';
+h+='<div style="margin-top:2px">';
+if(a1.mlConf>=65)h+='<span class="odd ml">ML '+a1.mlPick+' ('+a1.mlConf+'%)</span>';
+if(a1.atsConf>=60)h+='<span class="odd ats">ATS '+a1.atsPick+' ('+a1.atsConf+'%)</span>';
+h+='<span class="odd ou">'+a1.ouPick+' ('+a1.ouConf+'%)</span>';
+if(a1.isLock)h+='<span class="odd lock">LOCK</span>';
+h+='</div></div>';
 });
-h+="</div>";
-if(gs.length===0)h="<div style=\'color:#888;text-align:center;padding:30px\'>No hay juegos</div>";
+h+='</div>';
+if(gs.length===0)h='<div style="color:#888;text-align:center;padding:30px">No hay juegos</div>';
 document.getElementById("an").innerHTML=h;
-var ws=document.getElementById("weekSel");if(ws){ws.innerHTML="";for(var wi=1;wi<=18;wi++){var o=document.createElement("option");o.value=wi;o.textContent=wl[wi];ws.appendChild(o)}ws.value=cw;}
 }
 function showBettingGame(w,away,home){
 var g=wg[w].find(function(x){return x.away===away&&x.home===home});if(!g)return;
 var a1=an(g);
-var h="<button onclick=\'document.getElementById(\\\"an\\\").innerHTML=renderBetting()\' style=\'background:#222;border:1px solid #555;color:#ddd;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:.8rem;margin-bottom:6px\'>\u2190 Volver</button><div class=\'agd\'>";
-h+="<div class=\'ct fw\'><div style=\'display:flex;align-items:center;gap:10px\'><img src=\'https://a.espncdn.com/i/teamlogos/nfl/500/"+g.away+".png\' width=\'30\' height=\'30\' onerror=\'this.style.display=\\\"none\\\"\'><div style=\'flex:1;text-align:center\'><span style=\'font-size:.78rem;color:#888\'>S"+w+" \u00b7 "+g.date+(g.note?" \u00b7 "+g.note:"")+"</span><br><span style=\'font-size:1rem\'><b style=\'color:#fff\'>"+g.away+"</b> <span style=\'color:#888\'>@</span> <b style=\'color:#fff\'>"+g.home+"</b></span></div><img src=\'https://a.espncdn.com/i/teamlogos/nfl/500/"+g.home+".png\' width=\'30\' height=\'30\' onerror=\'this.style.display=\\\"none\\\"\'></div></div>";
-h+="<div class=\'ct\'><h3>\ud83d\udcb0 Moneyline</h3><div class=\'vl\'><span class=\'lb\'>Pick</span><span class=\'rv g\'>"+a1.mlPick+"</span></div><div class=\'vl\'><span class=\'lb\'>Confianza</span><span class=\'rv\'>"+a1.mlConf+"%</span></div><div class=\'bar\'><div class=\'bar-f g\' style=\'width:"+a1.mlConf+"%\'></div></div>";
-if(a1.isLock)h+="<div style=\'margin-top:4px\'><span class=\'odd lock\'>\ud83d\udd12 LOCK</span></div>";
-h+="</div><div class=\'ct\'><h3>\ud83d\udcca ATS</h3><div class=\'vl\'><span class=\'lb\'>Pick</span><span class=\'rv\' style=\'color:#ffd700\'>"+a1.atsPick+"</span></div><div class=\'vl\'><span class=\'lb\'>Confianza</span><span class=\'rv\'>"+a1.atsConf+"%</span></div><div class=\'bar\'><div class=\'bar-f y\' style=\'width:"+a1.atsConf+"%\'></div></div><div class=\'vl\'><span class=\'lb\'>Spread</span><span class=\'rv\'>"+g.home+" "+(g.spread<0?"":"+")+g.spread+"</span></div></div>";
-h+="<div class=\'ct\'><h3>\ud83c\udfaf Over/Under</h3><div class=\'vl\'><span class=\'lb\'>Pick</span><span class=\'rv\' style=\'color:"+(a1.ouPick==="Over"?"#4ade80":"#ddd")+"\'>"+a1.ouPick+" "+g.ou+"</span></div><div class=\'vl\'><span class=\'lb\'>Confianza</span><span class=\'rv\'>"+a1.ouConf+"%</span></div><div class=\'bar\'><div class=\'bar-f b\' style=\'width:"+a1.ouConf+"%\'></div></div></div>";
-h+="<div class=\'ct fw\'><h3>\ud83d\udcca Comparativa</h3><table><tr><th></th><th>"+g.away+"</th><th>"+g.home+"</th></tr><tr><td>Overall</td><td>"+(st[g.away]||70)+"</td><td>"+(st[g.home]||70)+"</td></tr><tr><td>QB</td><td>"+(qb[g.away]||70)+"</td><td>"+(qb[g.home]||70)+"</td></tr><tr><td>Defensa</td><td>"+(df[g.away]||70)+"</td><td>"+(df[g.home]||70)+"</td></tr><tr><td>O-Line</td><td>"+(ol[g.away]||70)+"</td><td>"+(ol[g.home]||70)+"</td></tr></table></div></div>";
+var h='<button onclick="renderBetting()" style="background:#222;border:1px solid #555;color:#ddd;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:.8rem;margin-bottom:6px">BACK</button><div class="agd">';
+h+='<div class="ct fw"><div style="display:flex;align-items:center;gap:10px">';
+h+='<div style="flex:1;text-align:center"><span style="font-size:.78rem;color:#888">S'+w+' '+g.date+(g.note?' '+g.note:'')+'</span><br>';
+h+='<span style="font-size:1rem"><b style="color:#fff">'+g.away+'</b> <span style="color:#888">@</span> <b style="color:#fff">'+g.home+'</b></span></div></div></div>';
+h+='<div class="ct"><h3>ML</h3><div class="vl"><span class="lb">Pick</span><span class="rv g">'+a1.mlPick+'</span></div><div class="vl"><span class="lb">Conf</span><span class="rv">'+a1.mlConf+'%</span></div><div class="bar"><div class="bar-f g" style="width:'+a1.mlConf+'%"></div></div>';
+if(a1.isLock)h+='<div><span class="odd lock">LOCK</span></div>';
+h+='</div><div class="ct"><h3>ATS</h3><div class="vl"><span class="lb">Pick</span><span class="rv" style="color:#ffd700">'+a1.atsPick+'</span></div><div class="vl"><span class="lb">Conf</span><span class="rv">'+a1.atsConf+'%</span></div><div class="bar"><div class="bar-f y" style="width:'+a1.atsConf+'%"></div></div><div class="vl"><span class="lb">Spread</span><span class="rv">'+g.home+' '+(g.spread<0?"":"+")+g.spread+'</span></div></div>';
+h+='<div class="ct"><h3>O/U</h3><div class="vl"><span class="lb">Pick</span><span class="rv">'+a1.ouPick+' '+g.ou+'</span></div><div class="vl"><span class="lb">Conf</span><span class="rv">'+a1.ouConf+'%</span></div><div class="bar"><div class="bar-f b" style="width:'+a1.ouConf+'%"></div></div></div>';
+h+='<div class="ct fw"><h3>COMPARE</h3><table><tr><th></th><th>'+g.away+'</th><th>'+g.home+'</th></tr><tr><td>Overall</td><td>'+(st[g.away]||70)+'</td><td>'+(st[g.home]||70)+'</td></tr><tr><td>QB</td><td>'+(qb[g.away]||70)+'</td><td>'+(qb[g.home]||70)+'</td></tr><tr><td>Def</td><td>'+(df[g.away]||70)+'</td><td>'+(df[g.home]||70)+'</td></tr><tr><td>O-Line</td><td>'+(ol[g.away]||70)+'</td><td>'+(ol[g.home]||70)+'</td></tr></table></div></div>';
 document.getElementById("an").innerHTML=h;}
 function showBettingTab(){
 ['tb-overview','tb-draft','tb-udfa','tb-schedule','tb-rosters','tb-betting'].forEach(function(i){var btn=document.getElementById(i);if(btn)btn.style.background='#16162a';btn.style.borderColor='#333'});
