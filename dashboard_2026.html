@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NFL 2026 Analytics — Temporada 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-<script src="data_2026.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:1.1rem}
@@ -83,7 +82,7 @@ th{color:#4a9eff;font-weight:600}
 // ============================================================
 
 // ---- TEAMS ----
-var teams = [
+const teams = [
   { id: "ARI", name: "Arizona Cardinals", city: "Glendale", conf: "NFC", div: "West", color: "#97233f" },
   { id: "ATL", name: "Atlanta Falcons", city: "Atlanta", conf: "NFC", div: "South", color: "#a71930" },
   { id: "BAL", name: "Baltimore Ravens", city: "Baltimore", conf: "AFC", div: "North", color: "#241773" },
@@ -119,7 +118,7 @@ var teams = [
 ];
 
 // ---- KEY DATES ----
-var keyDates = [
+const keyDates = [
   { date: "2026-08-06", event: "Hall of Fame Game (Canton, OH)", detail: "Cardinals vs. Panthers — NBC 8PM ET" },
   { date: "2026-09-09", event: "Kickoff Week 1", detail: "TBD @ Seattle Seahawks — NBC 8:20PM ET" },
   { date: "2026-09-10", event: "NFL Melbourne, Australia", detail: "49ers vs. Rams — FOX 8:35PM ET" },
@@ -136,7 +135,7 @@ var keyDates = [
 ];
 
 // ---- 2026 DRAFT (complete) ----
-var draft2026 = {
+const draft2026 = {
   ARI: [
     { round: 1, pick: 3,  name: "Jeremiyah Love", pos: "RB", college: "Notre Dame" },
     { round: 2, pick: 34, name: "Chase Bisontis", pos: "IOL", college: "Texas A&M" },
@@ -461,7 +460,7 @@ var draft2026 = {
 };
 
 // ---- UDFAs 2026 ----
-var udfas = {
+const udfas = {
   ARI: [
     { name: "Elijah Culp", pos: "CB", college: "James Madison" },
     { name: "Tre Wallace", pos: "WR", college: "Ole Miss" }
@@ -643,7 +642,7 @@ var udfas = {
 };
 
 // ---- 2026 SCHEDULE (confirmed games + framework) ----
-var season2026 = {
+const season2026 = {
   year: "2026",
   regularSeasonStart: "2026-09-09",
   regularSeasonEnd: "2027-01-10",
@@ -679,7 +678,7 @@ var season2026 = {
 
 // ---- WEEK 1 KICKOFF + KNOWN MATCHUPS ----
 // These are CONFIRMED as of May 9 per NFL and multiple sources:
-var knownGames = [
+const knownGames = [
   { week: 1, date: "2026-09-09", day: "Wed", away: "TBD", home: "SEA", venue: "Lumen Field, Seattle", tv: "NBC", note: "Kickoff Game" },
   { week: 1, date: "2026-09-10", day: "Thu", away: "SF", home: "LAR", venue: "Melbourne Cricket Ground, Australia", tv: "FOX", note: "NFL Melbourne" },
   { week: 4, date: "2026-09-27", day: "Sun", away: "BAL", home: "DAL", venue: "Rio de Janeiro, Brazil", tv: "NFLN", note: "NFL Brazil" },
@@ -709,9 +708,329 @@ const rosterNotes = {
   DAL: { s: ["Caleb Downs (R)", "Malik Hooker"], note: "Downs #11 — best safety in draft" }
 };
 
-var lastUpdated = "2026-05-09T23:55:00Z";
-var scheduleRelease = "2026-05-15T00:00:00Z"; // May 14 8PM ET
+const lastUpdated = "2026-05-09T23:55:00Z";
+const scheduleRelease = "2026-05-15T00:00:00Z"; // May 14 8PM ET
 
+
+
+// === WEEKLY GAMES ===
+const weeklyGames = {
+  1: [ // Week 1 · Sep 9-15 — 16 games
+    {date:"2026-09-09", away:"NE", home:"SEA", note:"Kickoff"},
+    {date:"2026-09-13", away:"ARI", home:"LAC"},
+    {date:"2026-09-13", away:"ATL", home:"PIT"},
+    {date:"2026-09-13", away:"BAL", home:"IND"},
+    {date:"2026-09-13", away:"BUF", home:"HOU"},
+    {date:"2026-09-13", away:"CAR", home:"NO"},
+    {date:"2026-09-13", away:"CHI", home:"LAR"},
+    {date:"2026-09-13", away:"TB", home:"CIN"},
+    {date:"2026-09-13", away:"CLE", home:"JAX"},
+    {date:"2026-09-13", away:"DAL", home:"NYG"},
+    {date:"2026-09-13", away:"DET", home:"GB"},
+    {date:"2026-09-13", away:"MIA", home:"LV"},
+    {date:"2026-09-13", away:"MIN", home:"SF"},
+    {date:"2026-09-13", away:"WSH", home:"PHI"},
+    {date:"2026-09-13", away:"NYJ", home:"TEN"},
+    {date:"2026-09-14", away:"DEN", home:"KC"}
+  ],
+  2: [ // Week 2 · Sep 17-22 — 17 games
+    {date:"2026-09-17", away:"DET", home:"BUF", note:"Thu"},
+    {date:"2026-09-20", away:"SF", home:"ARI"},
+    {date:"2026-09-20", away:"ATL", home:"CAR"},
+    {date:"2026-09-20", away:"NO", home:"BAL"},
+    {date:"2026-09-20", away:"CHI", home:"SEA"},
+    {date:"2026-09-20", away:"CIN", home:"HOU"},
+    {date:"2026-09-20", away:"CLE", home:"TB"},
+    {date:"2026-09-20", away:"WSH", home:"DAL"},
+    {date:"2026-09-20", away:"JAX", home:"DEN"},
+    {date:"2026-09-20", away:"GB", home:"NYJ"},
+    {date:"2026-09-20", away:"IND", home:"KC"},
+    {date:"2026-09-20", away:"LV", home:"LAC"},
+    {date:"2026-09-20", away:"MIA", home:"SF"},
+    {date:"2026-09-20", away:"MIN", home:"CHI"},
+    {date:"2026-09-20", away:"PIT", home:"NE"},
+    {date:"2026-09-20", away:"PHI", home:"TEN"},
+    {date:"2026-09-21", away:"NYG", home:"LAR", note:"Mon"}
+  ],
+  3: [ // Week 3 · Sep 27-28 — 16 games
+    {date:"2026-09-27", away:"LAC", home:"BUF"},
+    {date:"2026-09-27", away:"CAR", home:"CLE"},
+    {date:"2026-09-27", away:"CIN", home:"PIT"},
+    {date:"2026-09-27", away:"BAL", home:"DAL", note:"Rio"},
+    {date:"2026-09-27", away:"LAR", home:"DEN"},
+    {date:"2026-09-27", away:"NYJ", home:"DET"},
+    {date:"2026-09-27", away:"GB", home:"MIN"},
+    {date:"2026-09-27", away:"HOU", home:"IND"},
+    {date:"2026-09-27", away:"NE", home:"JAX"},
+    {date:"2026-09-27", away:"KC", home:"MIA"},
+    {date:"2026-09-27", away:"NO", home:"LV"},
+    {date:"2026-09-27", away:"TEN", home:"NYG"},
+    {date:"2026-09-27", away:"PHI", home:"LAR"},
+    {date:"2026-09-27", away:"SEA", home:"WSH"},
+    {date:"2026-09-27", away:"TB", home:"ATL"},
+    {date:"2026-09-27", away:"ARI", home:"WSH"},
+    {date:"2026-09-28", away:"PHI", home:"CHI", note:"Mon"}
+  ],
+  4: [ // Week 4 · Oct 1-5 — 16 games
+    {date:"2026-10-01", away:"PIT", home:"CLE", note:"Thu"},
+    {date:"2026-10-04", away:"ARI", home:"NYG"},
+    {date:"2026-10-04", away:"TB", home:"ATL"},
+    {date:"2026-10-04", away:"TEN", home:"BAL"},
+    {date:"2026-10-04", away:"NE", home:"BUF"},
+    {date:"2026-10-04", away:"CAR", home:"GB"},
+    {date:"2026-10-04", away:"NYJ", home:"CHI"},
+    {date:"2026-10-04", away:"JAX", home:"CIN"},
+    {date:"2026-10-04", away:"DAL", home:"HOU"},
+    {date:"2026-10-04", away:"DEN", home:"SF"},
+    {date:"2026-10-04", away:"DET", home:"MIN"},
+    {date:"2026-10-04", away:"WSH", home:"IND", note:"Tottenham"},
+    {date:"2026-10-04", away:"KC", home:"LV"},
+    {date:"2026-10-04", away:"LAC", home:"SEA"},
+    {date:"2026-10-04", away:"LAR", home:"PHI"},
+    {date:"2026-10-04", away:"MIA", home:"MIN"}
+  ],
+  5: [ // Week 5 · Oct 8-12 — 14 games (5 bye teams)
+    {date:"2026-10-08", away:"TB", home:"DAL", note:"Thu"},
+    {date:"2026-10-11", away:"ARI", home:"SF"},
+    {date:"2026-10-11", away:"BAL", home:"ATL"},
+    {date:"2026-10-11", away:"CHI", home:"CAR"},
+    {date:"2026-10-11", away:"CIN", home:"MIA"},
+    {date:"2026-10-11", away:"CLE", home:"NYJ"},
+    {date:"2026-10-11", away:"DEN", home:"LAC"},
+    {date:"2026-10-11", away:"GB", home:"TB"},
+    {date:"2026-10-11", away:"HOU", home:"TEN"},
+    {date:"2026-10-11", away:"IND", home:"PIT"},
+    {date:"2026-10-11", away:"PHI", home:"JAX", note:"Tottenham"},
+    {date:"2026-10-11", away:"LV", home:"NE"},
+    {date:"2026-10-11", away:"NYG", home:"WSH"},
+    {date:"2026-10-11", away:"NO", home:"SEA"},
+    {date:"2026-10-12", away:"BUF", home:"LAR", note:"Mon"}
+  ],
+  6: [ // Week 6 · Oct 15-19 — 15 games (2 bye teams)
+    {date:"2026-10-15", away:"SEA", home:"DEN", note:"Thu"},
+    {date:"2026-10-18", away:"BAL", home:"CLE"},
+    {date:"2026-10-18", away:"BUF", home:"LV"},
+    {date:"2026-10-18", away:"CAR", home:"PHI"},
+    {date:"2026-10-18", away:"DAL", home:"GB"},
+    {date:"2026-10-18", away:"SF", home:"DET"},
+    {date:"2026-10-18", away:"JAX", home:"HOU", note:"Wembley"},
+    {date:"2026-10-18", away:"TEN", home:"IND"},
+    {date:"2026-10-18", away:"LAC", home:"KC"},
+    {date:"2026-10-18", away:"MIN", home:"LAR"},
+    {date:"2026-10-18", away:"NO", home:"NYG"},
+    {date:"2026-10-18", away:"NYJ", home:"NE"},
+    {date:"2026-10-18", away:"PIT", home:"TB"},
+    {date:"2026-10-19", away:"WSH", home:"SF", note:"Mon"}
+  ],
+  7: [ // Week 7 · Oct 22-26 — 13 games (6 bye teams)
+    {date:"2026-10-22", away:"NE", home:"CHI", note:"Thu"},
+    {date:"2026-10-25", away:"DEN", home:"ARI"},
+    {date:"2026-10-25", away:"NO", home:"ATL"},
+    {date:"2026-10-25", away:"CIN", home:"BAL"},
+    {date:"2026-10-25", away:"ARI", home:"CAR"},
+    {date:"2026-10-25", away:"CLE", home:"TEN"},
+    {date:"2026-10-25", away:"DET", home:"LAR"},
+    {date:"2026-10-25", away:"NYG", home:"HOU"},
+    {date:"2026-10-25", away:"IND", home:"MIN"},
+    {date:"2026-10-25", away:"KC", home:"SEA"},
+    {date:"2026-10-25", away:"LAR", home:"LV"},
+    {date:"2026-10-25", away:"MIA", home:"NYJ"},
+    {date:"2026-10-25", away:"PIT", home:"NO", note:"Paris"},
+    {date:"2026-10-26", away:"DAL", home:"PHI", note:"Mon"}
+  ],
+  8: [ // Week 8 · Nov 1-2 — 13 games (6 bye)
+    {date:"2026-11-01", away:"ARI", home:"DAL"},
+    {date:"2026-11-01", away:"BAL", home:"BUF"},
+    {date:"2026-11-01", away:"MIN", home:"CAR"},
+    {date:"2026-11-01", away:"TEN", home:"CIN"},
+    {date:"2026-11-01", away:"CLE", home:"PIT"},
+    {date:"2026-11-01", away:"KC", home:"DEN"},
+    {date:"2026-11-01", away:"DET", home:"SEA"},
+    {date:"2026-11-01", away:"IND", home:"JAX"},
+    {date:"2026-11-01", away:"LAC", home:"LAR"},
+    {date:"2026-11-01", away:"LV", home:"NYJ"},
+    {date:"2026-11-01", away:"NE", home:"MIA"},
+    {date:"2026-11-01", away:"NO", home:"TB"},
+    {date:"2026-11-01", away:"PHI", home:"WSH"}
+  ],
+  9: [ // Week 9 · Nov 5-9 — 14 games (4 bye)
+    {date:"2026-11-05", away:"JAX", home:"BAL", note:"Thu"},
+    {date:"2026-11-08", away:"CHI", home:"ARI"},
+    {date:"2026-11-08", away:"ATL", home:"CIN", note:"Madrid"},
+    {date:"2026-11-08", away:"DEN", home:"CAR"},
+    {date:"2026-11-08", away:"CLE", home:"NO"},
+    {date:"2026-11-08", away:"DAL", home:"IND"},
+    {date:"2026-11-08", away:"DET", home:"MIA"},
+    {date:"2026-11-08", away:"GB", home:"NE"},
+    {date:"2026-11-08", away:"HOU", home:"LAC"},
+    {date:"2026-11-08", away:"NYJ", home:"KC"},
+    {date:"2026-11-08", away:"LAR", home:"WSH"},
+    {date:"2026-11-08", away:"LV", home:"SF"},
+    {date:"2026-11-08", away:"NYG", home:"PHI"},
+    {date:"2026-11-08", away:"TB", home:"KC"},
+    {date:"2026-11-09", away:"BUF", home:"MIN", note:"Mon"}
+  ],
+  10: [ // Week 10 · Nov 12-16 — 14 games (4 bye)
+    {date:"2026-11-12", away:"CAR", home:"CHI", note:"Thu"},
+    {date:"2026-11-12", away:"WSH", home:"NYG", note:"Thu"},
+    {date:"2026-11-15", away:"ARI", home:"SEA"},
+    {date:"2026-11-15", away:"KC", home:"ATL"},
+    {date:"2026-11-15", away:"BUF", home:"NYJ"},
+    {date:"2026-11-15", away:"PIT", home:"CIN"},
+    {date:"2026-11-15", away:"HOU", home:"CLE"},
+    {date:"2026-11-15", away:"SF", home:"DAL"},
+    {date:"2026-11-15", away:"NE", home:"DET", note:"Munich"},
+    {date:"2026-11-15", away:"MIN", home:"GB"},
+    {date:"2026-11-15", away:"MIA", home:"IND"},
+    {date:"2026-11-15", away:"JAX", home:"TEN"},
+    {date:"2026-11-15", away:"TB", home:"NO"},
+    {date:"2026-11-15", away:"LV", home:"SEA"},
+    {date:"2026-11-16", away:"LAC", home:"BAL", note:"Mon"}
+  ],
+  11: [ // Week 11 · Nov 19-23 — 15 games (2 bye)
+    {date:"2026-11-19", away:"CHI", home:"DET", note:"Thu"},
+    {date:"2026-11-19", away:"IND", home:"HOU", note:"Thu"},
+    {date:"2026-11-22", away:"ARI", home:"KC"},
+    {date:"2026-11-22", away:"ATL", home:"TB"},
+    {date:"2026-11-22", away:"BAL", home:"CAR"},
+    {date:"2026-11-22", away:"MIA", home:"BUF"},
+    {date:"2026-11-22", away:"TEN", home:"DAL"},
+    {date:"2026-11-22", away:"LV", home:"DEN"},
+    {date:"2026-11-22", away:"GB", home:"SF"},
+    {date:"2026-11-22", away:"JAX", home:"NYG"},
+    {date:"2026-11-22", away:"NYJ", home:"LAC"},
+    {date:"2026-11-22", away:"NO", home:"LAR"},
+    {date:"2026-11-22", away:"MIN", home:"SEA"},
+    {date:"2026-11-22", away:"PIT", home:"PHI"},
+    {date:"2026-11-23", away:"CIN", home:"WSH", note:"Mon"}
+  ],
+  12: [ // Week 12 · Nov 26-30 — 16 games (Thanksgiving)
+    {date:"2026-11-26", away:"KC", home:"BUF", note:"Thanksgiving"},
+    {date:"2026-11-26", away:"CHI", home:"GB", note:"Thanksgiving"},
+    {date:"2026-11-26", away:"PHI", home:"DAL", note:"Thanksgiving"},
+    {date:"2026-11-26", away:"DET", home:"MIN", note:"Thanksgiving"},
+    {date:"2026-11-27", away:"DEN", home:"PIT", note:"Fri"},
+    {date:"2026-11-29", away:"WSH", home:"ARI"},
+    {date:"2026-11-29", away:"ATL", home:"CAR"},
+    {date:"2026-11-29", away:"BAL", home:"HOU"},
+    {date:"2026-11-29", away:"NO", home:"CIN"},
+    {date:"2026-11-29", away:"LV", home:"CLE"},
+    {date:"2026-11-29", away:"NYG", home:"IND"},
+    {date:"2026-11-29", away:"TEN", home:"JAX"},
+    {date:"2026-11-29", away:"NE", home:"LAC"},
+    {date:"2026-11-29", away:"TB", home:"LAR"},
+    {date:"2026-11-29", away:"NYJ", home:"MIA"},
+    {date:"2026-11-29", away:"SEA", home:"SF"}
+  ],
+  13: [ // Week 13 · Dec 3-7 — 15 games (2 bye)
+    {date:"2026-12-03", away:"KC", home:"LAR", note:"Thu"},
+    {date:"2026-12-06", away:"PHI", home:"ARI"},
+    {date:"2026-12-06", away:"ATL", home:"NO"},
+    {date:"2026-12-06", away:"BUF", home:"NE"},
+    {date:"2026-12-06", away:"JAX", home:"CHI"},
+    {date:"2026-12-06", away:"CIN", home:"CLE"},
+    {date:"2026-12-06", away:"MIA", home:"DEN"},
+    {date:"2026-12-06", away:"DET", home:"GB"},
+    {date:"2026-12-06", away:"HOU", home:"PIT"},
+    {date:"2026-12-06", away:"LAC", home:"TB"},
+    {date:"2026-12-06", away:"SF", home:"NYG"},
+    {date:"2026-12-06", away:"WSH", home:"TEN"},
+    {date:"2026-12-07", away:"DAL", home:"SEA", note:"Mon"},
+    {date:"2026-12-07", away:"LAR", home:"SF", note:"Mon"}
+  ],
+  14: [ // Week 14 · Dec 10-14 — 16 games
+    {date:"2026-12-10", away:"MIN", home:"NE", note:"Thu"},
+    {date:"2026-12-13", away:"CAR", home:"ARI"},
+    {date:"2026-12-13", away:"ATL", home:"CLE"},
+    {date:"2026-12-13", away:"TB", home:"BAL"},
+    {date:"2026-12-13", away:"BUF", home:"GB"},
+    {date:"2026-12-13", away:"CHI", home:"MIA"},
+    {date:"2026-12-13", away:"KC", home:"CIN"},
+    {date:"2026-12-13", away:"DEN", home:"NYJ"},
+    {date:"2026-12-13", away:"TEN", home:"DET"},
+    {date:"2026-12-13", away:"HOU", home:"WSH"},
+    {date:"2026-12-13", away:"IND", home:"PHI"},
+    {date:"2026-12-13", away:"LAC", home:"LV"},
+    {date:"2026-12-13", away:"NYG", home:"SEA"},
+    {date:"2026-12-13", away:"NO", home:"LV"},
+    {date:"2026-12-13", away:"SF", home:"ARI"},
+    {date:"2026-12-14", away:"PIT", home:"JAX", note:"Mon"}
+  ],
+  15: [ // Week 15 · Dec 17-21 — 16 games
+    {date:"2026-12-17", away:"SF", home:"LAC", note:"Thu"},
+    {date:"2026-12-19", away:"BUF", home:"CHI", note:"Sat"},
+    {date:"2026-12-19", away:"SEA", home:"PHI", note:"Sat"},
+    {date:"2026-12-20", away:"NYJ", home:"ARI"},
+    {date:"2026-12-20", away:"ATL", home:"WSH"},
+    {date:"2026-12-20", away:"BAL", home:"PIT"},
+    {date:"2026-12-20", away:"CAR", home:"CIN"},
+    {date:"2026-12-20", away:"CLE", home:"NYG"},
+    {date:"2026-12-20", away:"DAL", home:"LAR"},
+    {date:"2026-12-20", away:"DEN", home:"LV"},
+    {date:"2026-12-20", away:"DET", home:"SF"},
+    {date:"2026-12-20", away:"MIA", home:"GB"},
+    {date:"2026-12-20", away:"JAX", home:"HOU"},
+    {date:"2026-12-20", away:"IND", home:"TEN"},
+    {date:"2026-12-20", away:"NO", home:"MIN"},
+    {date:"2026-12-21", away:"NE", home:"KC", note:"Mon"}
+  ],
+  16: [ // Week 16 · Dec 24-28 — 16 games
+    {date:"2026-12-24", away:"HOU", home:"PHI", note:"Thu"},
+    {date:"2026-12-25", away:"BUF", home:"DEN", note:"Christmas"},
+    {date:"2026-12-27", away:"ARI", home:"LAR"},
+    {date:"2026-12-27", away:"LV", home:"ATL"},
+    {date:"2026-12-27", away:"CLE", home:"BAL"},
+    {date:"2026-12-27", away:"CAR", home:"TB"},
+    {date:"2026-12-27", away:"DET", home:"CHI"},
+    {date:"2026-12-27", away:"JAX", home:"DAL"},
+    {date:"2026-12-27", away:"SF", home:"KC"},
+    {date:"2026-12-27", away:"LAC", home:"MIA"},
+    {date:"2026-12-27", away:"TEN", home:"LV"},
+    {date:"2026-12-27", away:"WSH", home:"MIN"},
+    {date:"2026-12-27", away:"NE", home:"NYJ"},
+    {date:"2026-12-27", away:"NO", home:"SEA"},
+    {date:"2026-12-28", away:"NYG", home:"DET", note:"Mon"},
+    {date:"2026-12-27", away:"GB", home:"CHI"}
+  ],
+  17: [ // Week 17 · Dec 31-Jan 4 — 16 games
+    {date:"2026-12-31", away:"BAL", home:"CIN", note:"Thu"},
+    {date:"2027-01-02", away:"WSH", home:"JAX", note:"Sat"},
+    {date:"2027-01-03", away:"LV", home:"ARI"},
+    {date:"2027-01-03", away:"CAR", home:"ATL"},
+    {date:"2027-01-03", away:"BUF", home:"MIA"},
+    {date:"2027-01-03", away:"IND", home:"CLE"},
+    {date:"2027-01-03", away:"NYG", home:"DAL"},
+    {date:"2027-01-03", away:"DEN", home:"NE"},
+    {date:"2027-01-03", away:"GB", home:"MIN"},
+    {date:"2027-01-03", away:"KC", home:"LAC"},
+    {date:"2027-01-03", away:"PIT", home:"TEN"},
+    {date:"2027-01-03", away:"PHI", home:"SF"},
+    {date:"2027-01-03", away:"MIN", home:"NYJ"},
+    {date:"2027-01-03", away:"SEA", home:"LAR"},
+    {date:"2027-01-03", away:"SF", home:"TB"},
+    {date:"2027-01-04", away:"HOU", home:"GB", note:"Mon"}
+  ],
+  18: [ // Week 18 · Jan 10 — 16 games (flex scheduling)
+    {date:"2027-01-10", away:"SF", home:"ARI"},
+    {date:"2027-01-10", away:"TB", home:"ATL"},
+    {date:"2027-01-10", away:"PIT", home:"BAL"},
+    {date:"2027-01-10", away:"NYJ", home:"BUF"},
+    {date:"2027-01-10", away:"NO", home:"CAR"},
+    {date:"2027-01-10", away:"CHI", home:"MIN"},
+    {date:"2027-01-10", away:"CLE", home:"CIN"},
+    {date:"2027-01-10", away:"DAL", home:"WSH"},
+    {date:"2027-01-10", away:"LAC", home:"DEN"},
+    {date:"2027-01-10", away:"GB", home:"DET"},
+    {date:"2027-01-10", away:"TEN", home:"HOU"},
+    {date:"2027-01-10", away:"JAX", home:"IND"},
+    {date:"2027-01-10", away:"LV", home:"KC"},
+    {date:"2027-01-10", away:"LAR", home:"SEA"},
+    {date:"2027-01-10", away:"MIA", home:"NE"},
+    {date:"2027-01-10", away:"PHI", home:"NYG"}
+  ]
+};
+
+// ---- SEASON INFO ----
 
 // === LOGOS URLS ===
 const logoUrl = (t) => `https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/${t.toLowerCase()}.png`;
