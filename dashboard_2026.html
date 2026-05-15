@@ -1357,17 +1357,17 @@ h+="<div style=\'display:grid;grid-template-columns:repeat(auto-fill,minmax(320p
 gs.forEach(function(g){
 var a1=an(g);
 var ni=g.note&&(g.note.indexOf("TNF")>=0||g.note.indexOf("MNF")>=0)?"\ud83c\udf19":g.note&&g.note.indexOf("Kickoff")>=0?"\ud83c\udfc6":"";
-h+="<div style=\'background:#16162a;border:1px solid #28283e;border-radius:5px;padding:8px;cursor:pointer\' onclick=\'showBettingGame("+g.week+",\\\""+g.away+"\\\",\\\""+g.home+"\\\")\'>";
-h+="<div style=\'display:flex;justify-content:space-between;color:#888;font-size:.72rem;margin-bottom:3px\'><span>"+ni+" S"+g.week+"</span><span>"+g.date+"</span></div>";
-h+="<div style=\'display:flex;align-items:center;gap:6px;margin:2px 0\'><img src=\'https://a.espncdn.com/i/teamlogos/nfl/500/"+g.away+".png\' width=\'22\' height=\'22\' onerror=\'this.style.display=\\\"none\\\"\'><span style=\'font-size:.82rem\'><b>"+g.away+"</b></span></div>";
-h+="<div style=\'display:flex;align-items:center;gap:6px;margin:2px 0\'><img src=\'https://a.espncdn.com/i/teamlogos/nfl/500/"+g.home+".png\' width=\'22\' height=\'22\' onerror=\'this.style.display=\\\"none\\\"\'><span style=\'font-size:.82rem\'><b>"+g.home+"</b></span></div>";
-var ss=g.spread<0?g.home+" "+g.spread:g.spread>0?g.home+" +"+g.spread:"Pick\'em";
-h+="<div style=\'margin:3px 0\'><span class=\'odd sp\'>"+ss+"</span><span class=\'odd ou\'>O/U "+g.ou+"</span></div>";
-h+="<div style=\'margin-top:2px\'>";
-if(a1.mlConf>=65)h+="<span class=\'odd ml\'>\ud83c\udfaf "+a1.mlPick+" ("+a1.mlConf+"%)</span>";
-if(a1.atsConf>=60)h+="<span class=\'odd ats\'>ATS "+a1.atsPick+" ("+a1.atsConf+"%)</span>";
-h+="<span class=\'odd ou\'>"+a1.ouPick+" ("+a1.ouConf+"%)</span>";
-if(a1.isLock)h+="<span class=\'odd lock\'>\ud83d\udd12 LOCK</span>";
+h+='<div class="bgc" data-w="'+g.week+'" data-a="'+g.away+'" data-h="'+g.home+'" style="background:#16162a;border:1px solid #28283e;border-radius:5px;padding:8px;cursor:pointer">';
+h+="<div style='display:flex;justify-content:space-between;color:#888;font-size:.72rem;margin-bottom:3px'><span>"+ni+" S"+g.week+"</span><span>"+g.date+"</span></div>";
+h+="<div style='display:flex;align-items:center;gap:6px;margin:2px 0'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.away+".png' width='22' height='22' onerror="this.style.display='none'"><span style='font-size:.82rem'><b>"+g.away+"</b></span></div>";
+h+="<div style='display:flex;align-items:center;gap:6px;margin:2px 0'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.home+".png' width='22' height='22' onerror="this.style.display='none'"><span style='font-size:.82rem'><b>"+g.home+"</b></span></div>";
+var ss=g.spread<0?g.home+" "+g.spread:g.spread>0?g.home+" +"+g.spread:"Pick'em";
+h+="<div style='margin:3px 0'><span class='odd sp'>"+ss+"</span><span class='odd ou'>O/U "+g.ou+"</span></div>";
+h+="<div style='margin-top:2px'>";
+if(a1.mlConf>=65)h+="<span class='odd ml'>\ud83c\udfaf "+a1.mlPick+" ("+a1.mlConf+"%)</span>";
+if(a1.atsConf>=60)h+="<span class='odd ats'>ATS "+a1.atsPick+" ("+a1.atsConf+"%)</span>";
+h+="<span class='odd ou'>"+a1.ouPick+" ("+a1.ouConf+"%)</span>";
+if(a1.isLock)h+="<span class='odd lock'>\ud83d\udd12 LOCK</span>";
 h+="</div></div>";
 });
 h+="</div>";
