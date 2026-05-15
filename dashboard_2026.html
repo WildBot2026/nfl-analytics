@@ -1,64 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NFL 2026 Pro Apuestas</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Inter",sans-serif;background:radial-gradient(ellipse at 20% 50%,#0f0f2a,#0a0a1a);color:#e0e0e0;min-height:100vh;font-size:1rem}
-.w{max-width:1280px;margin:0 auto;padding:16px}
-.hdr{background:linear-gradient(135deg,#1a1a3e,#0d0d2a);border:1px solid #2a2a5a;border-radius:12px;padding:16px 20px;margin-bottom:12px}
-.hdr h1{font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#4a9eff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hdr .sub{font-size:.75rem;color:#8888aa}
-.ctrls{display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#16163a;border:1px solid #2a2a5a;border-radius:10px;padding:8px 12px;margin-bottom:12px}
-.ctrls select{background:#0d0d25;color:#ddd;border:1px solid #3a3a6a;border-radius:8px;padding:8px 30px 8px 14px;font-size:.85rem;font-weight:600;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
-.btn{background:linear-gradient(135deg,#1a1a3e,#0d0d25);border:1px solid #3a3a6a;color:#ccc;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:600;font-family:inherit}
+body{font-family:Inter,sans-serif;background:#09091a;color:#e0e0e0;min-height:100vh}
+.w{max-width:1320px;margin:0 auto;padding:16px}
+.hdr{background:linear-gradient(135deg,#11113a,#0a0a1f);border:1px solid #2a2a5a;border-radius:14px;padding:18px 20px;margin-bottom:14px}
+.hdr h1{font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,#4a9eff,#a855f7,#ff6b35);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hdr .sub{font-size:.75rem;color:#7777aa;margin-top:2px}
+.ctrls{display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#11113a;border:1px solid #2a2a5a;border-radius:10px;padding:10px 14px;margin-bottom:14px}
+.ctrls select{background:#0a0a1f;color:#ddd;border:1px solid #3a3a6a;border-radius:8px;padding:8px 30px 8px 14px;font-size:.85rem;font-weight:600;cursor:pointer;outline:none;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
+.btn{background:linear-gradient(135deg,#1a1a3e,#0d0d25);border:1px solid #3a3a6a;color:#ccc;padding:8px 18px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:600;font-family:inherit}
 .btn.act{background:linear-gradient(135deg,#4a9eff,#2563eb);border-color:#4a9eff;color:#fff}
-.cnt{color:#8888aa;font-size:.8rem;font-weight:600;margin-left:auto}
-.gd{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:10px}
+.btn.lka{background:linear-gradient(135deg,#ff6b3530,#ff444430);border:1px solid #ff6b3560;color:#ff6b35}
+.cnt{color:#8888aa;font-size:.8rem;margin-left:auto;font-weight:600}
+.gd{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:10px}
 @media(max-width:600px){.gd{grid-template-columns:1fr}}
-.gc{background:linear-gradient(135deg,#16163e,#1a1a45);border:1px solid #2a2a5a;border-radius:12px;padding:14px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
-.gc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#4a9eff,#a855f7,#4a9eff);opacity:0;transition:opacity .3s}
-.gc:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(74,158,255,0.12);border-color:#3a3aff}
-.gc:hover::before{opacity:1}
-.gc .top{display:flex;justify-content:space-between;color:#8888aa;font-size:.7rem;font-weight:600;margin-bottom:8px}
-.gc .teams{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.gc .teams .tm{flex:1;font-size:.95rem;font-weight:700;color:#fff}
-.gc .teams .vs{color:#5555aa;font-size:.8rem;font-weight:600}
-.gc .teams .tm.a{text-align:left}.gc .teams .tm.h{text-align:right}
-.gc .lines{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.ln{display:inline-flex;padding:3px 8px;border-radius:6px;font-size:.72rem;font-weight:700;background:#0d0d25;border:1px solid #2a2a5a}
-.ln.sp{color:#a855f7;border-color:#a855f740}.ln.ou{color:#4a9eff;border-color:#4a9eff40}
-.gc .pks{display:flex;gap:4px;flex-wrap:wrap}
-.pk{padding:3px 8px;border-radius:6px;font-size:.7rem;font-weight:700}
-.pk.ml{background:#4ade8020;color:#4ade80;border:1px solid #4ade8040}
-.pk.ats{background:#ffd70020;color:#ffd700;border:1px solid #ffd70040}
-.pk.ou{background:#4a9eff20;color:#4a9eff;border:1px solid #4a9eff40}
-.pk.lk{background:linear-gradient(135deg,#ff6b3530,#ff444430);color:#ff6b35;border:1px solid #ff6b3560;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,0.4)}50%{box-shadow:0 0 0 4px rgba(255,107,53,0)}}
-#dt{display:none;margin-top:12px;background:linear-gradient(135deg,#16163e,#1a1a45);border:1px solid #2a2a5a;border-radius:14px;padding:20px}
-#dt.sh{display:block;animation:fi .3s}
-@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.agd{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:700px){.agd{grid-template-columns:1fr}}
-.cd{background:linear-gradient(135deg,#0d0d25,#16163a);border:1px solid #2a2a5a;border-radius:10px;padding:14px}
-.cd.fw{grid-column:1/-1}.cd h3{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:8px}
-.rw{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a1a3a;font-size:.8rem}
-.rw .lb{color:#8888aa}.rw .rv{font-weight:600}.rw .g{color:#4ade80}
-.bw{height:10px;border-radius:6px;margin:4px 0 8px;background:#0a0a18;overflow:hidden}
-.bf{height:100%;border-radius:6px;transition:width .6s}
-.bf.g{background:linear-gradient(90deg,#4ade80,#22c55e)}
-.bf.b{background:linear-gradient(90deg,#4a9eff,#3b82f6)}
-.bf.y{background:linear-gradient(90deg,#ffd700,#f59e0b)}
-.tbl{width:100%;border-collapse:collapse;font-size:.78rem}
-.tbl td,.tbl th{padding:5px 8px;border-bottom:1px solid #1a1a3a}
-.tbl th{color:#4a9eff;font-weight:700;font-size:.72rem}
-.tbl .vl{font-weight:700}
-.lock-badge{display:inline-flex;background:linear-gradient(135deg,#ff6b3530,#ff444430);border:1px solid #ff6b3560;border-radius:6px;padding:4px 10px;font-size:.75rem;font-weight:700;color:#ff6b35;margin-top:4px;animation:pulse 2s infinite}
-#gl:empty::after{content:'Cargando...';display:block;text-align:center;padding:40px;color:#5555aa}
-</style></head><body><div class="w">
+.gc{background:#11113a;border:1px solid #2a2a5a;border-radius:12px;cursor:pointer;transition:all .25s}
+.gc:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(74,158,255,0.12);border-color:#4a9eff}
+.gc .top{display:flex;justify-content:space-between;padding:8px 12px 0;font-size:.65rem;color:#8888aa;font-weight:600;text-transform:uppercase}
+.gc .bd{padding:8px 12px;display:flex;align-items:center;gap:10px}
+.gc .bd .lg{width:40px;height:40px;flex-shrink:0}
+.gc .bd .lg img{width:100%;height:100%;object-fit:contain}
+.gc .bd .nm{font-size:.9rem;font-weight:700;color:#fff}
+.gc .bd .vs{color:#5555aa;font-size:.7rem;font-weight:700;padding:0 2px;flex-shrink:0}
+.gc .bot{padding:4px 12px 10px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+.badge{padding:3px 8px;border-radius:5px;font-size:.68rem;font-weight:700}
+.badge.sp{background:#a855f720;color:#a855f7;border:1px solid #a855f740}
+.badge.ou{background:#4a9eff20;color:#4a9eff;border:1px solid #4a9eff40}
+.badge.mlp{background:#4ade8020;color:#4ade80;border:1px solid #4ade8040}
+.badge.atp{background:#ffd70020;color:#ffd700;border:1px solid #ffd70040}
+.badge.oup{background:#4a9eff20;color:#4a9eff;border:1px solid #4a9eff40}
+.badge.lk{background:linear-gradient(135deg,#ff6b3530,#ff444430);color:#ff6b35;border:1px solid #ff6b3560;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,0.3)}50%{box-shadow:0 0 0 4px rgba(255,107,53,0)}}
+#dt{display:none}#dt.sh{display:block;animation:fi .3s}
+@keyframes fi{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.dt-inner{background:linear-gradient(135deg,#11113a,#0a0a1f);border:1px solid #2a2a5a;border-radius:14px;padding:20px;margin-top:12px}
+.dt-inner .hb{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.dt-inner .hb button{background:#2a2a5a;border:0;color:#ccc;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:.8rem;font-weight:600}
+.dt-inner .hb button:hover{background:#3a3a6a;color:#fff}
+.dt-inner .top-bar{display:flex;align-items:center;justify-content:center;gap:20px;padding:14px;margin-bottom:14px;background:linear-gradient(135deg,#0d0d25,#1a1a3e);border-radius:12px;border:1px solid #2a2a5a}
+.dt-inner .top-bar .lg{width:56px;height:56px}
+.dt-inner .top-bar .lg img{width:100%;height:100%;object-fit:contain}
+.dt-inner .top-bar .tm{font-size:1.2rem;font-weight:900;color:#fff}
+.dt-inner .top-bar .at{color:#5555aa;font-size:.85rem;font-weight:700;padding:0 6px}
+.dt-inner .gd2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:700px){.dt-inner .gd2{grid-template-columns:1fr}}
+.dt-inner .box{background:linear-gradient(135deg,#0d0d25,#16163a);border:1px solid #2a2a5a;border-radius:10px;padding:14px}
+.dt-inner .box.fw{grid-column:1/-1}
+.dt-inner .box h3{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:8px}
+.dt-inner .box .rw{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid #1a1a3a;font-size:.82rem}
+.dt-inner .box .rw:last-child{border-bottom:0}
+.dt-inner .box .rw .lb{color:#8888aa}
+.dt-inner .box .rw .rv{font-weight:700}
+.dt-inner .box .rw .g{color:#4ade80}.dt-inner .box .rw .r{color:#f87171}.dt-inner .box .rw .y{color:#ffd700}
+.dt-inner .bw{height:12px;border-radius:8px;margin:6px 0 10px;background:#0a0a18;overflow:hidden}
+.dt-inner .bf{height:100%;border-radius:8px;transition:width .6s}
+.dt-inner .bf.g{background:linear-gradient(90deg,#4ade80,#22c55e)}
+.dt-inner .bf.b{background:linear-gradient(90deg,#4a9eff,#3b82f6)}
+.dt-inner .bf.y{background:linear-gradient(90deg,#ffd700,#f59e0b)}
+.dt-inner .tbl{width:100%;border-collapse:collapse;font-size:.82rem}
+.dt-inner .tbl td,.dt-inner .tbl th{padding:6px 10px;border-bottom:1px solid #1a1a3a}
+.dt-inner .tbl th{color:#4a9eff;font-weight:700;font-size:.72rem;text-transform:uppercase}
+.dt-inner .tbl .vl{font-weight:700}
+.dt-inner .tbl .up{color:#4ade80}.dt-inner .tbl .dn{color:#f87171}
+.dt-inner .lock-big{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#ff6b3530,#ff444430);border:1px solid #ff6b3560;border-radius:8px;padding:6px 14px;font-size:.8rem;font-weight:700;color:#ff6b35;margin-top:8px;animation:pulse 2s infinite}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#0a0a1a}
+::-webkit-scrollbar-thumb{background:#2a2a5a;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="w">
 <div class="hdr"><h1>U0001f3c8 NFL 2026 — Apuestas</h1><div class="sub">Super Bowl LXI · SoFi Stadium · 14 Feb 2027</div></div>
-<div class="ctrls"><select id="ws" onchange="cw()">
+<div class="ctrls">
+<select id="ws" onchange="cw()">
 <option value="1">Semana 1 (Sep 9-15)</option>
 <option value="2">Semana 2 (Sep 17-22)</option>
 <option value="3">Semana 3 (Sep 27-28)</option>
@@ -77,8 +97,14 @@ body{font-family:"Inter",sans-serif;background:radial-gradient(ellipse at 20% 50
 <option value="16">Semana 16 (Dic 24-28)</option>
 <option value="17">Semana 17 (Dic 31-Ene 4)</option>
 <option value="18">Semana 18 (Ene 10)</option>
-</select><button class="btn act" onclick="sf('a')">Todos</button><button class="btn" onclick="sf('l')">Locks</button><span class="cnt" id="cnt"></span></div>
-<div id="gl"></div><div id="dt"></div></div>
+</select>
+<button class="btn act" onclick="sf('a')">Todos</button>
+<button class="btn lka" onclick="sf('l')">Locks</button>
+<span class="cnt" id="cnt"></span>
+</div>
+<div id="gl"></div>
+<div id="dt"></div>
+</div>
 <script>
 var tc={"ARI":{"c":"#97233f","n":"Arizona Cardinals"},"ATL":{"c":"#a71930","n":"Atlanta Falcons"},"BAL":{"c":"#241773","n":"Baltimore Ravens"},"BUF":{"c":"#00338d","n":"Buffalo Bills"},"CAR":{"c":"#0085ca","n":"Carolina Panthers"},"CHI":{"c":"#0b162a","n":"Chicago Bears"},"CIN":{"c":"#fb4f14","n":"Cincinnati Bengals"},"CLE":{"c":"#311d00","n":"Cleveland Browns"},"DAL":{"c":"#003594","n":"Dallas Cowboys"},"DEN":{"c":"#002244","n":"Denver Broncos"},"DET":{"c":"#0076b6","n":"Detroit Lions"},"GB":{"c":"#203731","n":"Green Bay Packers"},"HOU":{"c":"#03202f","n":"Houston Texans"},"IND":{"c":"#002c5f","n":"Indianapolis Colts"},"JAX":{"c":"#006778","n":"Jacksonville Jaguars"},"KC":{"c":"#e31837","n":"Kansas City Chiefs"},"LAC":{"c":"#0080c6","n":"LA Chargers"},"LAR":{"c":"#003594","n":"LA Rams"},"LV":{"c":"#000000","n":"Las Vegas Raiders"},"MIA":{"c":"#008e97","n":"Miami Dolphins"},"MIN":{"c":"#4f2683","n":"Minnesota Vikings"},"NE":{"c":"#002244","n":"New England Patriots"},"NO":{"c":"#d3bc8d","n":"New Orleans Saints"},"NYG":{"c":"#0b2265","n":"New York Giants"},"NYJ":{"c":"#125740","n":"New York Jets"},"PHI":{"c":"#004c54","n":"Philadelphia Eagles"},"PIT":{"c":"#000000","n":"Pittsburgh Steelers"},"SEA":{"c":"#002244","n":"Seattle Seahawks"},"SF":{"c":"#aa0000","n":"San Francisco 49ers"},"TB":{"c":"#d50a0a","n":"Tampa Bay Buccaneers"},"TEN":{"c":"#0c2340","n":"Tennessee Titans"},"WAS":{"c":"#5a1414","n":"Washington Commanders"}};
 var st={"KC":95,"BUF":93,"BAL":92,"PHI":91,"DET":90,"SF":89,"CIN":88,"GB":87,"LAR":85,"MIA":84,"HOU":83,"DAL":82,"LAC":81,"SEA":80,"MIN":79,"TB":78,"CHI":77,"DEN":76,"PIT":75,"NYJ":74,"WAS":73,"ATL":72,"ARI":71,"LV":70,"NO":69,"IND":68,"JAX":67,"CLE":66,"TEN":65,"NYG":64,"NE":63,"CAR":62};
@@ -86,9 +112,20 @@ var qb={"KC":96,"BUF":94,"BAL":93,"CIN":91,"PHI":90,"DET":89,"LAR":88,"DAL":87,"
 var df={"BAL":94,"KC":92,"SF":91,"BUF":90,"DET":89,"PHI":88,"CIN":87,"GB":86,"DAL":85,"MIA":84,"LAR":83,"HOU":82,"LAC":81,"SEA":80,"MIN":79,"TB":78,"CHI":77,"DEN":76,"PIT":75,"NYJ":74,"WAS":73,"ATL":72,"ARI":71,"LV":70,"NO":69,"IND":68,"JAX":67,"CLE":66,"TEN":65,"NYG":64,"NE":63,"CAR":62};
 var ol={"PHI":95,"DET":93,"KC":91,"BAL":90,"GB":89,"DAL":88,"LAR":87,"SF":86,"BUF":85,"CIN":84,"MIA":83,"HOU":82,"LAC":81,"SEA":80,"MIN":79,"TB":78,"CHI":77,"DEN":76,"PIT":75,"NYJ":74,"WAS":73,"ATL":72,"ARI":71,"LV":70,"NO":69,"IND":68,"JAX":67,"CLE":66,"TEN":65,"NYG":64,"NE":63,"CAR":62};
 var ga=[[1,"KC","BAL",-5,48.5,"2026-09-09","Kickoff",-250,210,"BAL","KC",5],[1,"BUF","LAR",-3.5,50,"2026-09-10","",-200,170,"LAR","BUF",3.5],[1,"PHI","WAS",-4,47.5,"2026-09-10","",-200,170,"WAS","PHI",4],[1,"CHI","DET",-6.5,45.5,"2026-09-11","",-350,280,"DET","CHI",6.5],[1,"CIN","PIT",-1.5,43.5,"2026-09-11","",-150,130,"PIT","CIN",1.5],[1,"SEA","SF",-4.5,46.5,"2026-09-11","",-250,210,"SF","SEA",4.5],[1,"MIA","NYJ",-3,44.5,"2026-09-12","",-200,170,"NYJ","MIA",3],[1,"GB","MIN",-2.5,47,"2026-09-12","",-150,130,"MIN","GB",2.5],[1,"DAL","NYG",-5,44,"2026-09-12","",-250,210,"NYG","DAL",5],[1,"ATL","NO",-2.5,46.5,"2026-09-12","",-150,130,"NO","ATL",2.5],[1,"LV","DEN",-1,43,"2026-09-12","",-130,110,"DEN","LV",1],[1,"TEN","IND",-2,44,"2026-09-12","",-150,130,"IND","TEN",2],[1,"HOU","JAX",-7,45.5,"2026-09-12","",-350,280,"JAX","HOU",7],[1,"CAR","TB",-4,45,"2026-09-12","",-200,170,"TB","CAR",4],[1,"CLE","BAL",-6,43.5,"2026-09-13","MNF",-350,280,"BAL","CLE",6],[1,"ARI","NE",-2.5,44,"2026-09-13","MNF",-150,130,"NE","ARI",2.5],[2,"BUF","MIA",-3,49.5,"2026-09-17","TNF",-200,170,"MIA","BUF",3],[2,"KC","CIN",-4.5,49,"2026-09-18","",-250,210,"CIN","KC",4.5],[2,"SF","SEA",-5,47,"2026-09-18","",-250,210,"SEA","SF",5],[2,"DET","CHI",-6,46.5,"2026-09-19","",-350,280,"CHI","DET",6],[2,"PHI","ATL",-5.5,47.5,"2026-09-19","",-250,210,"ATL","PHI",5.5],[2,"DAL","WAS",-3.5,45.5,"2026-09-19","",-200,170,"WAS","DAL",3.5],[2,"LAR","ARI",-4,46,"2026-09-19","",-200,170,"ARI","LAR",4],[2,"NO","LV",-2,44.5,"2026-09-19","",-150,130,"LV","NO",2],[2,"NYJ","NE",-3.5,42,"2026-09-19","",-200,170,"NE","NYJ",3.5],[2,"IND","GB",-2,45.5,"2026-09-19","",-150,130,"GB","IND",2],[2,"JAX","TEN",-1,43.5,"2026-09-19","",-130,110,"TEN","JAX",1],[2,"DEN","CLE",-2.5,41.5,"2026-09-19","",-150,130,"CLE","DEN",2.5],[2,"LAC","CAR",-6,44,"2026-09-19","",-350,280,"CAR","LAC",6],[2,"TB","HOU",-1.5,46.5,"2026-09-19","",-150,130,"HOU","TB",1.5],[2,"PIT","BAL",-2,44,"2026-09-20","",-150,130,"BAL","PIT",2],[2,"NYG","CIN",-1,44.5,"2026-09-20","MNF",-130,110,"CIN","NYG",1],[3,"CLE","LAC",-1.5,42,"2026-09-27","",-150,130,"LAC","CLE",1.5],[3,"TEN","HOU",-3,43.5,"2026-09-27","",-200,170,"HOU","TEN",3],[3,"NYJ","DEN",-3,41.5,"2026-09-27","",-200,170,"DEN","NYJ",3],[3,"BAL","DAL",-5,46,"2026-09-27","",-250,210,"DAL","BAL",5],[3,"WAS","CIN",-2.5,46.5,"2026-09-27","",-150,130,"CIN","WAS",2.5],[3,"ATL","TB",-1.5,47.5,"2026-09-27","",-150,130,"TB","ATL",1.5],[3,"SEA","DET",-1.5,48,"2026-09-28","",-150,130,"DET","SEA",1.5],[3,"IND","CHI",-2.5,44,"2026-09-28","",-150,130,"CHI","IND",2.5],[3,"MIA","LAR",-2.5,48.5,"2026-09-28","",-150,130,"LAR","MIA",2.5],[3,"JAX","BUF",-5,47,"2026-09-28","",-250,210,"BUF","JAX",5],[3,"KC","ATL",-6,49.5,"2026-09-28","",-350,280,"ATL","KC",6],[3,"SF","ARI",-6.5,46.5,"2026-09-28","",-350,280,"ARI","SF",6.5],[3,"NO","PHI",-3.5,46,"2026-09-28","",-200,170,"PHI","NO",3.5],[3,"NE","NYG",-1.5,41,"2026-09-28","",-150,130,"NYG","NE",1.5],[3,"PIT","LV",-4,43,"2026-09-28","",-200,170,"LV","PIT",4],[3,"GB","CAR",-6,45,"2026-09-28","",-350,280,"CAR","GB",6],[4,"WAS","PHI",-3,48,"2026-10-01","TNF",-200,170,"PHI","WAS",3],[4,"BAL","BUF",-2.5,48.5,"2026-10-02","",-150,130,"BUF","BAL",2.5],[4,"CIN","KC",-1.5,49,"2026-10-02","",-150,130,"KC","CIN",1.5],[4,"SF","DAL",-4.5,47,"2026-10-03","",-250,210,"DAL","SF",4.5],[4,"MIA","TEN",-5,45.5,"2026-10-03","",-250,210,"TEN","MIA",5],[4,"DET","MIN",-5,47.5,"2026-10-03","",-250,210,"MIN","DET",5],[4,"LAR","GB",-2.5,47.5,"2026-10-03","",-150,130,"GB","LAR",2.5],[4,"LAC","DEN",-3,43,"2026-10-03","",-200,170,"DEN","LAC",3],[4,"HOU","IND",-4,44.5,"2026-10-03","",-200,170,"IND","HOU",4],[4,"NE","MIA",-1.5,43,"2026-10-03","",-150,130,"MIA","NE",1.5],[4,"CLE","WAS",-3,43,"2026-10-03","",-200,170,"WAS","CLE",3],[4,"CHI","CAR",-3,44.5,"2026-10-04","",-200,170,"CAR","CHI",3],[4,"NO","ATL",-2,46,"2026-10-04","",-150,130,"ATL","NO",2],[4,"NYJ","ARI",-2.5,44,"2026-10-04","",-150,130,"ARI","NYJ",2.5],[4,"SEA","NYG",-5,43,"2026-10-04","",-250,210,"NYG","SEA",5],[4,"PIT","CIN",-2.5,44,"2026-10-04","MNF",-150,130,"CIN","PIT",2.5],[5,"LAC","SF",-1.5,47.5,"2026-10-08","TNF",-150,130,"SF","LAC",1.5],[5,"BUF","KC",-3,51.5,"2026-10-09","",-200,170,"KC","BUF",3],[5,"PHI","DAL",-4,48,"2026-10-10","",-200,170,"DAL","PHI",4],[5,"GB","DET",-2,49,"2026-10-10","",-150,130,"DET","GB",2],[5,"BAL","CIN",-4,47.5,"2026-10-10","",-200,170,"CIN","BAL",4],[5,"MIA","NE",-5.5,43.5,"2026-10-10","",-250,210,"NE","MIA",5.5],[5,"SEA","LAR",-1.5,46.5,"2026-10-10","",-150,130,"LAR","SEA",1.5],[5,"TEN","JAX",-3,44,"2026-10-10","",-200,170,"JAX","TEN",3],[5,"HOU","LV",-6,44,"2026-10-10","",-350,280,"LV","HOU",6],[5,"PIT","CLE",-3.5,41.5,"2026-10-10","",-200,170,"CLE","PIT",3.5],[5,"IND","TEN",-2.5,44.5,"2026-10-10","",-150,130,"TEN","IND",2.5],[5,"CHI","NO",-2,45.5,"2026-10-10","",-150,130,"NO","CHI",2],[5,"TB","ARI",-4,47.5,"2026-10-11","",-200,170,"ARI","TB",4],[5,"DEN","LAC",-1.5,42.5,"2026-10-11","",-150,130,"LAC","DEN",1.5],[5,"NYG","WAS",-2,44,"2026-10-11","",-150,130,"WAS","NYG",2],[5,"CAR","ATL",-3,46,"2026-10-11","MNF",-200,170,"ATL","CAR",3],[6,"WAS","CHI",-3,44.5,"2026-10-15","TNF",-200,170,"CHI","WAS",3],[6,"DET","LAR",-4,49.5,"2026-10-16","",-200,170,"LAR","DET",4],[6,"LV","PIT",-2,43,"2026-10-16","",-150,130,"PIT","LV",2],[6,"CIN","CLE",-3.5,43,"2026-10-17","",-200,170,"CLE","CIN",3.5],[6,"BAL","LAC",-4,45.5,"2026-10-17","",-200,170,"LAC","BAL",4],[6,"NO","TB",-1.5,47,"2026-10-17","",-150,130,"TB","NO",1.5],[6,"DAL","SF",-2,47.5,"2026-10-17","",-150,130,"SF","DAL",2],[6,"IND","MIA",-1.5,45.5,"2026-10-17","",-150,130,"MIA","IND",1.5],[6,"TEN","BUF",-5.5,47,"2026-10-17","",-250,210,"BUF","TEN",5.5],[6,"NYJ","PHI",-2.5,44,"2026-10-17","",-150,130,"PHI","NYJ",2.5],[6,"HOU","NE",-6,43.5,"2026-10-17","",-350,280,"NE","HOU",6],[6,"KC","SF",-5,49.5,"2026-10-18","",-250,210,"SF","KC",5],[6,"GB","ARI",-4.5,46.5,"2026-10-18","",-250,210,"ARI","GB",4.5],[6,"CAR","DEN",-1.5,43.5,"2026-10-18","",-150,130,"DEN","CAR",1.5],[6,"MIN","SEA",-2.5,46.5,"2026-10-18","",-150,130,"SEA","MIN",2.5],[6,"NYG","PHI",-4,45,"2026-10-18","MNF",-200,170,"PHI","NYG",4],[7,"BUF","TEN",-6.5,47.5,"2026-10-22","TNF",-350,280,"TEN","BUF",6.5],[7,"PHI","NYG",-5.5,45.5,"2026-10-23","",-250,210,"NYG","PHI",5.5],[7,"SF","KC",-1.5,50,"2026-10-24","",-150,130,"KC","SF",1.5],[7,"CIN","BAL",-2,47,"2026-10-24","",-150,130,"BAL","CIN",2],[7,"LAR","MIN",-3,48.5,"2026-10-24","",-200,170,"MIN","LAR",3],[7,"MIA","IND",-4,46,"2026-10-24","",-200,170,"IND","MIA",4],[7,"DAL","DET",-2,48.5,"2026-10-24","",-150,130,"DET","DAL",2],[7,"LV","SEA",-3,45,"2026-10-24","",-200,170,"SEA","LV",3],[7,"TB","ATL",-2.5,47.5,"2026-10-24","",-150,130,"ATL","TB",2.5],[7,"JAX","HOU",-1.5,44,"2026-10-24","",-150,130,"HOU","JAX",1.5],[7,"CLE","CIN",-2.5,42.5,"2026-10-25","",-150,130,"CIN","CLE",2.5],[7,"ARI","LAR",-1.5,47,"2026-10-25","",-150,130,"LAR","ARI",1.5],[7,"CAR","NO",-2.5,46,"2026-10-25","",-150,130,"NO","CAR",2.5],[7,"NE","NYJ",-1,42,"2026-10-25","",-130,110,"NYJ","NE",1],[7,"CHI","GB",-2.5,45.5,"2026-10-25","",-150,130,"GB","CHI",2.5],[7,"DEN","KC",-5.5,42.5,"2026-10-25","MNF",-250,210,"KC","DEN",5.5],[8,"PIT","PIT",-0.7,50.7,"2026-10-29","",-130,110,"PIT","PIT",0.7],[8,"DET","KC",-2.5,49.8,"2026-10-30","",-150,130,"KC","DET",2.5],[8,"GB","PHI",-0.9,47.3,"2026-10-31","",-130,110,"PHI","GB",0.9],[8,"NO","NO",0.1,49.6,"2026-11-01","",-130,110,"NO","NO",0.1],[8,"HOU","MIA",-0.2,48.6,"2026-11-05","",-130,110,"MIA","HOU",0.2],[8,"LAC","DEN",1.2,43.6,"2026-11-06","",-150,130,"LAC","DEN",1.2],[8,"SF","JAX",6.9,48.1,"2026-11-07","",-350,280,"SF","JAX",6.9],[8,"NYJ","MIN",-2.2,45.1,"2026-11-08","",-150,130,"MIN","NYJ",2.2],[8,"ATL","TEN",2.6,44.4,"2026-11-12","",-200,170,"ATL","TEN",2.6],[8,"IND","IND",-0.2,50.9,"2026-11-13","",-130,110,"IND","IND",0.2],[8,"LAR","BAL",-2,49.7,"2026-11-14","",-150,130,"BAL","LAR",2],[8,"NE","NE",-0.9,45.5,"2026-11-15","",-130,110,"NE","NE",0.9],[8,"TB","CAR",6.2,50,"2026-11-19","",-350,280,"TB","CAR",6.2],[8,"WAS","WAS",-0.2,50.3,"2026-11-20","",-130,110,"WAS","WAS",0.2],[8,"DAL","NYG",5.5,47.5,"2026-11-21","",-250,210,"DAL","NYG",5.5],[8,"CLE","CLE",0.8,46.2,"2026-11-22","",-130,110,"CLE","CLE",0.8],[9,"PIT","CLE",3.4,48.8,"2026-11-26","",-200,170,"PIT","CLE",3.4],[9,"GB","DEN",3.7,43.9,"2026-11-27","",-200,170,"GB","DEN",3.7],[9,"NE","LV",-2.3,44.6,"2026-11-28","",-150,130,"LV","NE",2.3],[9,"CIN","NO",7.2,50.4,"2026-11-29","",-500,380,"CIN","NO",7.2],[9,"PHI","TB",4.3,43.9,"2026-11-30","",-250,210,"PHI","TB",4.3],[9,"ARI","ARI",0.6,44.9,"2026-12-03","",-130,110,"ARI","ARI",0.6],[9,"NYG","NYG",-0.8,48.9,"2026-12-04","",-130,110,"NYG","NYG",0.8],[9,"WAS","DAL",-2.9,44,"2026-12-05","",-200,170,"DAL","WAS",2.9],[9,"HOU","LAR",-1.3,47.2,"2026-12-06","",-150,130,"LAR","HOU",1.3],[9,"MIA","SEA",2.2,49,"2026-12-10","",-150,130,"MIA","SEA",2.2],[9,"CHI","IND",2.8,48.4,"2026-12-11","",-200,170,"CHI","IND",2.8],[9,"TEN","TEN",-0.1,45,"2026-12-12","",-130,110,"TEN","TEN",0.1],[9,"BUF","ATL",7.1,47.7,"2026-12-13","",-500,380,"BUF","ATL",7.1],[9,"BAL","BAL",-0.9,43.5,"2026-12-17","",-130,110,"BAL","BAL",0.9],[9,"KC","LAC",4.7,45.2,"2026-12-18","",-250,210,"KC","LAC",4.7],[9,"JAX","JAX",0.4,50.1,"2026-12-19","",-130,110,"JAX","JAX",0.4],[10,"LV","LV",-0.8,49.5,"2026-12-20","",-130,110,"LV","LV",0.8],[10,"LAR","LAR",0.3,47.3,"2026-12-24","",-130,110,"LAR","LAR",0.3],[10,"DET","WAS",6.2,44.9,"2026-12-25","",-350,280,"DET","WAS",6.2],[10,"CAR","DAL",-5.9,50.2,"2026-12-26","",-350,280,"DAL","CAR",5.9],[10,"DEN","SF",-4.6,50.4,"2026-12-27","",-250,210,"SF","DEN",4.6],[10,"LAC","LAC",0.4,48.8,"2026-12-28","",-130,110,"LAC","LAC",0.4],[10,"SEA","MIN",0.3,44.5,"2026-12-31","",-130,110,"SEA","MIN",0.3],[10,"ARI","NYG",2.8,43.5,"2027-01-01","",-200,170,"ARI","NYG",2.8],[10,"ATL","JAX",1.6,50.4,"2027-01-02","",-150,130,"ATL","JAX",1.6],[10,"MIA","MIA",0,49.8,"2027-01-03","",-130,110,"MIA","MIA",0],[10,"GB","PIT",4.7,46.2,"2027-01-04","",-250,210,"GB","PIT",4.7],[10,"NYJ","NE",3.8,43.3,"2027-01-10","",-200,170,"NYJ","NE",3.8],[10,"CIN","CIN",0.1,45.5,"2026-12-20","",-130,110,"CIN","CIN",0.1],[10,"TB","TB",-0.4,45.1,"2026-12-20","",-130,110,"TB","TB",0.4],[10,"PHI","PHI",-0.1,50.4,"2026-12-20","",-130,110,"PHI","PHI",0.1],[10,"CLE","CLE",0.2,47.5,"2026-12-20","",-130,110,"CLE","CLE",0.2],[11,"HOU","MIA",-0.9,48.1,"2026-12-20","",-130,110,"MIA","HOU",0.9],[11,"BUF","SEA",5.1,49.8,"2026-12-20","",-250,210,"BUF","SEA",5.1],[11,"NO","SF",-7.1,43,"2026-12-20","",-500,380,"SF","NO",7.1],[11,"NE","KC",-11.1,48.9,"2026-12-20","",-700,500,"KC","NE",11.1],[11,"NYG","NYG",-1,43.6,"2026-12-20","",-130,110,"NYG","NYG",1],[11,"PHI","LV",7.1,49.7,"2026-12-20","",-500,380,"PHI","LV",7.1],[11,"PIT","PIT",-0.7,45.5,"2026-12-20","",-130,110,"PIT","PIT",0.7],[11,"ARI","DET",-5.6,50.2,"2026-12-20","",-350,280,"DET","ARI",5.6],[11,"MIN","TB",-0.5,49.2,"2026-12-20","",-130,110,"TB","MIN",0.5],[11,"JAX","JAX",0.2,44.2,"2026-12-20","",-130,110,"JAX","JAX",0.2],[11,"NYJ","DEN",0.3,49.5,"2026-12-20","",-130,110,"NYJ","DEN",0.3],[11,"CLE","CLE",0.5,45.7,"2026-12-20","",-130,110,"CLE","CLE",0.5],[11,"CAR","GB",-7.6,49.5,"2026-12-20","",-500,380,"GB","CAR",7.6],[11,"LAC","LAC",-0.8,50,"2026-12-20","",-130,110,"LAC","LAC",0.8],[11,"WAS","WAS",0.6,46.7,"2026-12-20","",-130,110,"WAS","WAS",0.6],[11,"CIN","CIN",-0.5,43.2,"2026-12-20","",-130,110,"CIN","CIN",0.5],[12,"NO","NO",-1,50.4,"2026-12-20","",-130,110,"NO","NO",1],[12,"NYG","LV",-1.5,48.4,"2026-12-20","",-150,130,"LV","NYG",1.5],[12,"NE","JAX",-1,45.6,"2026-12-20","",-130,110,"JAX","NE",1],[12,"CHI","CHI",0.4,45.4,"2026-12-20","",-130,110,"CHI","CHI",0.4],[12,"CIN","IND",6.5,45.4,"2026-12-20","",-350,280,"CIN","IND",6.5],[12,"ATL","MIA",-3.1,48.4,"2026-12-20","",-200,170,"MIA","ATL",3.1],[12,"DEN","CAR",4.3,47.4,"2026-12-20","",-250,210,"DEN","CAR",4.3],[12,"PIT","PHI",-5.5,47.6,"2026-12-20","",-250,210,"PHI","PIT",5.5],[12,"BUF","BUF",-0.1,44.7,"2026-12-20","",-130,110,"BUF","BUF",0.1],[12,"LAR","LAR",0.6,44.4,"2026-12-20","",-130,110,"LAR","LAR",0.6],[12,"LAC","LAC",0.3,45.7,"2026-12-20","",-130,110,"LAC","LAC",0.3],[12,"GB","MIN",3,44.8,"2026-12-20","",-200,170,"GB","MIN",3],[12,"SF","NYJ",4.5,46.8,"2026-12-20","",-250,210,"SF","NYJ",4.5],[12,"BAL","BAL",-0.2,48,"2026-12-20","",-130,110,"BAL","BAL",0.2],[12,"DET","DET",0,45,"2026-12-20","",-130,110,"DET","DET",0],[12,"WAS","WAS",0.5,49.2,"2026-12-20","",-130,110,"WAS","WAS",0.5],[13,"BAL","BAL",0.6,46.9,"2026-12-20","",-130,110,"BAL","BAL",0.6],[13,"TEN","NE",1.1,44.9,"2026-12-20","",-150,130,"TEN","NE",1.1],[13,"SEA","SEA",-0.8,44.2,"2026-12-20","",-130,110,"SEA","SEA",0.8],[13,"PIT","TB",-1.6,46.3,"2026-12-20","",-150,130,"TB","PIT",1.6],[13,"KC","WAS",6.5,49.7,"2026-12-20","",-350,280,"KC","WAS",6.5],[13,"GB","GB",0.9,43.2,"2026-12-20","",-130,110,"GB","GB",0.9],[13,"MIN","DEN",1,50.5,"2026-12-20","",-130,110,"MIN","DEN",1],[13,"HOU","DET",-1.6,49.7,"2026-12-20","",-150,130,"DET","HOU",1.6],[13,"CAR","LV",-2.1,50.2,"2026-12-20","",-150,130,"LV","CAR",2.1],[13,"NYG","BUF",-9.7,46.1,"2026-12-20","",-500,380,"BUF","NYG",9.7],[13,"LAR","SF",-0.9,49.7,"2026-12-20","",-130,110,"SF","LAR",0.9],[13,"JAX","ATL",-1.6,50.3,"2026-12-20","",-150,130,"ATL","JAX",1.6],[13,"NO","LAC",-4.8,46.4,"2026-12-20","",-250,210,"LAC","NO",4.8],[13,"PHI","PHI",-0.5,45.6,"2026-12-20","",-130,110,"PHI","PHI",0.5],[13,"CLE","IND",0.1,45.2,"2026-12-20","",-130,110,"CLE","IND",0.1],[13,"NYJ","NYJ",0.7,46.8,"2026-12-20","",-130,110,"NYJ","NYJ",0.7],[14,"DAL","JAX",5.2,50.3,"2026-12-20","",-250,210,"DAL","JAX",5.2],[14,"IND","IND",-0.6,47.7,"2026-12-20","",-130,110,"IND","IND",0.6],[14,"MIA","MIA",0.4,45.4,"2026-12-20","",-130,110,"MIA","MIA",0.4],[14,"PIT","HOU",-2.1,47.5,"2026-12-20","",-150,130,"HOU","PIT",2.1],[14,"LAC","LAC",0.3,43.6,"2026-12-20","",-130,110,"LAC","LAC",0.3],[14,"LAR","LAR",-0.2,46.9,"2026-12-20","",-130,110,"LAR","LAR",0.2],[14,"DEN","NYG",4.8,46.7,"2026-12-20","",-250,210,"DEN","NYG",4.8],[14,"DET","KC",-1.6,48.2,"2026-12-20","",-150,130,"KC","DET",1.6],[14,"NE","LV",-1.8,46.7,"2026-12-20","",-150,130,"LV","NE",1.8],[14,"NO","CAR",2,45,"2026-12-20","",-150,130,"NO","CAR",2],[14,"CIN","CIN",-0.1,49,"2026-12-20","",-130,110,"CIN","CIN",0.1],[14,"ATL","ARI",0,47,"2026-12-20","",-130,110,"ATL","ARI",0],[14,"SEA","NYJ",1.7,45.1,"2026-12-20","",-150,130,"SEA","NYJ",1.7],[14,"MIN","MIN",0.8,47.4,"2026-12-20","",-130,110,"MIN","MIN",0.8],[14,"CLE","CLE",-0.5,46.3,"2026-12-20","",-130,110,"CLE","CLE",0.5],[14,"TEN","TEN",0,48.7,"2026-12-20","",-130,110,"TEN","TEN",0],[15,"NYJ","JAX",2.7,44.5,"2026-12-20","",-200,170,"NYJ","JAX",2.7],[15,"BUF","BUF",0.2,49.1,"2026-12-20","",-130,110,"BUF","BUF",0.2],[15,"ATL","TB",-1.3,45.4,"2026-12-20","",-150,130,"TB","ATL",1.3],[15,"WAS","TEN",3.1,44,"2026-12-20","",-200,170,"WAS","TEN",3.1],[15,"CAR","NYG",-1.1,50.6,"2026-12-20","",-150,130,"NYG","CAR",1.1],[15,"CHI","IND",2.2,43.1,"2026-12-20","",-150,130,"CHI","IND",2.2],[15,"DAL","MIN",0.7,50.7,"2026-12-20","",-130,110,"DAL","MIN",0.7],[15,"MIA","MIA",-0.8,43.5,"2026-12-20","",-130,110,"MIA","MIA",0.8],[15,"LAR","LAR",0.4,44.2,"2026-12-20","",-130,110,"LAR","LAR",0.4],[15,"GB","KC",-3.5,45,"2026-12-20","",-200,170,"KC","GB",3.5],[15,"LV","LV",0.2,47.9,"2026-12-20","",-130,110,"LV","LV",0.2],[15,"SEA","SEA",0.8,45.4,"2026-12-20","",-130,110,"SEA","SEA",0.8],[15,"NO","NO",0.1,43.5,"2026-12-20","",-130,110,"NO","NO",0.1],[15,"CLE","CLE",0.5,48,"2026-12-20","",-130,110,"CLE","CLE",0.5],[15,"BAL","ARI",6.5,47.4,"2026-12-20","",-350,280,"BAL","ARI",6.5],[15,"PHI","SF",1,46.8,"2026-12-20","",-130,110,"PHI","SF",1],[16,"LAC","SEA",0.1,45.2,"2026-12-20","",-130,110,"LAC","SEA",0.1],[16,"PHI","PHI",0.2,50.1,"2026-12-20","",-130,110,"PHI","PHI",0.2],[16,"CHI","MIA",-3.3,44.8,"2026-12-20","",-200,170,"MIA","CHI",3.3],[16,"HOU","KC",-3.8,43.2,"2026-12-20","",-200,170,"KC","HOU",3.8],[16,"ARI","GB",-5.2,49.1,"2026-12-20","",-250,210,"GB","ARI",5.2],[16,"LAR","LAR",-0.1,45.2,"2026-12-20","",-130,110,"LAR","LAR",0.1],[16,"CAR","CAR",0.6,50.8,"2026-12-20","",-130,110,"CAR","CAR",0.6],[16,"DET","PIT",4.6,43.8,"2026-12-20","",-250,210,"DET","PIT",4.6],[16,"BUF","IND",8.3,48.3,"2026-12-20","",-500,380,"BUF","IND",8.3],[16,"LV","LV",-0.9,43.7,"2026-12-20","",-130,110,"LV","LV",0.9],[16,"MIN","DAL",-0.5,49.9,"2026-12-20","",-130,110,"DAL","MIN",0.5],[16,"TEN","TEN",0.7,46.7,"2026-12-20","",-130,110,"TEN","TEN",0.7],[16,"JAX","JAX",0.2,47,"2026-12-20","",-130,110,"JAX","JAX",0.2],[16,"SF","TB",3.2,44,"2026-12-20","",-200,170,"SF","TB",3.2],[16,"DEN","DEN",0,43.2,"2026-12-20","",-130,110,"DEN","DEN",0],[16,"BAL","CLE",9.1,45.5,"2026-12-20","",-500,380,"BAL","CLE",9.1],[17,"CHI","CHI",-0.4,47.7,"2026-12-20","",-130,110,"CHI","CHI",0.4],[17,"ATL","ATL",-0.7,47.3,"2026-12-20","",-130,110,"ATL","ATL",0.7],[17,"WAS","WAS",0.1,46.6,"2026-12-20","",-130,110,"WAS","WAS",0.1],[17,"MIA","DET",-1.6,47.6,"2026-12-20","",-150,130,"DET","MIA",1.6],[17,"CIN","CIN",-0.9,49,"2026-12-20","",-130,110,"CIN","CIN",0.9],[17,"TEN","SF",-8.2,48.3,"2026-12-20","",-500,380,"SF","TEN",8.2],[17,"NYG","NYJ",-3.3,43.3,"2026-12-20","",-200,170,"NYJ","NYG",3.3],[17,"NO","SEA",-2.9,50,"2026-12-20","",-200,170,"SEA","NO",2.9],[17,"DAL","DAL",-0.1,48.8,"2026-12-20","",-130,110,"DAL","DAL",0.1],[17,"DEN","DEN",-0.7,46.8,"2026-12-20","",-130,110,"DEN","DEN",0.7],[17,"KC","KC",0.4,48.2,"2026-12-20","",-130,110,"KC","KC",0.4],[17,"PHI","MIN",4.7,46,"2026-12-20","",-250,210,"PHI","MIN",4.7],[17,"BUF","BUF",0.5,50,"2026-12-20","",-130,110,"BUF","BUF",0.5],[17,"PIT","CLE",3.3,50.4,"2026-12-20","",-200,170,"PIT","CLE",3.3],[17,"IND","BAL",-8.1,43.8,"2026-12-20","",-500,380,"BAL","IND",8.1],[17,"ARI","LAR",-4.8,48.6,"2026-12-20","",-250,210,"LAR","ARI",4.8],[18,"NO","NO",-0.4,47.4,"2026-12-20","",-130,110,"NO","NO",0.4],[18,"KC","KC",1,45.4,"2026-12-20","",-130,110,"KC","KC",1],[18,"NYJ","DAL",-2.8,45.4,"2026-12-20","",-200,170,"DAL","NYJ",2.8],[18,"BAL","JAX",7.5,46.1,"2026-12-20","",-500,380,"BAL","JAX",7.5],[18,"NE","BUF",-9.6,43.2,"2026-12-20","",-500,380,"BUF","NE",9.6],[18,"TB","TB",-1,49.9,"2026-12-20","",-130,110,"TB","TB",1],[18,"PIT","CIN",-3.5,49,"2026-12-20","",-200,170,"CIN","PIT",3.5],[18,"MIN","SEA",0.2,44.8,"2026-12-20","",-130,110,"MIN","SEA",0.2],[18,"LAR","LAR",-0.6,45,"2026-12-20","",-130,110,"LAR","LAR",0.6],[18,"NYG","LV",-1.6,44.1,"2026-12-20","",-150,130,"LV","NYG",1.6],[18,"CLE","CLE",-0.9,49.3,"2026-12-20","",-130,110,"CLE","CLE",0.9],[18,"CAR","IND",-2.7,50.3,"2026-12-20","",-200,170,"IND","CAR",2.7],[18,"SF","GB",0.1,49.3,"2026-12-20","",-130,110,"SF","GB",0.1],[18,"DEN","DEN",0,45.2,"2026-12-20","",-130,110,"DEN","DEN",0],[18,"DET","DET",0.9,50.7,"2026-12-20","",-130,110,"DET","DET",0.9],[18,"ATL","ATL",0.6,46.7,"2026-12-20","",-130,110,"ATL","ATL",0.6]];
-var wm={},ca={},cw=1,cf="a";
+var wm={},tn={},ca={},cw=1,cf="a";
+Object.keys(tc).forEach(function(k){tn[k]=tc[k].n;});
 ga.forEach(function(a){var g={w:a[0],a:a[1],h:a[2],s:a[3],o:a[4],d:a[5],n:a[6],mf:a[7],md:a[8],fv:a[9],un:a[10],sv:a[11]};if(!wm[g.w])wm[g.w]=[];wm[g.w].push(g);});
-function an(g){var k=g.w+"_"+g.a+"_"+g.h;if(ca[k])return ca[k];var f=g.fv,ud=g.un,sv=g.sv;var fs=(st[f]||70)+(f===g.h?3:0);var ds=(st[ud]||70)+(ud===g.h?3:0);var sd=fs-ds;var qa=(qb[f]||70)-(qb[ud]||70);var da=(df[f]||70)-(df[ud]||70);var oa=(ol[f]||70)-(ol[ud]||70);var mc=50+sd*2+qa*0.5+da*0.3+oa*0.2;mc=Math.max(45,Math.min(98,mc));var mp=mc>55?f:ud;var ae=(sd-sv*3)+qa*0.2+da*0.15;var ap=ae>0?f:ud;var ar=50+Math.abs(ae);ar=Math.max(45,Math.min(95,ar));var it=(fs+ds)/1.5+((qb[f]||70)+(qb[ud]||70))/5;var od=it-g.o;var op=od>0?"Over":"Under";var oc=50+Math.abs(od)*3;oc=Math.max(45,Math.min(92,oc));var lk=mc>=80&&(sd>8||(sd>5&&qa>10));ca[k]={mp:mp,mr:Math.round(mc),ap:ap,ar:Math.round(ar),op:op,or:Math.round(oc),lk:lk,sd:Math.round(sd*10)/10,qa:Math.round(qa),da:Math.round(da),oa:Math.round(oa)};return ca[k];}
+function an(g){var k=g.w+"_"+g.a+"_"+g.h;if(ca[k])return ca[k];
+var f=g.fv,ud=g.un,sv=g.sv;
+var fs=(st[f]||70)+(f===g.h?3:0);var ds=(st[ud]||70)+(ud===g.h?3:0);var sd=fs-ds;
+var qa=(qb[f]||70)-(qb[ud]||70);var da=(df[f]||70)-(df[ud]||70);var oa=(ol[f]||70)-(ol[ud]||70);
+var mc=50+sd*2+qa*0.5+da*0.3+oa*0.2;mc=Math.max(45,Math.min(99,mc));var mp=mc>55?f:ud;
+var ae=(sd-sv*3)+qa*0.2+da*0.15;var ap=ae>0?f:ud;var ar=50+Math.abs(ae);ar=Math.max(45,Math.min(98,ar));
+var it=(fs+ds)/1.5+((qb[f]||70)+(qb[ud]||70))/5;var od=it-g.o;
+var op=od>0?"Over":"Under";var oc=50+Math.abs(od)*3;oc=Math.max(45,Math.min(95,oc));
+var lk=mc>=82&&sd>6;
+var gr=mc>=93?"A+":mc>=87?"A":mc>=82?"A-":mc>=78?"B+":mc>=73?"B":mc>=68?"B-":mc>=63?"C+":mc>=58?"C":"D";
+ca[k]={mp:mp,mr:Math.round(mc),ap:ap,ar:Math.round(ar),op:op,or:Math.round(oc),lk:lk,sd:Math.round(sd*10)/10,qa:Math.round(qa),fs:Math.round(fs),ds:Math.round(ds),gr:gr};return ca[k];}
 function rd(){
 var gs=wm[cw]||[];if(cf==="l")gs=gs.filter(function(x){return an(x).lk});
 var el=document.getElementById("gl");el.innerHTML="";
@@ -99,55 +136,78 @@ var _w=g.w,_a=g.a,_h=g.h;
 d.onclick=function(){sg(_w,_a,_h);};
 var h="";
 h+="<div class='top'><span>S"+g.w+"</span><span>"+g.d+"</span></div>";
-h+="<div class='teams'><div class='tm a'><b>"+g.a+"</b></div><div class='vs'>@</div><div class='tm h'><b>"+g.h+"</b></div></div>";
+h+="<div class='bd'><div class='lg'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.a+".png' alt=''></div><div style='flex:1'><div class='nm'>"+(tn[g.a]||g.a)+"</div></div>";
+h+="<div class='vs'>@</div>";
+h+="<div style='flex:1;text-align:right'><div class='nm'>"+(tn[g.h]||g.h)+"</div></div><div class='lg'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.h+".png' alt=''></div></div>";
 var ss=g.s<0?g.h+" "+g.s:g.s>0?g.h+" +"+g.s:"PK";
-h+="<div class='lines'><span class='ln sp'>"+ss+"</span><span class='ln ou'>O/U "+g.o+"</span></div>";
-h+="<div class='pks'>";
-if(a.mr>=65)h+="<span class='pk ml'>ML "+a.mp+" ("+a.mr+"%)</span>";
-if(a.ar>=60)h+="<span class='pk ats'>ATS "+a.ap+" ("+a.ar+"%)</span>";
-h+="<span class='pk ou'>"+a.op+" ("+a.or+"%)</span>";
-if(a.lk)h+="<span class='pk lk'>LOCK</span>";
-d.innerHTML=h;el.appendChild(d);
+h+="<div class='bot'><span class='badge sp'>"+ss+"</span><span class='badge ou'>O/U "+g.o+"</span>";
+if(a.mr>=65)h+="<span class='badge mlp'>ML "+a.mp+"</span>";
+if(a.ar>=60)h+="<span class='badge atp'>ATS "+a.ap+"</span>";
+h+="<span class='badge oup'>"+a.op+"</span>";
+if(a.lk)h+="<span class='badge lk'>LOCK</span>";
+h+="</div>";d.innerHTML=h;el.appendChild(d);
 });
 document.getElementById("cnt").textContent=gs.length+" juegos";
 }
 function sg(w,a,h){
 var g=wm[w].find(function(x){return x.a===a&&x.h===h});if(!g)return;
-var anl=an(g);
-var dt=document.getElementById("dt");dt.className="sh";dt.scrollIntoView({behavior:"smooth",block:"start"});
+var a=an(g);var el=document.getElementById("dt");el.className="sh";
+el.scrollIntoView({behavior:"smooth",block:"start"});
 var H=[];
-H.push("<div style='text-align:center;padding:6px 0'><button onclick='document.getElementById(\"dt\").className=\"\"'>Cerrar</button></div>");
-H.push("<div class='agd'>");
-H.push("<div class='cd fw'><div style='text-align:center'><span>S"+w+(g.n?" - "+g.n:"")+"</span><br><span style='font-size:1.4rem;font-weight:900;color:#fff'>"+g.a+" vs "+g.h+"</span><br><span>"+g.d+"</span></div></div>");
-H.push("<div class='cd'><h3>Moneyline</h3>");
-H.push("<div class='rw'><span class='lb'>Pick</span><span class='rv g'>"+anl.mp+"</span></div>");
-H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+anl.mr+"%</span></div>");
-H.push("<div class='bw'><div class='bf g' style='width:"+anl.mr+"%'></div></div>");
-if(anl.lk)H.push("<div class='lock-badge'>LOCK</div>");
+H.push("<div class='dt-inner'>");
+H.push("<div class='hb'><div></div><button onclick='document.getElementById(\'dt\').className=\'\''>Cerrar</button></div>");
+H.push("<div class='top-bar'><div style='text-align:center'><div class='lg' style='margin:0 auto'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.a+".png' alt=''></div><div class='tm'>"+(tn[g.a]||g.a)+"</div></div>");
+H.push("<div class='at'>@</div><div style='text-align:center'><div class='lg' style='margin:0 auto'><img src='https://a.espncdn.com/i/teamlogos/nfl/500/"+g.h+".png' alt=''></div><div class='tm'>"+(tn[g.h]||g.h)+"</div></div></div>");
+H.push("<div style='text-align:center;margin-bottom:14px'><span style='font-size:.82rem;color:#fff;font-weight:600'>Semana "+w+"</span> <span style='color:#8888aa;font-size:.75rem'>"+g.d+"</span></div>");
+H.push("<div class='gd2'>");
+H.push("<div class='box'><h3>Moneyline</h3>");
+H.push("<div class='rw'><span class='lb'>Pick</span><span class='rv g' style='font-size:1rem'>"+a.mp+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+a.mr+"%</span></div>");
+H.push("<div class='bw'><div class='bf g' style='width:"+a.mr+"%'></div></div>");
+H.push("<div class='rw'><span class='lb'>Grado</span><span class='rv' style='color:"+(a.mr>=82?"#4ade80":a.mr>=68?"#ffd700":"#f87171")+"'>"+a.gr+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Fav</span><span class='rv'>"+(g.mf<0?g.a:g.h)+" "+(g.mf<0?"-":"+")+Math.abs(g.mf)+"</span></div>");
+if(a.lk)H.push("<div class='lock-big'>LOCK</div>");
 H.push("</div>");
-H.push("<div class='cd'><h3>ATS</h3>");
-H.push("<div class='rw'><span class='lb'>Pick</span><span style='color:#ffd700'>"+anl.ap+"</span></div>");
-H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+anl.ar+"%</span></div>");
-H.push("<div class='bw'><div class='bf y' style='width:"+anl.ar+"%'></div></div>");
-H.push("<div class='rw'><span class='lb'>Spread</span><span class='rv'>"+g.h+" "+(g.s<0?"":"+")+g.s+"</span></div>");
+H.push("<div class='box'><h3>ATS (Spread)</h3>");
+H.push("<div class='rw'><span class='lb'>Pick</span><span class='rv y'>"+a.ap+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+a.ar+"%</span></div>");
+H.push("<div class='bw'><div class='bf y' style='width:"+a.ar+"%'></div></div>");
+H.push("<div class='rw'><span class='lb'>Linea</span><span class='rv'>"+(g.s>0?"+":"")+g.s+" "+g.h+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Diferencia</span><span class='rv' style='color:"+(a.sd>0?"#4ade80":"#f87171")+"'>"+(a.sd>0?"+":"")+a.sd+" pts</span></div>");
 H.push("</div>");
-H.push("<div class='cd'><h3>Over/Under</h3>");
+H.push("<div class='box'><h3>Over/Under</h3>");
 H.push("<div class='rw'><span class='lb'>Linea</span><span class='rv'>"+g.o+"</span></div>");
-H.push("<div class='rw'><span class='lb'>Pick</span><span class='rv'>"+anl.op+"</span></div>");
-H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+anl.or+"%</span></div>");
-H.push("<div class='bw'><div class='bf b' style='width:"+anl.or+"%'></div></div>");
+H.push("<div class='rw'><span class='lb'>Pick</span><span class='rv' style='color:"+(a.op==="Over"?"#4ade80":"#ddd")+"'>"+a.op+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Confianza</span><span class='rv'>"+a.or+"%</span></div>");
+H.push("<div class='bw'><div class='bf b' style='width:"+a.or+"%'></div></div>");
+var pj=Math.round(g.o+((a.op==="Over"?1:-1)*Math.round((a.or-50)/3)));
+H.push("<div class='rw'><span class='lb'>Proyectado</span><span class='rv'>"+pj+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Diferencia</span><span class='rv' style='color:"+(pj>g.o?"#4ade80":"#f87171")+"'>"+(pj>g.o?"+":"")+(pj-g.o)+"</span></div>");
 H.push("</div>");
-H.push("<div class='cd fw'><table class='tbl'><tr><th>Cat</th><th>"+g.a+"</th><th>"+g.h+"</th><th>Dif</th></tr>");
-var cats={st:"Overall",qb:"QB",df:"Def",ol:"O-Line"};
-Object.keys(cats).forEach(function(k){
-var av=eval(k)[g.a]||70;var hv=eval(k)[g.h]||70;var df=av-hv;
-H.push("<tr><td>"+cats[k]+"</td><td class='vl'>"+av+"</td><td class='vl'>"+hv+"</td><td style='color:"+(df>=0?"#4ade80":"#f87171")+"'>"+(df>0?"+":"")+df+"</td></tr>");
+H.push("<div class='box fw'><h3>Ratings Comparativos</h3><table class='tbl'><tr><th>Categoria</th><th>"+(tn[g.a]||g.a)+"</th><th></th><th>"+(tn[g.h]||g.h)+"</th><th>Dif</th><th>Analisis</th></tr>");
+var cats=[{k:"st",l:"Overall"},{k:"qb",l:"QB"},{k:"df",l:"Defensa"},{k:"ol",l:"O-Line"}];
+cats.forEach(function(c){
+var av=eval(c.k)[g.a]||70;var hv=eval(c.k)[g.h]||70;var df=av-hv;
+var ab=Math.abs(df)>=15?"Dominante":Math.abs(df)>=10?"Ventaja clara":Math.abs(df)>=5?"Ventaja leve":"Emparejado";
+H.push("<tr><td>"+c.l+"</td><td class='vl'>"+av+"</td><td style='color:#5555aa'>vs</td><td class='vl'>"+hv+"</td><td class='"+(df>0?"up":"dn")+"'>"+(df>0?"+":"")+df+"</td><td style='font-size:.72rem;color:#8888aa'>"+ab+"</td></tr>");
 });
 H.push("</table></div>");
+cats.forEach(function(c){
+var av=eval(c.k)[g.a]||70;var hv=eval(c.k)[g.h]||70;
+H.push("<div class='box fw' style='padding:10px 14px'><div style='display:flex;justify-content:space-between;font-size:.72rem;color:#8888aa;margin-bottom:4px'><span>"+(tn[g.a]||g.a)+" ("+av+")</span><span>"+c.l+"</span><span>"+(tn[g.h]||g.h)+" ("+hv+")</span></div>");
+H.push("<div class='bw' style='height:14px;display:flex'><div class='bf b' style='width:"+(av/(av+hv)*100)+"%;border-radius:8px 0 0 8px'></div><div style='width:2px;background:#3a3a6a;flex-shrink:0'></div><div class='bf' style='width:"+(hv/(av+hv)*100)+"%;border-radius:0 8px 8px 0;background:"+(hv>av?"#4a9eff":"#0a0a18")+"'></div></div></div>");
+});
+H.push("<div class='box fw'><h3>Factores Clave</h3>");
+if(a.sd>5)H.push("<div class='rw'><span class='lb'>Diferencia ratings</span><span class='rv g'>"+a.sd+" pts "+(a.sd>0?g.fv:g.un)+"</span></div>");
+H.push("<div class='rw'><span class='lb'>QB ventaja</span><span class='rv' style='color:"+(a.qa>0?"#4ade80":"#f87171")+"'>"+(a.qa>0?"+":"")+a.qa+" "+(a.qa>0?g.a:g.h)+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Def ventaja</span><span class='rv' style='color:"+(a.da>0?"#4ade80":"#f87171")+"'>"+(a.da>0?"+":"")+a.da+" "+(a.da>0?g.a:g.h)+"</span></div>");
+H.push("<div class='rw'><span class='lb'>Spread value</span><span class='rv'>"+(g.sv>0?"+":"")+g.sv+"</span></div>");
 H.push("</div>");
-dt.innerHTML=H.join("");
+H.push("</div></div>");
+el.innerHTML=H.join("");
 }
-function cw(){cw=parseInt(document.getElementById("ws").value);rd();}
+function cw(){cw=parseInt(document.getElementById("ws").value);rd();document.getElementById("dt").className="";}
 function sf(f){cf=f;rd();}
 window.onload=function(){rd();};
-</script></body></html>
+</script>
+</body></html>
