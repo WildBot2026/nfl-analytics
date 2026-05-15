@@ -745,9 +745,9 @@ function teamInfo(t){
 }
 
 function showTab(tab){
-  document.querySelectorAll('[id^="tb-"]').forEach(b => b.style.background = '#16162a');
+  document.querySelectorAll('[id^="tb-"]').forEach(b => {b.style.background = '#16162a'; b.style.borderColor = '#333';});
   const btn = document.getElementById('tb-'+tab);
-  if(btn) btn.style.background = '#222';
+  if(btn) {btn.style.background = '#222'; btn.style.borderColor = '#4a9eff';}
   
   const an = document.getElementById('an');
   let html = '';
@@ -975,8 +975,14 @@ function renderRosters(){
   return h;
 }
 
-// Initialize
-document.getElementById('an').innerHTML = renderOverview();
+// Initialize — si hay #schedule en URL carga calendario, si no overview
+const hash = window.location.hash.replace('#','');
+if(hash === 'schedule') {
+  document.getElementById('an').innerHTML = renderSchedule();
+  showTab('schedule');
+} else {
+  document.getElementById('an').innerHTML = renderOverview();
+}
 </script>
 </body>
 </html>
