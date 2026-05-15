@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NFL 2026 Analytics — Temporada 2026</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="data_2026.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:1.1rem}
@@ -82,7 +83,7 @@ th{color:#4a9eff;font-weight:600}
 // ============================================================
 
 // ---- TEAMS ----
-const teams = [
+var teams = [
   { id: "ARI", name: "Arizona Cardinals", city: "Glendale", conf: "NFC", div: "West", color: "#97233f" },
   { id: "ATL", name: "Atlanta Falcons", city: "Atlanta", conf: "NFC", div: "South", color: "#a71930" },
   { id: "BAL", name: "Baltimore Ravens", city: "Baltimore", conf: "AFC", div: "North", color: "#241773" },
@@ -118,7 +119,7 @@ const teams = [
 ];
 
 // ---- KEY DATES ----
-const keyDates = [
+var keyDates = [
   { date: "2026-08-06", event: "Hall of Fame Game (Canton, OH)", detail: "Cardinals vs. Panthers — NBC 8PM ET" },
   { date: "2026-09-09", event: "Kickoff Week 1", detail: "TBD @ Seattle Seahawks — NBC 8:20PM ET" },
   { date: "2026-09-10", event: "NFL Melbourne, Australia", detail: "49ers vs. Rams — FOX 8:35PM ET" },
@@ -135,7 +136,7 @@ const keyDates = [
 ];
 
 // ---- 2026 DRAFT (complete) ----
-const draft2026 = {
+var draft2026 = {
   ARI: [
     { round: 1, pick: 3,  name: "Jeremiyah Love", pos: "RB", college: "Notre Dame" },
     { round: 2, pick: 34, name: "Chase Bisontis", pos: "IOL", college: "Texas A&M" },
@@ -460,7 +461,7 @@ const draft2026 = {
 };
 
 // ---- UDFAs 2026 ----
-const udfas = {
+var udfas = {
   ARI: [
     { name: "Elijah Culp", pos: "CB", college: "James Madison" },
     { name: "Tre Wallace", pos: "WR", college: "Ole Miss" }
@@ -642,7 +643,7 @@ const udfas = {
 };
 
 // ---- 2026 SCHEDULE (confirmed games + framework) ----
-const season2026 = {
+var season2026 = {
   year: "2026",
   regularSeasonStart: "2026-09-09",
   regularSeasonEnd: "2027-01-10",
@@ -678,7 +679,7 @@ const season2026 = {
 
 // ---- WEEK 1 KICKOFF + KNOWN MATCHUPS ----
 // These are CONFIRMED as of May 9 per NFL and multiple sources:
-const knownGames = [
+var knownGames = [
   { week: 1, date: "2026-09-09", day: "Wed", away: "TBD", home: "SEA", venue: "Lumen Field, Seattle", tv: "NBC", note: "Kickoff Game" },
   { week: 1, date: "2026-09-10", day: "Thu", away: "SF", home: "LAR", venue: "Melbourne Cricket Ground, Australia", tv: "FOX", note: "NFL Melbourne" },
   { week: 4, date: "2026-09-27", day: "Sun", away: "BAL", home: "DAL", venue: "Rio de Janeiro, Brazil", tv: "NFLN", note: "NFL Brazil" },
@@ -708,8 +709,8 @@ const rosterNotes = {
   DAL: { s: ["Caleb Downs (R)", "Malik Hooker"], note: "Downs #11 — best safety in draft" }
 };
 
-const lastUpdated = "2026-05-09T23:55:00Z";
-const scheduleRelease = "2026-05-15T00:00:00Z"; // May 14 8PM ET
+var lastUpdated = "2026-05-09T23:55:00Z";
+var scheduleRelease = "2026-05-15T00:00:00Z"; // May 14 8PM ET
 
 
 // === LOGOS URLS ===
