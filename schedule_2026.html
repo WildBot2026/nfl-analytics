@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NFL 2026 — Calendario + Análisis</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d0d1a;color:#ddd;min-height:100vh;font-size:15px;padding:8px}
+.w{max-width:1100px;margin:0 auto}
+h1{font-size:1.3rem;color:#fff;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+h1 small{font-size:.7rem;color:#888;font-weight:normal}
+.tabs{display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap}
+.tabs button{background:#16162a;border:1px solid #333;color:#aaa;padding:5px 10px;border-radius:4px;cursor:pointer;font-size:.82rem}
+.tabs button:hover,.tabs button.act{background:#222;color:#fff;border-color:#4a9eff}
+.week-box{background:#16162a;border:1px solid #28283e;border-radius:5px;padding:8px;margin-bottom:6px}
+.week-box h2{font-size:.95rem;color:#ffd700;margin-bottom:4px;display:flex;justify-content:space-between;align-items:center}
+.week-box h2 span{font-size:.72rem;color:#888;font-weight:normal}
+.game{display:flex;align-items:center;gap:6px;padding:5px 6px;margin:2px 0;background:#1a1a2e;border-radius:4px;border-left:3px solid #4a9eff;cursor:pointer;transition:background .15s}
+.game:hover{background:#22223a}
+.game .logos{display:flex;align-items:center;gap:4px;min-width:40px}
+.game .logos img{width:20px;height:20px;border-radius:2px}
+.game .matchup{flex:1;font-size:.82rem}
+.game .matchup b{color:#fff}
+.game .meta{text-align:right;font-size:.68rem;color:#888;white-space:nowrap}
+.game .meta .note{color:#ffd700;background:rgba(255,215,0,.1);padding:1px 4px;border-radius:3px;font-weight:600}
+.game.det{background:#1e1e35;border-left-color:#ffd700}
+.detail{display:none;padding:8px 10px;background:#12122a;border-radius:0 0 5px 5px;margin:-2px 0 4px;font-size:.8rem;border:1px solid #28283e;border-top:none}
+.detail.show{display:block}
+.detail .row{display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.detail .row .l{color:#888}
+.detail .row .v{color:#fff;font-weight:500}
+.detail .gr{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+@media(max-width:600px){.detail .gr{grid-template-columns:1fr}}
+.detail .card{background:#16162a;border:1px solid #28283e;border-radius:4px;padding:5px}
+.detail .card h3{font-size:.82rem;color:#4a9eff;margin-bottom:3px}
+.detail .card .p{display:flex;justify-content:space-between;font-size:.75rem;padding:1px 0}
+.detail .card .p .n{color:#888}
+.detail .card .p .v{color:#fff}
+.pick{display:inline-block;padding:2px 8px;border-radius:3px;font-size:.75rem;font-weight:700}
+.pick-w{background:#1b5e2018;color:#4ade80;border:1px solid #4ade8040}
+.pick-l{background:#b71c1c18;color:#f87171;border:1px solid #f8717140}
+.b{font-weight:600}
+.g{color:#4ade80}
+.r{color:#f87171}
+.y{color:#ffd700}
+.tag{font-size:.65rem;background:#333;padding:1px 5px;border-radius:3px;display:inline-block;margin:1px}
+.clima{font-size:.75rem;color:#888;margin:2px 0}
+.pr{font-size:.8rem;color:#bbb;margin:2px 0;padding:4px;background:rgba(74,158,255,.05);border-radius:3px;border-left:2px solid #4a9eff}
+.ld{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin:3px 0}
+.ld div{font-size:.68rem;color:#999;text-align:center;padding:2px;background:#1a1a2e;border-radius:3px}
+.ld div b{color:#fff;display:block;font-size:.78rem}
+.tt{font-size:.72rem;color:#888;background:#1a1a2e;padding:4px;border-radius:3px;text-align:center;margin:2px 0}
+.sm{font-size:.72rem;color:#888}
+</style>
+</head>
+<body>
+<div class="w">
+<h1>🏈 NFL 2026 — Calendario + Análisis <small id="status">Cargando...</small></h1>
+
+<div class="tabs" id="tabs"></div>
+<div id="content"></div>
+</div>
+
+<script>
+let analysis = null;
+let teamsCache = {};
+
+const logoUrl = (t) => `https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/${t.toLowerCase()}.png`;
+
+const weekLabels = {
+  1:'Semana 1 · Sep 9-15',2:'Semana 2 · Sep 17-22',3:'Semana 3 · Sep 27-29',
+  4:'Semana 4 · Oct 1-5',5:'Semana 5 · Oct 8-12',6:'Semana 6 · Oct 15-19',
+  7:'Semana 7 · Oct 22-26',8:'Semana 8 · Nov 1-4',9:'Semana 9 · Nov 5-9',
+  10:'Semana 10 · Nov 12-16',11:'Semana 11 · Nov 19-23',12:'Semana 12 · Nov 26-30',
+  13:'Semana 13 · Dic 3-7',14:'Semana 14 · Dic 10-14',15:'Semana 15 · Dic 17-21',
+  16:'Semana 16 · Dic 24-28',17:'Semana 17 · Dic 31-Ene 4',18:'Semana 18 · Ene 10'
+};
+
+async function boot(){
+  try {
+    let r = await fetch('nfl_2026_analysis.json?_=' + Date.now());
+    if(!r.ok) { document.getElementById('status').textContent = 'Error carga'; return; }
+    analysis = await r.json();
+    document.getElementById('status').textContent = analysis.gameCount + ' juegos · ' + analysis.weekCount + ' semanas';
+    
+    // Build week tabs
+    const weeks = Object.keys(analysis.weeklyGames).sort((a,b) => a-b);
+    const tabsDiv = document.getElementById('tabs');
+    let tabsHtml = '';
+    weeks.forEach(w => {
+      const gms = analysis.weeklyGames[w] || [];
+      tabsHtml += `<button onclick="showWeek(${w})" id="tab-${w}">📅 Semana ${w} (${gms.length})</button>`;
+    });
+    tabsHtml += '<button onclick="showAll()" id="tab-all">📋 Todas</button>';
+    tabsDiv.innerHTML = tabsHtml;
+    
+    // Show current or nearest week
+    showAll();
+  } catch(e) {
+    document.getElementById('status').textContent = 'Error: ' + e.message;
+  }
+}
+
+function showWeek(wn){
+  document.querySelectorAll('#tabs button').forEach(b => b.className = '');
+  const btn = document.getElementById('tab-'+wn);
+  if(btn) btn.className = 'act';
+  
+  const gms = analysis.weeklyGames[wn] || [];
+  renderGames(gms, wn);
+}
+
+function showAll(){
+  document.querySelectorAll('#tabs button').forEach(b => b.className = '');
+  const btn = document.getElementById('tab-all');
+  if(btn) btn.className = 'act';
+  
+  const weeks = Object.keys(analysis.weeklyGames).sort((a,b) => a-b);
+  const cont = document.getElementById('content');
+  let h = '';
+  
+  weeks.forEach(w => {
+    const gms = analysis.weeklyGames[w] || [];
+    h += renderWeekBlock(w, gms, false);
+  });
+  
+  cont.innerHTML = h;
+}
+
+function renderWeekBlock(wn, gms, allExpand){
+  let h = '<div class="week-box">';
+  h += '<h2>📆 ' + (weekLabels[wn] || 'Semana ' + wn) + ' <span>' + gms.length + ' juegos</span></h2>';
+  
+  gms.forEach(g => {
+    const gid = g.date + '_' + g.away + '_' + g.home;
+    const ga = analysis.gameAnalysis[gid];
+    
+    h += '<div class="game" onclick="toggleGame(\''+gid+'\')" id="g-'+gid+'">';
+    h += '<div class="logos"><img src="'+logoUrl(g.away)+'"><span style="color:#888;font-size:.7rem">@</span><img src="'+logoUrl(g.home)+'"></div>';
+    h += '<div class="matchup"><b>' + g.away + '</b> @ <b>' + g.home + '</b>';
+    if(ga && ga.odds && ga.odds.spreadLine) h += ' <span class="y" style="font-size:.7rem">' + ga.odds.spreadLine + '</span>';
+    h += '</div>';
+    h += '<div class="meta">' + formatDate(g.date);
+    if(ga && ga.time) h += ' · ' + ga.time;
+    if(g.note) h += ' <span class="note">' + g.note + '</span>';
+    h += '</div></div>';
+    
+    // Detail panel (hidden)
+    h += '<div class="detail" id="d-'+gid+'">';
+    if(ga) {
+      h += renderGameDetail(ga, g);
+    } else {
+      h += '<div class="sm" style="text-align:center">Análisis no disponible</div>';
+    }
+    h += '</div>';
+  });
+  
+  h += '</div>';
+  return h;
+}
+
+function renderGames(gms, wn){
+  const cont = document.getElementById('content');
+  cont.innerHTML = renderWeekBlock(wn, gms, false);
+}
+
+function renderGameDetail(ga, g){
+  let h = '<div class="gr">';
+  
+  // Left column: Odds + Prediction
+  h += '<div class="card">';
+  h += '<h3>🎲 Líneas</h3>';
+  h += '<div class="p"><span class="n">Spread</span><span class="v">' + ga.odds.spreadLine + '</span></div>';
+  h += '<div class="p"><span class="n">Total</span><span class="v">' + ga.odds.total + '</span></div>';
+  h += '<div class="p"><span class="n">Favorito</span><span class="v y">' + ga.odds.favorite + '</span></div>';
+  h += '<div class="p"><span class="n">Moneyline ' + ga.odds.favorite + '</span><span class="v">' + ga.odds.moneyline[ga.odds.favorite] + '</span></div>';
+  h += '<div class="p"><span class="n">Moneyline ' + ga.odds.underdog + '</span><span class="v">' + ga.odds.moneyline[ga.odds.underdog] + '</span></div>';
+  h += '<div class="tt">' + ga.odds.sources.join(' · ') + '</div>';
+  h += '</div>';
+  
+  // Center: Raven prediction
+  h += '<div class="card">';
+  h += '<h3>🦅 Raven Prediction</h3>';
+  h += '<div style="margin:3px 0">';
+  h += '<span class="pick pick-w">' + ga.ravenPrediction.pick + '</span>';
+  h += ' <span style="font-size:.8rem;color:#ffd700">' + ga.ravenPrediction.confidence + '%</span>';
+  h += '</div>';
+  h += '<div style="margin:3px 0"><span class="pick pick-w">' + ga.ravenPrediction.ouPick + '</span></div>';
+  h += '<div class="pr">' + ga.ravenPrediction.analysis + '</div>';
+  
+  // Head to head
+  if(ga.headToHead) {
+    h += '<div class="sm" style="margin-top:3px;font-size:.68rem;color:#888">';
+    h += 'H2H últimos 5: ' + (ga.headToHead.awayWins || '?') + 'W-' + (ga.headToHead.homeWins || '?') + 'L';
+    h += '</div>';
+  }
+  h += '</div>';
+  
+  // Right column: Weather + Coaches
+  h += '<div class="card">';
+  h += '<h3>🌤️ Clima</h3>';
+  if(ga.weather) {
+    h += '<div class="p"><span class="n">Temp</span><span class="v">' + ga.weather.temperature + '</span></div>';
+    h += '<div class="p"><span class="n">Condición</span><span class="v">' + ga.weather.conditions + '</span></div>';
+    h += '<div class="p"><span class="n">Viento</span><span class="v">' + ga.weather.wind + '</span></div>';
+    if(ga.weather.impact) h += '<div class="clima">⚠️ ' + ga.weather.impact + '</div>';
+  }
+  h += '<h3 style="margin-top:5px">👨‍🏫 Coaches</h3>';
+  if(ga.coaches) {
+    Object.entries(ga.coaches).forEach(([team, coach]) => {
+      h += '<div style="font-size:.78rem;margin:1px 0"><span style="color:#888">' + team + ':</span> ' + coach + '</div>';
+    });
+  }
+  h += '<h3 style="margin-top:5px">📺 ' + (ga.timeLabel || 'Regular') + '</h3>';
+  h += '<div class="sm">' + (ga.timeType === 'night' ? '🌙 Juego nocturno' : ga.timeType === 'afternoon' ? '☀️ Juego vespertino' : '⏰ Horario regular') + '</div>';
+  h += '</div>';
+  
+  // Second row: QB + Key Players
+  h += '</div><div class="gr">';
+  
+  h += '<div class="card">';
+  h += '<h3>🏈 ' + g.away + ' — Ofensa</h3>';
+  if(ga.awayTeam && ga.awayTeam.qb) {
+    h += '<div class="p"><span class="n">QB: ' + ga.awayTeam.qb.name + '</span><span class="v">' + ga.awayTeam.qb.rating + '</span></div>';
+  }
+  h += '<div class="p"><span class="n">Rank Of.</span><span class="v b ' + (ga.awayTeam && ga.awayTeam.offRank <= 10 ? 'g' : ga.awayTeam && ga.awayTeam.offRank <= 20 ? 'y' : 'r') + '">#' + (ga.awayTeam ? ga.awayTeam.offRank : '?') + '</span></div>';
+  h += '<div class="p"><span class="n">Rank Def.</span><span class="v b ' + (ga.awayTeam && ga.awayTeam.defRank <= 10 ? 'g' : ga.awayTeam && ga.awayTeam.defRank <= 20 ? 'y' : 'r') + '">#' + (ga.awayTeam ? ga.awayTeam.defRank : '?') + '</span></div>';
+  if(ga.awayTeam && ga.awayTeam.lastSeason) {
+    h += '<div class="sm">' + ga.awayTeam.lastSeason.wins + '-' + ga.awayTeam.lastSeason.losses + ' · ' + ga.awayTeam.lastSeason.offYards + ' yds of · ' + ga.awayTeam.lastSeason.defYards + ' yds def</div>';
+  }
+  h += '</div>';
+  
+  h += '<div class="card">';
+  h += '<h3>🏈 ' + g.home + ' — Ofensa</h3>';
+  if(ga.homeTeam && ga.homeTeam.qb) {
+    h += '<div class="p"><span class="n">QB: ' + ga.homeTeam.qb.name + '</span><span class="v">' + ga.homeTeam.qb.rating + '</span></div>';
+  }
+  h += '<div class="p"><span class="n">Rank Of.</span><span class="v b ' + (ga.homeTeam && ga.homeTeam.offRank <= 10 ? 'g' : ga.homeTeam && ga.homeTeam.offRank <= 20 ? 'y' : 'r') + '">#' + (ga.homeTeam ? ga.homeTeam.offRank : '?') + '</span></div>';
+  h += '<div class="p"><span class="n">Rank Def.</span><span class="v b ' + (ga.homeTeam && ga.homeTeam.defRank <= 10 ? 'g' : ga.homeTeam && ga.homeTeam.defRank <= 20 ? 'y' : 'r') + '">#' + (ga.homeTeam ? ga.homeTeam.defRank : '?') + '</span></div>';
+  if(ga.homeTeam && ga.homeTeam.lastSeason) {
+    h += '<div class="sm">' + ga.homeTeam.lastSeason.wins + '-' + ga.homeTeam.lastSeason.losses + ' · ' + ga.homeTeam.lastSeason.offYards + ' yds of · ' + ga.homeTeam.lastSeason.defYards + ' yds def</div>';
+  }
+  h += '</div>';
+  
+  // Top players
+  h += '<div class="card">';
+  h += '<h3>⭐ Top Players</h3>';
+  ['awayTeam', 'homeTeam'].forEach(tk => {
+    const teamData = ga[tk];
+    if(!teamData) return;
+    const team = tk === 'awayTeam' ? g.away : g.home;
+    if(teamData.topOffense) {
+      h += '<div style="font-size:.72rem;color:#888;margin-top:2px"><b>' + team + '</b></div>';
+      teamData.topOffense.forEach(p => {
+        h += '<div style="font-size:.7rem;display:flex;justify-content:space-between">';
+        h += '<span>' + p.name.substring(0,18) + '</span>';
+        h += '<span class="' + (p.pos === 'QB' ? 'g' : '') + '">' + p.pos + '</span>';
+        h += '</div>';
+      });
+    }
+  });
+  h += '</div>';
+  
+  h += '</div>';
+  return h;
+}
+
+function toggleGame(gid){
+  const det = document.getElementById('d-'+gid);
+  const game = document.getElementById('g-'+gid);
+  if(!det) return;
+  det.classList.toggle('show');
+  game.classList.toggle('det');
+}
+
+function formatDate(ds){
+  const d = new Date(ds + 'T12:00:00');
+  const days = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+  const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  return days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()];
+}
+
+boot();
+</script>
+</body>
+</html>
