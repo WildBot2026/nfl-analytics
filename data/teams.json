@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2026-05-15",
+    "seasonsAvailable": ["2024", "2025", "2026"]
+  },
+  "teams": {
+    "ARI": { "name": "Arizona Cardinals", "stadium": "State Farm Stadium", "location": "Glendale, AZ", "conference": "NFC", "division": "West", "established": 1920, "colors": ["red", "black", "white"], "coach": "Mike LaFleur" },
+    "ATL": { "name": "Atlanta Falcons", "stadium": "Mercedes-Benz Stadium", "location": "Atlanta, GA", "conference": "NFC", "division": "South", "established": 1966, "colors": ["black", "red", "silver"], "coach": "Kevin Stefanski" },
+    "BAL": { "name": "Baltimore Ravens", "stadium": "M&T Bank Stadium", "location": "Baltimore, MD", "conference": "AFC", "division": "North", "established": 1996, "colors": ["purple", "black", "gold"], "coach": "Jesse Minter" },
+    "BUF": { "name": "Buffalo Bills", "stadium": "Highmark Stadium", "location": "Orchard Park, NY", "conference": "AFC", "division": "East", "established": 1960, "colors": ["blue", "red", "white"], "coach": "Joe Brady" },
+    "CAR": { "name": "Carolina Panthers", "stadium": "Bank of America Stadium", "location": "Charlotte, NC", "conference": "NFC", "division": "South", "established": 1995, "colors": ["black", "blue", "silver"], "coach": "Dave Canales" },
+    "CHI": { "name": "Chicago Bears", "stadium": "Soldier Field", "location": "Chicago, IL", "conference": "NFC", "division": "North", "established": 1920, "colors": ["navy", "orange", "white"], "coach": "Matt Eberflus" },
+    "CIN": { "name": "Cincinnati Bengals", "stadium": "Paycor Stadium", "location": "Cincinnati, OH", "conference": "AFC", "division": "North", "established": 1968, "colors": ["orange", "black", "white"], "coach": "Zac Taylor" },
+    "CLE": { "name": "Cleveland Browns", "stadium": "Huntington Bank Field", "location": "Cleveland, OH", "conference": "AFC", "division": "North", "established": 1946, "colors": ["brown", "orange", "white"], "coach": "Todd Monken" },
+    "DAL": { "name": "Dallas Cowboys", "stadium": "AT&T Stadium", "location": "Arlington, TX", "conference": "NFC", "division": "East", "established": 1960, "colors": ["navy", "silver", "white"], "coach": "Vacante" },
+    "DEN": { "name": "Denver Broncos", "stadium": "Empower Field at Mile High", "location": "Denver, CO", "conference": "AFC", "division": "West", "established": 1960, "colors": ["orange", "blue", "white"], "coach": "Sean Payton" },
+    "DET": { "name": "Detroit Lions", "stadium": "Ford Field", "location": "Detroit, MI", "conference": "NFC", "division": "North", "established": 1930, "colors": ["blue", "silver", "white"], "coach": "Dan Campbell" },
+    "GB": { "name": "Green Bay Packers", "stadium": "Lambeau Field", "location": "Green Bay, WI", "conference": "NFC", "division": "North", "established": 1919, "colors": ["green", "gold", "white"], "coach": "Matt LaFleur" },
+    "HOU": { "name": "Houston Texans", "stadium": "NRG Stadium", "location": "Houston, TX", "conference": "AFC", "division": "South", "established": 2002, "colors": ["navy", "red", "white"], "coach": "DeMeco Ryans" },
+    "IND": { "name": "Indianapolis Colts", "stadium": "Lucas Oil Stadium", "location": "Indianapolis, IN", "conference": "AFC", "division": "South", "established": 1953, "colors": ["blue", "white"], "coach": "Shane Steichen" },
+    "JAX": { "name": "Jacksonville Jaguars", "stadium": "EverBank Stadium", "location": "Jacksonville, FL", "conference": "AFC", "division": "South", "established": 1995, "colors": ["teal", "black", "gold"], "coach": "Liam Coen" },
+    "KC": { "name": "Kansas City Chiefs", "stadium": "GEHA Field at Arrowhead", "location": "Kansas City, MO", "conference": "AFC", "division": "West", "established": 1960, "colors": ["red", "gold", "white"], "coach": "Andy Reid" },
+    "LAC": { "name": "Los Angeles Chargers", "stadium": "SoFi Stadium", "location": "Inglewood, CA", "conference": "AFC", "division": "West", "established": 1960, "colors": ["powder blue", "white", "gold"], "coach": "Jim Harbaugh" },
+    "LAR": { "name": "Los Angeles Rams", "stadium": "SoFi Stadium", "location": "Inglewood, CA", "conference": "NFC", "division": "West", "established": 1936, "colors": ["blue", "gold", "white"], "coach": "Sean McVay" },
+    "LV": { "name": "Las Vegas Raiders", "stadium": "Allegiant Stadium", "location": "Las Vegas, NV", "conference": "AFC", "division": "West", "established": 1960, "colors": ["silver", "black", "white"], "coach": "Klint Kubiak" },
+    "MIA": { "name": "Miami Dolphins", "stadium": "Hard Rock Stadium", "location": "Miami Gardens, FL", "conference": "AFC", "division": "East", "established": 1966, "colors": ["aqua", "orange", "white"], "coach": "Jeff Hafley" },
+    "MIN": { "name": "Minnesota Vikings", "stadium": "U.S. Bank Stadium", "location": "Minneapolis, MN", "conference": "NFC", "division": "North", "established": 1961, "colors": ["purple", "gold", "white"], "coach": "Kevin O'Connell" },
+    "NE": { "name": "New England Patriots", "stadium": "Gillette Stadium", "location": "Foxborough, MA", "conference": "AFC", "division": "East", "established": 1960, "colors": ["navy", "red", "silver"], "coach": "Mike Vrabel" },
+    "NO": { "name": "New Orleans Saints", "stadium": "Caesars Superdome", "location": "New Orleans, LA", "conference": "NFC", "division": "South", "established": 1967, "colors": ["gold", "black", "white"], "coach": "Kellen Moore" },
+    "NYG": { "name": "New York Giants", "stadium": "MetLife Stadium", "location": "East Rutherford, NJ", "conference": "NFC", "division": "East", "established": 1925, "colors": ["blue", "red", "white"], "coach": "John Harbaugh" },
+    "NYJ": { "name": "New York Jets", "stadium": "MetLife Stadium", "location": "East Rutherford, NJ", "conference": "AFC", "division": "East", "established": 1960, "colors": ["green", "white"], "coach": "Aaron Glenn" },
+    "PHI": { "name": "Philadelphia Eagles", "stadium": "Lincoln Financial Field", "location": "Philadelphia, PA", "conference": "NFC", "division": "East", "established": 1933, "colors": ["midnight green", "silver", "black"], "coach": "Nick Sirianni" },
+    "PIT": { "name": "Pittsburgh Steelers", "stadium": "Acrisure Stadium", "location": "Pittsburgh, PA", "conference": "AFC", "division": "North", "established": 1933, "colors": ["black", "gold"], "coach": "Kevin Rogers" },
+    "SEA": { "name": "Seattle Seahawks", "stadium": "Lumen Field", "location": "Seattle, WA", "conference": "NFC", "division": "West", "established": 1976, "colors": ["blue", "green", "gray"], "coach": "Mike Macdonald" },
+    "SF": { "name": "San Francisco 49ers", "stadium": "Levi's Stadium", "location": "Santa Clara, CA", "conference": "NFC", "division": "West", "established": 1946, "colors": ["red", "gold", "white"], "coach": "Kyle Shanahan" },
+    "TB": { "name": "Tampa Bay Buccaneers", "stadium": "Raymond James Stadium", "location": "Tampa, FL", "conference": "NFC", "division": "South", "established": 1976, "colors": ["pewter", "red", "black"], "coach": "Todd Bowles" },
+    "TEN": { "name": "Tennessee Titans", "stadium": "Nissan Stadium", "location": "Nashville, TN", "conference": "AFC", "division": "South", "established": 1960, "colors": ["navy", "red", "silver"], "coach": "Brian Callahan" },
+    "WAS": { "name": "Washington Commanders", "stadium": "Northwest Stadium", "location": "Landover, MD", "conference": "NFC", "division": "East", "established": 1932, "colors": ["burgundy", "gold"], "coach": "Dan Quinn" }
+  }
+}
