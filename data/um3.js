@@ -94,12 +94,12 @@ h+='</div></div>'
 h+='<div class="us"><div class="ust">🔥 Roster (ESPN)</div><div class="u2">'
 ;[aa,ha].forEach(a=>{const p=TP[a]||{};h+='<div class="utb"><div class="utt">'+TN[a]+'</div>'
 if(p.QBs&&p.QBs.length){h+='<div style="font-size:9px;color:#4fc3f7;margin-top:3px">QB:</div><div class="upb"><span class="upn">'+p.QBs.join(', ')+'</span></div>'}
-if(p.WRs&&p.WRs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">WR:</div>';p.WRs.slice(0,3).forEach(w=>h+='<div class="upb"><span class="upn">#'+w.jersey+' '+w.name+'</span> <span class="ups">'+w.age+'yo</span></div>')}
-if(p.RBs&&p.RBs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">RB:</div>';p.RBs.slice(0,2).forEach(r=>h+='<div class="upb"><span class="upn">#'+r.jersey+' '+r.name+'</span> <span class="ups">'+r.age+'yo</span></div>')}
-if(p.TEs&&p.TEs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">TE:</div>';p.TEs.slice(0,1).forEach(t=>h+='<div class="upb"><span class="upn">#'+t.jersey+' '+t.name+'</span> <span class="ups">'+t.age+'yo</span></div>')}
-if(p.LBs&&p.LBs.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:4px">LB:</div>';p.LBs.slice(0,4).forEach(l=>h+='<div class="upb"><span class="upn">#'+l.jersey+' '+l.name+'</span> <span class="ups">'+l.age+'yo</span></div>')}
-if(p.CBs&&p.CBs.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:3px">CB:</div>';p.CBs.slice(0,2).forEach(c=>h+='<div class="upb"><span class="upn">#'+c.jersey+' '+c.name+'</span> <span class="ups">'+c.age+'yo</span></div>')}
-if(p.Ss&&p.Ss.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:3px">S:</div>';p.Ss.slice(0,1).forEach(s=>h+='<div class="upb"><span class="upn">#'+s.jersey+' '+s.name+'</span> <span class="ups">'+s.age+'yo</span></div>')}
+if(p.WRs&&p.WRs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">WR:</div>';p.WRs.slice(0,3).forEach(w=>h+='<div class="upb"><span class="upn">#'+w.jersey+' '+w.name+'</span> <span class="ups">'+w.cap+'</span></div>')}
+if(p.RBs&&p.RBs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">RB:</div>';p.RBs.slice(0,2).forEach(r=>h+='<div class="upb"><span class="upn">#'+r.jersey+' '+r.name+'</span> <span class="ups">'+r.cap+'</span></div>')}
+if(p.TEs&&p.TEs.length){h+='<div style="font-size:9px;color:#66bb6a;margin-top:3px">TE:</div>';p.TEs.slice(0,1).forEach(t=>h+='<div class="upb"><span class="upn">#'+t.jersey+' '+t.name+'</span> <span class="ups">'+t.cap+'</span></div>')}
+if(p.LBs&&p.LBs.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:4px">LB:</div>';p.LBs.slice(0,4).forEach(l=>h+='<div class="upb"><span class="upn">#'+l.jersey+' '+l.name+'</span> <span class="ups">'+l.cap+'</span></div>')}
+if(p.CBs&&p.CBs.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:3px">CB:</div>';p.CBs.slice(0,2).forEach(c=>h+='<div class="upb"><span class="upn">#'+c.jersey+' '+c.name+'</span> <span class="ups">'+c.cap+'</span></div>')}
+if(p.Ss&&p.Ss.length){h+='<div style="font-size:9px;color:#ff7043;margin-top:3px">S:</div>';p.Ss.slice(0,1).forEach(s=>h+='<div class="upb"><span class="upn">#'+s.jersey+' '+s.name+'</span> <span class="ups">'+s.cap+'</span></div>')}
 h+='</div>'})
 h+='</div></div></div>'
 d.innerHTML=h}
