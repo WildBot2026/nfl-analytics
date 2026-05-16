@@ -1,0 +1,556 @@
+{
+  "players": {
+    "Joe Burrow": {
+      "name": "Joe Burrow",
+      "team": "Cincinnati Bengals",
+      "stats": {
+        "passingYards": 4918,
+        "passingTouchdowns": 43,
+        "interceptions": 9,
+        "passerRating": 108.5
+      }
+    },
+    "Jared Goff": {
+      "name": "Jared Goff",
+      "team": "Detroit Lions",
+      "stats": {
+        "passingYards": 4629,
+        "passingTouchdowns": 37,
+        "interceptions": 12,
+        "passerRating": 111.8
+      }
+    },
+    "Baker Mayfield": {
+      "name": "Baker Mayfield",
+      "team": "Tampa Bay Buccaneers",
+      "stats": {
+        "passingYards": 4500,
+        "passingTouchdowns": 41,
+        "interceptions": 16,
+        "passerRating": 106.8
+      }
+    },
+    "Geno Smith": {
+      "name": "Geno Smith",
+      "team": "Seattle Seahawks",
+      "stats": {
+        "passingYards": 4320,
+        "passingTouchdowns": 21,
+        "interceptions": 15,
+        "passerRating": 93.2
+      }
+    },
+    "Sam Darnold": {
+      "name": "Sam Darnold",
+      "team": "Minnesota Vikings",
+      "stats": {
+        "passingYards": 4319,
+        "passingTouchdowns": 35,
+        "interceptions": 12,
+        "passerRating": 102.5
+      }
+    },
+    "Lamar Jackson": {
+      "name": "Lamar Jackson",
+      "team": "Baltimore Ravens",
+      "stats": {
+        "passingYards": 4172,
+        "passingTouchdowns": 41,
+        "interceptions": 4,
+        "passerRating": 119.6
+      }
+    },
+    "Patrick Mahomes": {
+      "name": "Patrick Mahomes",
+      "team": "Kansas City Chiefs",
+      "stats": {
+        "passingYards": 3928,
+        "passingTouchdowns": 26,
+        "interceptions": 11,
+        "passerRating": 93.5
+      }
+    },
+    "Aaron Rodgers": {
+      "name": "Aaron Rodgers",
+      "team": "New York Jets",
+      "stats": {
+        "passingYards": 3897,
+        "passingTouchdowns": 28,
+        "interceptions": 11,
+        "passerRating": 90.5
+      }
+    },
+    "Justin Herbert": {
+      "name": "Justin Herbert",
+      "team": "Los Angeles Chargers",
+      "stats": {
+        "passingYards": 3870,
+        "passingTouchdowns": 23,
+        "interceptions": 3,
+        "passerRating": 101.7
+      }
+    },
+    "Brock Purdy": {
+      "name": "Brock Purdy",
+      "team": "San Francisco 49ers",
+      "stats": {
+        "passingYards": 3864,
+        "passingTouchdowns": 20,
+        "interceptions": 12,
+        "passerRating": 96.1
+      }
+    },
+    "Kyler Murray": {
+      "name": "Kyler Murray",
+      "team": "Arizona Cardinals",
+      "stats": {
+        "passingYards": 3851,
+        "passingTouchdowns": 21,
+        "interceptions": 11,
+        "passerRating": 93.5
+      }
+    },
+    "Bo Nix": {
+      "name": "Bo Nix",
+      "team": "Denver Broncos",
+      "stats": {
+        "passingYards": 3775,
+        "passingTouchdowns": 29,
+        "interceptions": 12,
+        "passerRating": 93.3
+      }
+    },
+    "Matthew Stafford": {
+      "name": "Matthew Stafford",
+      "team": "Los Angeles Rams",
+      "stats": {
+        "passingYards": 3762,
+        "passingTouchdowns": 20,
+        "interceptions": 8,
+        "passerRating": 93.6
+      }
+    },
+    "Josh Allen": {
+      "name": "Josh Allen",
+      "team": "Buffalo Bills",
+      "stats": {
+        "passingYards": 3731,
+        "passingTouchdowns": 28,
+        "interceptions": 6,
+        "passerRating": 101.4
+      }
+    },
+    "C.J. Stroud": {
+      "name": "C.J. Stroud",
+      "team": "Houston Texans",
+      "stats": {
+        "passingYards": 3727,
+        "passingTouchdowns": 20,
+        "interceptions": 12,
+        "passerRating": 87.0
+      }
+    },
+    "Jayden Daniels": {
+      "name": "Jayden Daniels",
+      "team": "Washington Commanders",
+      "stats": {
+        "passingYards": 3568,
+        "passingTouchdowns": 25,
+        "interceptions": 9,
+        "passerRating": 100.1
+      }
+    },
+    "Caleb Williams": {
+      "name": "Caleb Williams",
+      "team": "Chicago Bears",
+      "stats": {
+        "passingYards": 3541,
+        "passingTouchdowns": 20,
+        "interceptions": 6,
+        "passerRating": 87.8
+      }
+    },
+    "Kirk Cousins": {
+      "name": "Kirk Cousins",
+      "team": "Atlanta Falcons",
+      "stats": {
+        "passingYards": 3508,
+        "passingTouchdowns": 18,
+        "interceptions": 16,
+        "passerRating": 88.6
+      }
+    },
+    "Jordan Love": {
+      "name": "Jordan Love",
+      "team": "Green Bay Packers",
+      "stats": {
+        "passingYards": 3389,
+        "passingTouchdowns": 25,
+        "interceptions": 11,
+        "passerRating": 96.7
+      }
+    },
+    "Jalen Hurts": {
+      "name": "Jalen Hurts",
+      "team": "Philadelphia Eagles",
+      "stats": {
+        "passingYards": 2903,
+        "passingTouchdowns": 18,
+        "interceptions": 5,
+        "passerRating": 103.7
+      }
+    },
+    "Tua Tagovailoa": {
+      "name": "Tua Tagovailoa",
+      "team": "Miami Dolphins",
+      "stats": {
+        "passingYards": 2867,
+        "passingTouchdowns": 19,
+        "interceptions": 7,
+        "passerRating": 101.4
+      }
+    },
+    "Russell Wilson": {
+      "name": "Russell Wilson",
+      "team": "Pittsburgh Steelers",
+      "stats": {
+        "passingYards": 2482,
+        "passingTouchdowns": 16,
+        "interceptions": 5,
+        "passerRating": 95.6
+      }
+    },
+    "Bryce Young": {
+      "name": "Bryce Young",
+      "team": "Carolina Panthers",
+      "stats": {
+        "passingYards": 2403,
+        "passingTouchdowns": 15,
+        "interceptions": 9,
+        "passerRating": 82.2
+      }
+    },
+    "Drake Maye": {
+      "name": "Drake Maye",
+      "team": "New England Patriots",
+      "stats": {
+        "passingYards": 2276,
+        "passingTouchdowns": 15,
+        "interceptions": 10,
+        "passerRating": 88.1
+      }
+    },
+    "Derek Carr": {
+      "name": "Derek Carr",
+      "team": "New Orleans Saints",
+      "stats": {
+        "passingYards": 2145,
+        "passingTouchdowns": 15,
+        "interceptions": 5,
+        "passerRating": 101.0
+      }
+    }
+  },
+  "byTeam": {
+    "Cincinnati Bengals": [
+      {
+        "name": "Joe Burrow",
+        "team": "Cincinnati Bengals",
+        "stats": {
+          "passingYards": 4918,
+          "passingTouchdowns": 43,
+          "interceptions": 9,
+          "passerRating": 108.5
+        }
+      }
+    ],
+    "Detroit Lions": [
+      {
+        "name": "Jared Goff",
+        "team": "Detroit Lions",
+        "stats": {
+          "passingYards": 4629,
+          "passingTouchdowns": 37,
+          "interceptions": 12,
+          "passerRating": 111.8
+        }
+      }
+    ],
+    "Tampa Bay Buccaneers": [
+      {
+        "name": "Baker Mayfield",
+        "team": "Tampa Bay Buccaneers",
+        "stats": {
+          "passingYards": 4500,
+          "passingTouchdowns": 41,
+          "interceptions": 16,
+          "passerRating": 106.8
+        }
+      }
+    ],
+    "Seattle Seahawks": [
+      {
+        "name": "Geno Smith",
+        "team": "Seattle Seahawks",
+        "stats": {
+          "passingYards": 4320,
+          "passingTouchdowns": 21,
+          "interceptions": 15,
+          "passerRating": 93.2
+        }
+      }
+    ],
+    "Minnesota Vikings": [
+      {
+        "name": "Sam Darnold",
+        "team": "Minnesota Vikings",
+        "stats": {
+          "passingYards": 4319,
+          "passingTouchdowns": 35,
+          "interceptions": 12,
+          "passerRating": 102.5
+        }
+      }
+    ],
+    "Baltimore Ravens": [
+      {
+        "name": "Lamar Jackson",
+        "team": "Baltimore Ravens",
+        "stats": {
+          "passingYards": 4172,
+          "passingTouchdowns": 41,
+          "interceptions": 4,
+          "passerRating": 119.6
+        }
+      }
+    ],
+    "Kansas City Chiefs": [
+      {
+        "name": "Patrick Mahomes",
+        "team": "Kansas City Chiefs",
+        "stats": {
+          "passingYards": 3928,
+          "passingTouchdowns": 26,
+          "interceptions": 11,
+          "passerRating": 93.5
+        }
+      }
+    ],
+    "New York Jets": [
+      {
+        "name": "Aaron Rodgers",
+        "team": "New York Jets",
+        "stats": {
+          "passingYards": 3897,
+          "passingTouchdowns": 28,
+          "interceptions": 11,
+          "passerRating": 90.5
+        }
+      }
+    ],
+    "Los Angeles Chargers": [
+      {
+        "name": "Justin Herbert",
+        "team": "Los Angeles Chargers",
+        "stats": {
+          "passingYards": 3870,
+          "passingTouchdowns": 23,
+          "interceptions": 3,
+          "passerRating": 101.7
+        }
+      }
+    ],
+    "San Francisco 49ers": [
+      {
+        "name": "Brock Purdy",
+        "team": "San Francisco 49ers",
+        "stats": {
+          "passingYards": 3864,
+          "passingTouchdowns": 20,
+          "interceptions": 12,
+          "passerRating": 96.1
+        }
+      }
+    ],
+    "Arizona Cardinals": [
+      {
+        "name": "Kyler Murray",
+        "team": "Arizona Cardinals",
+        "stats": {
+          "passingYards": 3851,
+          "passingTouchdowns": 21,
+          "interceptions": 11,
+          "passerRating": 93.5
+        }
+      }
+    ],
+    "Denver Broncos": [
+      {
+        "name": "Bo Nix",
+        "team": "Denver Broncos",
+        "stats": {
+          "passingYards": 3775,
+          "passingTouchdowns": 29,
+          "interceptions": 12,
+          "passerRating": 93.3
+        }
+      }
+    ],
+    "Los Angeles Rams": [
+      {
+        "name": "Matthew Stafford",
+        "team": "Los Angeles Rams",
+        "stats": {
+          "passingYards": 3762,
+          "passingTouchdowns": 20,
+          "interceptions": 8,
+          "passerRating": 93.6
+        }
+      }
+    ],
+    "Buffalo Bills": [
+      {
+        "name": "Josh Allen",
+        "team": "Buffalo Bills",
+        "stats": {
+          "passingYards": 3731,
+          "passingTouchdowns": 28,
+          "interceptions": 6,
+          "passerRating": 101.4
+        }
+      }
+    ],
+    "Houston Texans": [
+      {
+        "name": "C.J. Stroud",
+        "team": "Houston Texans",
+        "stats": {
+          "passingYards": 3727,
+          "passingTouchdowns": 20,
+          "interceptions": 12,
+          "passerRating": 87.0
+        }
+      }
+    ],
+    "Washington Commanders": [
+      {
+        "name": "Jayden Daniels",
+        "team": "Washington Commanders",
+        "stats": {
+          "passingYards": 3568,
+          "passingTouchdowns": 25,
+          "interceptions": 9,
+          "passerRating": 100.1
+        }
+      }
+    ],
+    "Chicago Bears": [
+      {
+        "name": "Caleb Williams",
+        "team": "Chicago Bears",
+        "stats": {
+          "passingYards": 3541,
+          "passingTouchdowns": 20,
+          "interceptions": 6,
+          "passerRating": 87.8
+        }
+      }
+    ],
+    "Atlanta Falcons": [
+      {
+        "name": "Kirk Cousins",
+        "team": "Atlanta Falcons",
+        "stats": {
+          "passingYards": 3508,
+          "passingTouchdowns": 18,
+          "interceptions": 16,
+          "passerRating": 88.6
+        }
+      }
+    ],
+    "Green Bay Packers": [
+      {
+        "name": "Jordan Love",
+        "team": "Green Bay Packers",
+        "stats": {
+          "passingYards": 3389,
+          "passingTouchdowns": 25,
+          "interceptions": 11,
+          "passerRating": 96.7
+        }
+      }
+    ],
+    "Philadelphia Eagles": [
+      {
+        "name": "Jalen Hurts",
+        "team": "Philadelphia Eagles",
+        "stats": {
+          "passingYards": 2903,
+          "passingTouchdowns": 18,
+          "interceptions": 5,
+          "passerRating": 103.7
+        }
+      }
+    ],
+    "Miami Dolphins": [
+      {
+        "name": "Tua Tagovailoa",
+        "team": "Miami Dolphins",
+        "stats": {
+          "passingYards": 2867,
+          "passingTouchdowns": 19,
+          "interceptions": 7,
+          "passerRating": 101.4
+        }
+      }
+    ],
+    "Pittsburgh Steelers": [
+      {
+        "name": "Russell Wilson",
+        "team": "Pittsburgh Steelers",
+        "stats": {
+          "passingYards": 2482,
+          "passingTouchdowns": 16,
+          "interceptions": 5,
+          "passerRating": 95.6
+        }
+      }
+    ],
+    "Carolina Panthers": [
+      {
+        "name": "Bryce Young",
+        "team": "Carolina Panthers",
+        "stats": {
+          "passingYards": 2403,
+          "passingTouchdowns": 15,
+          "interceptions": 9,
+          "passerRating": 82.2
+        }
+      }
+    ],
+    "New England Patriots": [
+      {
+        "name": "Drake Maye",
+        "team": "New England Patriots",
+        "stats": {
+          "passingYards": 2276,
+          "passingTouchdowns": 15,
+          "interceptions": 10,
+          "passerRating": 88.1
+        }
+      }
+    ],
+    "New Orleans Saints": [
+      {
+        "name": "Derek Carr",
+        "team": "New Orleans Saints",
+        "stats": {
+          "passingYards": 2145,
+          "passingTouchdowns": 15,
+          "interceptions": 5,
+          "passerRating": 101.0
+        }
+      }
+    ]
+  }
+}
