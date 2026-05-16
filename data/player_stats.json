@@ -1,1 +1,653 @@
-{}
+{
+  "WR": [
+    {
+      "name": "Ja'Marr Chase",
+      "team": "CIN",
+      "rec": 127,
+      "yds": 1711,
+      "td": 17
+    },
+    {
+      "name": "Justin Jefferson",
+      "team": "MIN",
+      "rec": 117,
+      "yds": 1523,
+      "td": 9
+    },
+    {
+      "name": "Amon-Ra St. Brown",
+      "team": "DET",
+      "rec": 115,
+      "yds": 1485,
+      "td": 11
+    },
+    {
+      "name": "CeeDee Lamb",
+      "team": "DAL",
+      "rec": 119,
+      "yds": 1476,
+      "td": 9
+    },
+    {
+      "name": "Tyreek Hill",
+      "team": "MIA",
+      "rec": 101,
+      "yds": 1399,
+      "td": 8
+    },
+    {
+      "name": "Davante Adams",
+      "team": "NYJ",
+      "rec": 103,
+      "yds": 1337,
+      "td": 8
+    },
+    {
+      "name": "Mike Evans",
+      "team": "TB",
+      "rec": 89,
+      "yds": 1328,
+      "td": 14
+    },
+    {
+      "name": "Puka Nacua",
+      "team": "LAR",
+      "rec": 106,
+      "yds": 1327,
+      "td": 6
+    },
+    {
+      "name": "Malik Nabers",
+      "team": "NYG",
+      "rec": 104,
+      "yds": 1310,
+      "td": 7
+    },
+    {
+      "name": "Nico Collins",
+      "team": "HOU",
+      "rec": 80,
+      "yds": 1305,
+      "td": 7
+    },
+    {
+      "name": "Garrett Wilson",
+      "team": "NYJ",
+      "rec": 99,
+      "yds": 1294,
+      "td": 5
+    },
+    {
+      "name": "Drake London",
+      "team": "ATL",
+      "rec": 95,
+      "yds": 1268,
+      "td": 8
+    },
+    {
+      "name": "Chris Godwin",
+      "team": "TB",
+      "rec": 98,
+      "yds": 1255,
+      "td": 5
+    },
+    {
+      "name": "DeVonta Smith",
+      "team": "PHI",
+      "rec": 86,
+      "yds": 1203,
+      "td": 8
+    },
+    {
+      "name": "Zay Flowers",
+      "team": "BAL",
+      "rec": 92,
+      "yds": 1193,
+      "td": 5
+    },
+    {
+      "name": "Khalil Shakir",
+      "team": "BUF",
+      "rec": 90,
+      "yds": 1186,
+      "td": 4
+    },
+    {
+      "name": "Jaxon Smith-Njigba",
+      "team": "SEA",
+      "rec": 102,
+      "yds": 1176,
+      "td": 6
+    },
+    {
+      "name": "Terry McLaurin",
+      "team": "WAS",
+      "rec": 83,
+      "yds": 1164,
+      "td": 10
+    },
+    {
+      "name": "Brian Thomas Jr.",
+      "team": "JAX",
+      "rec": 77,
+      "yds": 1161,
+      "td": 11
+    },
+    {
+      "name": "D.J. Moore",
+      "team": "CHI",
+      "rec": 96,
+      "yds": 1158,
+      "td": 6
+    }
+  ],
+  "RB": [
+    {
+      "name": "Saquon Barkley",
+      "team": "PHI",
+      "att": 345,
+      "yds": 2005,
+      "td": 13,
+      "rec": 33,
+      "recYds": 278
+    },
+    {
+      "name": "Derrick Henry",
+      "team": "BAL",
+      "att": 325,
+      "yds": 1921,
+      "td": 16,
+      "rec": 19,
+      "recYds": 193
+    },
+    {
+      "name": "Bijan Robinson",
+      "team": "ATL",
+      "att": 291,
+      "yds": 1456,
+      "td": 11,
+      "rec": 61,
+      "recYds": 487
+    },
+    {
+      "name": "Christian McCaffrey",
+      "team": "SF",
+      "att": 248,
+      "yds": 1381,
+      "td": 10,
+      "rec": 54,
+      "recYds": 451
+    },
+    {
+      "name": "Josh Jacobs",
+      "team": "GB",
+      "att": 301,
+      "yds": 1329,
+      "td": 15,
+      "rec": 36,
+      "recYds": 287
+    },
+    {
+      "name": "Jonathan Taylor",
+      "team": "IND",
+      "att": 278,
+      "yds": 1311,
+      "td": 11,
+      "rec": 21,
+      "recYds": 164
+    },
+    {
+      "name": "Kyren Williams",
+      "team": "LAR",
+      "att": 280,
+      "yds": 1278,
+      "td": 12,
+      "rec": 45,
+      "recYds": 320
+    },
+    {
+      "name": "Joe Mixon",
+      "team": "HOU",
+      "att": 279,
+      "yds": 1260,
+      "td": 10,
+      "rec": 32,
+      "recYds": 246
+    },
+    {
+      "name": "De'Von Achane",
+      "team": "MIA",
+      "att": 203,
+      "yds": 1208,
+      "td": 7,
+      "rec": 78,
+      "recYds": 591
+    },
+    {
+      "name": "Jahmyr Gibbs",
+      "team": "DET",
+      "att": 225,
+      "yds": 1199,
+      "td": 12,
+      "rec": 52,
+      "recYds": 438
+    },
+    {
+      "name": "James Cook",
+      "team": "BUF",
+      "att": 207,
+      "yds": 1154,
+      "td": 10,
+      "rec": 32,
+      "recYds": 258
+    },
+    {
+      "name": "Chuba Hubbard",
+      "team": "CAR",
+      "att": 258,
+      "yds": 1135,
+      "td": 8,
+      "rec": 39,
+      "recYds": 247
+    },
+    {
+      "name": "Isiah Pacheco",
+      "team": "KC",
+      "att": 219,
+      "yds": 1070,
+      "td": 7,
+      "rec": 37,
+      "recYds": 302
+    },
+    {
+      "name": "David Montgomery",
+      "team": "DET",
+      "att": 218,
+      "yds": 1042,
+      "td": 14,
+      "rec": 26,
+      "recYds": 189
+    },
+    {
+      "name": "D'Andre Swift",
+      "team": "CHI",
+      "att": 232,
+      "yds": 1038,
+      "td": 6,
+      "rec": 37,
+      "recYds": 289
+    }
+  ],
+  "TE": [
+    {
+      "name": "Travis Kelce",
+      "team": "KC",
+      "rec": 87,
+      "yds": 951,
+      "td": 9
+    },
+    {
+      "name": "George Kittle",
+      "team": "SF",
+      "rec": 78,
+      "yds": 1029,
+      "td": 9
+    },
+    {
+      "name": "Sam LaPorta",
+      "team": "DET",
+      "rec": 72,
+      "yds": 754,
+      "td": 7
+    },
+    {
+      "name": "Trey McBride",
+      "team": "ARI",
+      "rec": 96,
+      "yds": 950,
+      "td": 3
+    },
+    {
+      "name": "Mark Andrews",
+      "team": "BAL",
+      "rec": 64,
+      "yds": 740,
+      "td": 8
+    },
+    {
+      "name": "Brock Bowers",
+      "team": "LV",
+      "rec": 101,
+      "yds": 1079,
+      "td": 4
+    },
+    {
+      "name": "Dalton Kincaid",
+      "team": "BUF",
+      "rec": 58,
+      "yds": 584,
+      "td": 3
+    },
+    {
+      "name": "Dallas Goedert",
+      "team": "PHI",
+      "rec": 55,
+      "yds": 659,
+      "td": 4
+    },
+    {
+      "name": "Evan Engram",
+      "team": "JAX",
+      "rec": 84,
+      "yds": 742,
+      "td": 5
+    },
+    {
+      "name": "Kyle Pitts",
+      "team": "ATL",
+      "rec": 52,
+      "yds": 672,
+      "td": 3
+    },
+    {
+      "name": "Jake Ferguson",
+      "team": "DAL",
+      "rec": 61,
+      "yds": 621,
+      "td": 2
+    },
+    {
+      "name": "Isaiah Likely",
+      "team": "BAL",
+      "rec": 46,
+      "yds": 541,
+      "td": 5
+    }
+  ],
+  "LB": [
+    {
+      "name": "Roquan Smith",
+      "team": "BAL",
+      "tackles": 138,
+      "sacks": 3.0,
+      "int": 1
+    },
+    {
+      "name": "Fred Warner",
+      "team": "SF",
+      "tackles": 131,
+      "sacks": 2.0,
+      "int": 3
+    },
+    {
+      "name": "Bobby Wagner",
+      "team": "WAS",
+      "tackles": 118,
+      "sacks": 3.5,
+      "int": 1
+    },
+    {
+      "name": "Zaire Franklin",
+      "team": "IND",
+      "tackles": 135,
+      "sacks": 1.5,
+      "int": 0
+    },
+    {
+      "name": "Devin White",
+      "team": "TB",
+      "tackles": 112,
+      "sacks": 4.0,
+      "int": 1
+    },
+    {
+      "name": "C.J. Mosley",
+      "team": "NYJ",
+      "tackles": 105,
+      "sacks": 1.0,
+      "int": 2
+    },
+    {
+      "name": "Dre Greenlaw",
+      "team": "SF",
+      "tackles": 95,
+      "sacks": 2.0,
+      "int": 1
+    },
+    {
+      "name": "Demario Davis",
+      "team": "NO",
+      "tackles": 109,
+      "sacks": 5.0,
+      "int": 1
+    },
+    {
+      "name": "Foyesade Oluokun",
+      "team": "JAX",
+      "tackles": 127,
+      "sacks": 3.0,
+      "int": 2
+    },
+    {
+      "name": "Lavonte David",
+      "team": "TB",
+      "tackles": 96,
+      "sacks": 5.5,
+      "int": 1
+    },
+    {
+      "name": "Matt Milano",
+      "team": "BUF",
+      "tackles": 88,
+      "sacks": 2.0,
+      "int": 1
+    },
+    {
+      "name": "T.J. Edwards",
+      "team": "CHI",
+      "tackles": 115,
+      "sacks": 2.5,
+      "int": 1
+    },
+    {
+      "name": "Jeremiah Owusu-Koramoah",
+      "team": "CLE",
+      "tackles": 101,
+      "sacks": 3.0,
+      "int": 2
+    },
+    {
+      "name": "Eric Kendricks",
+      "team": "SF",
+      "tackles": 94,
+      "sacks": 3.5,
+      "int": 2
+    },
+    {
+      "name": "Nick Bolton",
+      "team": "KC",
+      "tackles": 92,
+      "sacks": 2.0,
+      "int": 1
+    },
+    {
+      "name": "Azeez Al-Shaair",
+      "team": "HOU",
+      "tackles": 103,
+      "sacks": 2.0,
+      "int": 0
+    }
+  ],
+  "CB": [
+    {
+      "name": "Patrick Surtain II",
+      "team": "DEN",
+      "tackles": 51,
+      "int": 5,
+      "pd": 13
+    },
+    {
+      "name": "Sauce Gardner",
+      "team": "NYJ",
+      "tackles": 48,
+      "int": 2,
+      "pd": 15
+    },
+    {
+      "name": "Jalen Ramsey",
+      "team": "MIA",
+      "tackles": 55,
+      "int": 3,
+      "pd": 11
+    },
+    {
+      "name": "Denzel Ward",
+      "team": "CLE",
+      "tackles": 42,
+      "int": 3,
+      "pd": 12
+    },
+    {
+      "name": "Charvarius Ward",
+      "team": "SF",
+      "tackles": 58,
+      "int": 2,
+      "pd": 14
+    },
+    {
+      "name": "L'Jarius Sneed",
+      "team": "TEN",
+      "tackles": 52,
+      "int": 2,
+      "pd": 10
+    },
+    {
+      "name": "Marshon Lattimore",
+      "team": "NO",
+      "tackles": 44,
+      "int": 2,
+      "pd": 9
+    },
+    {
+      "name": "Trent McDuffie",
+      "team": "KC",
+      "tackles": 62,
+      "int": 2,
+      "pd": 12
+    },
+    {
+      "name": "Jaylon Johnson",
+      "team": "CHI",
+      "tackles": 41,
+      "int": 4,
+      "pd": 10
+    },
+    {
+      "name": "A.J. Terrell",
+      "team": "ATL",
+      "tackles": 47,
+      "int": 2,
+      "pd": 11
+    },
+    {
+      "name": "Darius Slay",
+      "team": "PHI",
+      "tackles": 39,
+      "int": 2,
+      "pd": 8
+    },
+    {
+      "name": "D.J. Reed",
+      "team": "NYJ",
+      "tackles": 55,
+      "int": 1,
+      "pd": 9
+    }
+  ],
+  "S": [
+    {
+      "name": "Minkah Fitzpatrick",
+      "team": "PIT",
+      "tackles": 78,
+      "int": 3,
+      "pd": 8
+    },
+    {
+      "name": "Derwin James",
+      "team": "LAC",
+      "tackles": 92,
+      "int": 3,
+      "pd": 10
+    },
+    {
+      "name": "Budda Baker",
+      "team": "ARI",
+      "tackles": 91,
+      "int": 1,
+      "pd": 7
+    },
+    {
+      "name": "Kevin Byard",
+      "team": "CHI",
+      "tackles": 82,
+      "int": 3,
+      "pd": 8
+    },
+    {
+      "name": "Talanoa Hufanga",
+      "team": "SF",
+      "tackles": 71,
+      "int": 2,
+      "pd": 6
+    },
+    {
+      "name": "Kyle Hamilton",
+      "team": "BAL",
+      "tackles": 81,
+      "int": 4,
+      "pd": 11
+    },
+    {
+      "name": "Antoine Winfield Jr.",
+      "team": "TB",
+      "tackles": 88,
+      "int": 3,
+      "pd": 9
+    },
+    {
+      "name": "Jevon Holland",
+      "team": "MIA",
+      "tackles": 73,
+      "int": 2,
+      "pd": 7
+    },
+    {
+      "name": "Jessie Bates III",
+      "team": "ATL",
+      "tackles": 93,
+      "int": 5,
+      "pd": 12
+    },
+    {
+      "name": "Harrison Smith",
+      "team": "MIN",
+      "tackles": 70,
+      "int": 2,
+      "pd": 6
+    },
+    {
+      "name": "Xavier McKinney",
+      "team": "NYG",
+      "tackles": 87,
+      "int": 3,
+      "pd": 8
+    },
+    {
+      "name": "Justin Simmons",
+      "team": "ATL",
+      "tackles": 62,
+      "int": 3,
+      "pd": 7
+    }
+  ]
+}

@@ -1,0 +1,3349 @@
+{
+  "metadata": {
+    "source": "ESPN API v2",
+    "season": "2024",
+    "lastUpdated": "2026-05-16 07:37:49",
+    "totalOffensePlayers": 132,
+    "totalDefensePlayers": 173
+  },
+  "offense": [
+    {
+      "name": "Joe Burrow",
+      "position": "QB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "passingYards": "4918",
+        "passingYards_raw": 4918.0,
+        "passingTouchdowns": "43",
+        "passingTouchdowns_raw": 43.0
+      }
+    },
+    {
+      "name": "Jared Goff",
+      "position": "QB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "passingYards": "4629",
+        "passingYards_raw": 4629.0,
+        "passingTouchdowns": "37",
+        "passingTouchdowns_raw": 37.0
+      }
+    },
+    {
+      "name": "Baker Mayfield",
+      "position": "QB",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "stats": {
+        "passingYards": "4500",
+        "passingYards_raw": 4500.0,
+        "passingTouchdowns": "41",
+        "passingTouchdowns_raw": 41.0
+      }
+    },
+    {
+      "name": "Geno Smith",
+      "position": "QB",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "passingYards": "4320",
+        "passingYards_raw": 4320.0,
+        "passingTouchdowns": "21",
+        "passingTouchdowns_raw": 21.0
+      }
+    },
+    {
+      "name": "Sam Darnold",
+      "position": "QB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "passingYards": "4319",
+        "passingYards_raw": 4319.0,
+        "passingTouchdowns": "35",
+        "passingTouchdowns_raw": 35.0
+      }
+    },
+    {
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "passingYards": "4172",
+        "passingYards_raw": 4172.0,
+        "rushingYards": "915",
+        "rushingYards_raw": 915.0,
+        "passingTouchdowns": "41",
+        "passingTouchdowns_raw": 41.0
+      }
+    },
+    {
+      "name": "Patrick Mahomes",
+      "position": "QB",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "stats": {
+        "passingYards": "3928",
+        "passingYards_raw": 3928.0,
+        "passingTouchdowns": "26",
+        "passingTouchdowns_raw": 26.0
+      }
+    },
+    {
+      "name": "Aaron Rodgers",
+      "position": "QB",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "stats": {
+        "passingYards": "3897",
+        "passingYards_raw": 3897.0,
+        "passingTouchdowns": "28",
+        "passingTouchdowns_raw": 28.0
+      }
+    },
+    {
+      "name": "Justin Herbert",
+      "position": "QB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "passingYards": "3870",
+        "passingYards_raw": 3870.0,
+        "passingTouchdowns": "23",
+        "passingTouchdowns_raw": 23.0
+      }
+    },
+    {
+      "name": "Brock Purdy",
+      "position": "QB",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "stats": {
+        "passingYards": "3864",
+        "passingYards_raw": 3864.0,
+        "passingTouchdowns": "20",
+        "passingTouchdowns_raw": 20.0
+      }
+    },
+    {
+      "name": "Kyler Murray",
+      "position": "QB",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "passingYards": "3851",
+        "passingYards_raw": 3851.0,
+        "passingTouchdowns": "21",
+        "passingTouchdowns_raw": 21.0
+      }
+    },
+    {
+      "name": "Bo Nix",
+      "position": "QB",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "stats": {
+        "passingYards": "3775",
+        "passingYards_raw": 3775.0,
+        "passingTouchdowns": "29",
+        "passingTouchdowns_raw": 29.0
+      }
+    },
+    {
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "stats": {
+        "passingYards": "3762",
+        "passingYards_raw": 3762.0,
+        "passingTouchdowns": "20",
+        "passingTouchdowns_raw": 20.0
+      }
+    },
+    {
+      "name": "Josh Allen",
+      "position": "QB",
+      "team": "Buffalo Bills",
+      "teamAbbr": "BUF",
+      "stats": {
+        "passingYards": "3731",
+        "passingYards_raw": 3731.0,
+        "passingTouchdowns": "28",
+        "passingTouchdowns_raw": 28.0,
+        "rushingTouchdowns": "12",
+        "rushingTouchdowns_raw": 12.0
+      }
+    },
+    {
+      "name": "C.J. Stroud",
+      "position": "QB",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "passingYards": "3727",
+        "passingYards_raw": 3727.0,
+        "passingTouchdowns": "20",
+        "passingTouchdowns_raw": 20.0
+      }
+    },
+    {
+      "name": "Jayden Daniels",
+      "position": "QB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "passingYards": "3568",
+        "passingYards_raw": 3568.0,
+        "passingTouchdowns": "25",
+        "passingTouchdowns_raw": 25.0
+      }
+    },
+    {
+      "name": "Caleb Williams",
+      "position": "QB",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "stats": {
+        "passingYards": "3541",
+        "passingYards_raw": 3541.0,
+        "passingTouchdowns": "20",
+        "passingTouchdowns_raw": 20.0
+      }
+    },
+    {
+      "name": "Kirk Cousins",
+      "position": "QB",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "stats": {
+        "passingYards": "3508",
+        "passingYards_raw": 3508.0,
+        "passingTouchdowns": "18",
+        "passingTouchdowns_raw": 18.0
+      }
+    },
+    {
+      "name": "Jordan Love",
+      "position": "QB",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "stats": {
+        "passingYards": "3389",
+        "passingYards_raw": 3389.0,
+        "passingTouchdowns": "25",
+        "passingTouchdowns_raw": 25.0
+      }
+    },
+    {
+      "name": "Jalen Hurts",
+      "position": "QB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "passingYards": "2903",
+        "passingYards_raw": 2903.0,
+        "rushingTouchdowns": "14",
+        "rushingTouchdowns_raw": 14.0
+      }
+    },
+    {
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "rushingYards": "2005",
+        "rushingYards_raw": 2005.0,
+        "rushingTouchdowns": "13",
+        "rushingTouchdowns_raw": 13.0
+      }
+    },
+    {
+      "name": "Derrick Henry",
+      "position": "RB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "rushingYards": "1921",
+        "rushingYards_raw": 1921.0,
+        "rushingTouchdowns": "16",
+        "rushingTouchdowns_raw": 16.0
+      }
+    },
+    {
+      "name": "Bijan Robinson",
+      "position": "RB",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "stats": {
+        "rushingYards": "1456",
+        "rushingYards_raw": 1456.0,
+        "rushingTouchdowns": "14",
+        "rushingTouchdowns_raw": 14.0
+      }
+    },
+    {
+      "name": "Jonathan Taylor",
+      "position": "RB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "stats": {
+        "rushingYards": "1431",
+        "rushingYards_raw": 1431.0,
+        "rushingTouchdowns": "11",
+        "rushingTouchdowns_raw": 11.0
+      }
+    },
+    {
+      "name": "Jahmyr Gibbs",
+      "position": "RB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "rushingYards": "1412",
+        "rushingYards_raw": 1412.0,
+        "rushingTouchdowns": "16",
+        "rushingTouchdowns_raw": 16.0
+      }
+    },
+    {
+      "name": "Josh Jacobs",
+      "position": "RB",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "stats": {
+        "rushingYards": "1329",
+        "rushingYards_raw": 1329.0,
+        "rushingTouchdowns": "15",
+        "rushingTouchdowns_raw": 15.0
+      }
+    },
+    {
+      "name": "Kyren Williams",
+      "position": "RB",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "stats": {
+        "rushingYards": "1299",
+        "rushingYards_raw": 1299.0,
+        "rushingTouchdowns": "14",
+        "rushingTouchdowns_raw": 14.0
+      }
+    },
+    {
+      "name": "Chuba Hubbard",
+      "position": "RB",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "stats": {
+        "rushingYards": "1195",
+        "rushingYards_raw": 1195.0,
+        "rushingTouchdowns": "10",
+        "rushingTouchdowns_raw": 10.0
+      }
+    },
+    {
+      "name": "Aaron Jones Sr.",
+      "position": "RB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "rushingYards": "1138",
+        "rushingYards_raw": 1138.0
+      }
+    },
+    {
+      "name": "Bucky Irving",
+      "position": "RB",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "stats": {
+        "rushingYards": "1122",
+        "rushingYards_raw": 1122.0,
+        "rushingTouchdowns": "8",
+        "rushingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "James Conner",
+      "position": "RB",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "rushingYards": "1094",
+        "rushingYards_raw": 1094.0,
+        "rushingTouchdowns": "8",
+        "rushingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Tony Pollard",
+      "position": "RB",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "stats": {
+        "rushingYards": "1079",
+        "rushingYards_raw": 1079.0
+      }
+    },
+    {
+      "name": "Rico Dowdle",
+      "position": "RB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "stats": {
+        "rushingYards": "1079",
+        "rushingYards_raw": 1079.0
+      }
+    },
+    {
+      "name": "Najee Harris",
+      "position": "RB",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "stats": {
+        "rushingYards": "1043",
+        "rushingYards_raw": 1043.0
+      }
+    },
+    {
+      "name": "Joe Mixon",
+      "position": "RB",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "rushingYards": "1016",
+        "rushingYards_raw": 1016.0,
+        "rushingTouchdowns": "11",
+        "rushingTouchdowns_raw": 11.0
+      }
+    },
+    {
+      "name": "James Cook III",
+      "position": "RB",
+      "team": "Buffalo Bills",
+      "teamAbbr": "BUF",
+      "stats": {
+        "rushingYards": "1009",
+        "rushingYards_raw": 1009.0,
+        "rushingTouchdowns": "16",
+        "rushingTouchdowns_raw": 16.0
+      }
+    },
+    {
+      "name": "Chase Brown",
+      "position": "RB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "rushingYards": "990",
+        "rushingYards_raw": 990.0,
+        "rushingTouchdowns": "7",
+        "rushingTouchdowns_raw": 7.0
+      }
+    },
+    {
+      "name": "D'Andre Swift",
+      "position": "RB",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "stats": {
+        "rushingYards": "959",
+        "rushingYards_raw": 959.0
+      }
+    },
+    {
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "stats": {
+        "rushingYards": "950",
+        "rushingYards_raw": 950.0
+      }
+    },
+    {
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "receivingYards": "1708",
+        "receivingYards_raw": 1708.0,
+        "receptions": "127",
+        "receptions_raw": 127.0,
+        "receivingTouchdowns": "17",
+        "receivingTouchdowns_raw": 17.0
+      }
+    },
+    {
+      "name": "Justin Jefferson",
+      "position": "WR",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "receivingYards": "1533",
+        "receivingYards_raw": 1533.0,
+        "receptions": "103",
+        "receptions_raw": 103.0,
+        "receivingTouchdowns": "10",
+        "receivingTouchdowns_raw": 10.0
+      }
+    },
+    {
+      "name": "Brian Thomas Jr.",
+      "position": "WR",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "stats": {
+        "receivingYards": "1282",
+        "receivingYards_raw": 1282.0,
+        "receptions": "87",
+        "receptions_raw": 87.0,
+        "receivingTouchdowns": "10",
+        "receivingTouchdowns_raw": 10.0
+      }
+    },
+    {
+      "name": "Drake London",
+      "position": "WR",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "stats": {
+        "receivingYards": "1271",
+        "receivingYards_raw": 1271.0,
+        "receptions": "100",
+        "receptions_raw": 100.0,
+        "receivingTouchdowns": "9",
+        "receivingTouchdowns_raw": 9.0
+      }
+    },
+    {
+      "name": "Amon-Ra St. Brown",
+      "position": "WR",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "receivingYards": "1263",
+        "receivingYards_raw": 1263.0,
+        "receptions": "115",
+        "receptions_raw": 115.0,
+        "receivingTouchdowns": "12",
+        "receivingTouchdowns_raw": 12.0
+      }
+    },
+    {
+      "name": "Jerry Jeudy",
+      "position": "WR",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "stats": {
+        "receivingYards": "1229",
+        "receivingYards_raw": 1229.0,
+        "receptions": "90",
+        "receptions_raw": 90.0
+      }
+    },
+    {
+      "name": "Malik Nabers",
+      "position": "WR",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "stats": {
+        "receivingYards": "1204",
+        "receivingYards_raw": 1204.0,
+        "receptions": "109",
+        "receptions_raw": 109.0
+      }
+    },
+    {
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "stats": {
+        "receivingYards": "1194",
+        "receivingYards_raw": 1194.0,
+        "receptions": "101",
+        "receptions_raw": 101.0
+      }
+    },
+    {
+      "name": "Brock Bowers",
+      "position": "TE",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "stats": {
+        "receivingYards": "1194",
+        "receivingYards_raw": 1194.0,
+        "receptions": "112",
+        "receptions_raw": 112.0
+      }
+    },
+    {
+      "name": "Ladd McConkey",
+      "position": "WR",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "receivingYards": "1149",
+        "receivingYards_raw": 1149.0,
+        "receptions": "82",
+        "receptions_raw": 82.0
+      }
+    },
+    {
+      "name": "Trey McBride",
+      "position": "TE",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "receivingYards": "1146",
+        "receivingYards_raw": 1146.0,
+        "receptions": "111",
+        "receptions_raw": 111.0
+      }
+    },
+    {
+      "name": "Jaxon Smith-Njigba",
+      "position": "WR",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "receivingYards": "1130",
+        "receivingYards_raw": 1130.0,
+        "receptions": "100",
+        "receptions_raw": 100.0
+      }
+    },
+    {
+      "name": "George Kittle",
+      "position": "TE",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "stats": {
+        "receivingYards": "1106",
+        "receivingYards_raw": 1106.0,
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Garrett Wilson",
+      "position": "WR",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "stats": {
+        "receivingYards": "1104",
+        "receivingYards_raw": 1104.0,
+        "receptions": "101",
+        "receptions_raw": 101.0
+      }
+    },
+    {
+      "name": "Terry McLaurin",
+      "position": "WR",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "receivingYards": "1096",
+        "receivingYards_raw": 1096.0,
+        "receptions": "82",
+        "receptions_raw": 82.0,
+        "receivingTouchdowns": "13",
+        "receivingTouchdowns_raw": 13.0
+      }
+    },
+    {
+      "name": "Courtland Sutton",
+      "position": "WR",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "stats": {
+        "receivingYards": "1081",
+        "receivingYards_raw": 1081.0,
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "A.J. Brown",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "receivingYards": "1079",
+        "receivingYards_raw": 1079.0
+      }
+    },
+    {
+      "name": "Davante Adams",
+      "position": "WR",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "stats": {
+        "receivingYards": "1063",
+        "receivingYards_raw": 1063.0,
+        "receptions": "85",
+        "receptions_raw": 85.0,
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Zay Flowers",
+      "position": "WR",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "receivingYards": "1059",
+        "receivingYards_raw": 1059.0
+      }
+    },
+    {
+      "name": "Jakobi Meyers",
+      "position": "WR",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "stats": {
+        "receivingYards": "1027",
+        "receivingYards_raw": 1027.0,
+        "receptions": "87",
+        "receptions_raw": 87.0
+      }
+    },
+    {
+      "name": "Tua Tagovailoa",
+      "position": "QB",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "stats": {
+        "passingTouchdowns": "19",
+        "passingTouchdowns_raw": 19.0
+      }
+    },
+    {
+      "name": "David Montgomery",
+      "position": "RB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "rushingTouchdowns": "12",
+        "rushingTouchdowns_raw": 12.0
+      }
+    },
+    {
+      "name": "J.K. Dobbins",
+      "position": "RB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "rushingTouchdowns": "9",
+        "rushingTouchdowns_raw": 9.0
+      }
+    },
+    {
+      "name": "Brian Robinson Jr.",
+      "position": "RB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "rushingTouchdowns": "8",
+        "rushingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Zach Charbonnet",
+      "position": "RB",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "rushingTouchdowns": "8",
+        "rushingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Kareem Hunt",
+      "position": "RB",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "stats": {
+        "rushingTouchdowns": "7",
+        "rushingTouchdowns_raw": 7.0
+      }
+    },
+    {
+      "name": "DJ Moore",
+      "position": "WR",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "stats": {
+        "receptions": "98",
+        "receptions_raw": 98.0
+      }
+    },
+    {
+      "name": "Travis Kelce",
+      "position": "TE",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "stats": {
+        "receptions": "97",
+        "receptions_raw": 97.0
+      }
+    },
+    {
+      "name": "Wan'Dale Robinson",
+      "position": "WR",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "stats": {
+        "receptions": "93",
+        "receptions_raw": 93.0
+      }
+    },
+    {
+      "name": "Jonnu Smith",
+      "position": "TE",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "stats": {
+        "receptions": "88",
+        "receptions_raw": 88.0,
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Mike Evans",
+      "position": "WR",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "stats": {
+        "receivingTouchdowns": "11",
+        "receivingTouchdowns_raw": 11.0
+      }
+    },
+    {
+      "name": "Mark Andrews",
+      "position": "TE",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "receivingTouchdowns": "11",
+        "receivingTouchdowns_raw": 11.0
+      }
+    },
+    {
+      "name": "Tee Higgins",
+      "position": "WR",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "receivingTouchdowns": "10",
+        "receivingTouchdowns_raw": 10.0
+      }
+    },
+    {
+      "name": "Nick Westbrook-Ikhine",
+      "position": "WR",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "stats": {
+        "receivingTouchdowns": "9",
+        "receivingTouchdowns_raw": 9.0
+      }
+    },
+    {
+      "name": "Rashod Bateman",
+      "position": "WR",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "receivingTouchdowns": "9",
+        "receivingTouchdowns_raw": 9.0
+      }
+    },
+    {
+      "name": "Jordan Addison",
+      "position": "WR",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "receivingTouchdowns": "9",
+        "receivingTouchdowns_raw": 9.0
+      }
+    },
+    {
+      "name": "DeVonta Smith",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Quentin Johnston",
+      "position": "WR",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Jalen McMillan",
+      "position": "WR",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "stats": {
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Marvin Harrison Jr.",
+      "position": "WR",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "receivingTouchdowns": "8",
+        "receivingTouchdowns_raw": 8.0
+      }
+    },
+    {
+      "name": "Israel Abanikanda",
+      "position": "RB",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "height": 71.0,
+      "weight": 215.0,
+      "age": 23,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Jared Abbrederis",
+      "position": "WR",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 73.0,
+      "weight": 195.0,
+      "age": 35,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Ameer Abdullah",
+      "position": "RB",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "height": 69.0,
+      "weight": 203.0,
+      "age": 32,
+      "experience": 11,
+      "stats": {}
+    },
+    {
+      "name": "Khalid Abdullah",
+      "position": "RB",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 70.0,
+      "weight": 220.0,
+      "age": 31,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Rabih Abdullah",
+      "position": "RB",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 72.0,
+      "weight": 235.0,
+      "age": 51,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Chad Abram",
+      "position": "RB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 72.0,
+      "weight": 229.0,
+      "age": 34,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Keshunn Abram",
+      "position": "WR",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "height": 74.0,
+      "weight": 193.0,
+      "age": 27,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "De'Von Achane",
+      "position": "RB",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "height": 69.0,
+      "weight": 191.0,
+      "age": 24,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Jackson Acker",
+      "position": "FB",
+      "team": "Buffalo Bills",
+      "teamAbbr": "BUF",
+      "height": 73.0,
+      "weight": 250.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Jaelon Acklin",
+      "position": "WR",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "height": 73.0,
+      "weight": 189.0,
+      "age": 30,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Charlie Adams",
+      "position": "WR",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "height": 74.0,
+      "weight": 210.0,
+      "age": 46,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Darvin Adams",
+      "position": "WR",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "height": 74.0,
+      "weight": 195.0,
+      "age": 36,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "DJ Adams",
+      "position": "RB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "height": 70.0,
+      "weight": 210.0,
+      "age": 35,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Harry Adams",
+      "position": "WR",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 72.0,
+      "weight": 183.0,
+      "age": 36,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Jerell Adams",
+      "position": "TE",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 78.0,
+      "weight": 256.0,
+      "age": 33,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Joe Adams",
+      "position": "WR",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "height": 71.0,
+      "weight": 185.0,
+      "age": 36,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Jonathan Adams",
+      "position": "WR",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 75.0,
+      "weight": 220.0,
+      "age": 27,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Josh Adams",
+      "position": "RB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "height": 74.0,
+      "weight": 225.0,
+      "age": 29,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Kris Adams",
+      "position": "WR",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 75.0,
+      "weight": 194.0,
+      "age": 38,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Kyle Adams",
+      "position": "TE",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 76.0,
+      "weight": 250.0,
+      "age": 38,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Rodney Adams",
+      "position": "WR",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "height": 73.0,
+      "weight": 189.0,
+      "age": 31,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Tyler Adams",
+      "position": "WR",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 72.0,
+      "weight": 190.0,
+      "age": 27,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Joseph Addai",
+      "position": "RB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 71.0,
+      "weight": 214.0,
+      "age": 43,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Bralon Addison",
+      "position": "WR",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "height": 70.0,
+      "weight": 190.0,
+      "age": 32,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Quincy Adeboyejo",
+      "position": "WR",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 75.0,
+      "weight": 200.0,
+      "age": 30,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Ife Adeyi",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 70.0,
+      "weight": 175.0,
+      "age": 25,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Nate Adkins",
+      "position": "TE",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "height": 75.0,
+      "weight": 252.0,
+      "age": 26,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "James Adkisson",
+      "position": "WR",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "height": 77.0,
+      "weight": 230.0,
+      "age": 46,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Graham Adomitis",
+      "position": "TE",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 76.0,
+      "weight": 255.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Tommie Agee",
+      "position": "RB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "height": 72.0,
+      "weight": 235.0,
+      "age": 62,
+      "experience": 8,
+      "stats": {}
+    },
+    {
+      "name": "Nelson Agholor",
+      "position": "WR",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "height": 72.0,
+      "weight": 200.0,
+      "age": 32,
+      "experience": 10,
+      "stats": {}
+    },
+    {
+      "name": "Jamal Agnew",
+      "position": "WR",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "height": 70.0,
+      "weight": 190.0,
+      "age": 31,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "Ray Agnew",
+      "position": "FB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "height": 70.0,
+      "weight": 247.0,
+      "age": 35,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Carlton Agudosi",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 78.0,
+      "weight": 220.0,
+      "age": 32,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Devin Aguilar",
+      "position": "WR",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 71.0,
+      "weight": 200.0,
+      "age": 37,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Joey Aguilar",
+      "position": "QB",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "height": 75.0,
+      "weight": 225.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Holton Ahlers",
+      "position": "QB",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "height": 75.0,
+      "weight": 227.0,
+      "age": 26,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Salvon Ahmed",
+      "position": "RB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 71.0,
+      "weight": 196.0,
+      "age": 27,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Kamar Aiken",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 74.0,
+      "weight": 216.0,
+      "age": 36,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Sam Aiken",
+      "position": "WR",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 74.0,
+      "weight": 220.0,
+      "age": 45,
+      "experience": 8,
+      "stats": {}
+    },
+    {
+      "name": "Troy Aikman",
+      "position": "QB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "height": 75.0,
+      "weight": 226.0,
+      "age": 59,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Brandon Aiyuk",
+      "position": "WR",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "height": 72.0,
+      "weight": 200.0,
+      "age": 28,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Jay Ajayi",
+      "position": "RB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 72.0,
+      "weight": 223.0,
+      "age": 32,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Seyi Ajirotutu",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 75.0,
+      "weight": 215.0,
+      "age": 38,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Ajou Ajou",
+      "position": "WR",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 75.0,
+      "weight": 218.0,
+      "age": 24,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Cam Akers",
+      "position": "RB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "height": 70.0,
+      "weight": 217.0,
+      "age": 26,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Landen Akers",
+      "position": "WR",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 72.0,
+      "weight": 191.0,
+      "age": 28,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Kelly Akharaiyi",
+      "position": "WR",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "height": 72.0,
+      "weight": 201.0,
+      "age": 26,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "C.J. Akins",
+      "position": "WR",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 73.0,
+      "weight": 200.0,
+      "age": 35,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Jordan Akins",
+      "position": "TE",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 76.0,
+      "weight": 245.0,
+      "age": 34,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Elvis Akpla",
+      "position": "WR",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 73.0,
+      "weight": 190.0,
+      "age": 37,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Abdul-Karim al-Jabbar",
+      "position": "RB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 71.0,
+      "weight": 205.0,
+      "age": 51,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Zac Alcorn",
+      "position": "TE",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "height": 76.0,
+      "weight": 260.0,
+      "age": 45,
+      "experience": 1,
+      "stats": {}
+    }
+  ],
+  "defense": [
+    {
+      "name": "Zaire Franklin",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "stats": {
+        "totalTackles": "173",
+        "totalTackles_raw": 173.0
+      }
+    },
+    {
+      "name": "Budda Baker",
+      "position": "S",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "totalTackles": "164",
+        "totalTackles_raw": 164.0
+      }
+    },
+    {
+      "name": "Robert Spillane",
+      "position": "LB",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "stats": {
+        "totalTackles": "158",
+        "totalTackles_raw": 158.0
+      }
+    },
+    {
+      "name": "Jamien Sherwood",
+      "position": "LB",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "stats": {
+        "totalTackles": "158",
+        "totalTackles_raw": 158.0
+      }
+    },
+    {
+      "name": "Roquan Smith",
+      "position": "LB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "totalTackles": "154",
+        "totalTackles_raw": 154.0
+      }
+    },
+    {
+      "name": "Kaden Elliss",
+      "position": "LB",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "stats": {
+        "totalTackles": "151",
+        "totalTackles_raw": 151.0
+      }
+    },
+    {
+      "name": "Zack Baun",
+      "position": "LB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "totalTackles": "151",
+        "totalTackles_raw": 151.0
+      }
+    },
+    {
+      "name": "Daiyan Henley",
+      "position": "LB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "totalTackles": "147",
+        "totalTackles_raw": 147.0
+      }
+    },
+    {
+      "name": "Nick Cross",
+      "position": "S",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "stats": {
+        "totalTackles": "146",
+        "totalTackles_raw": 146.0
+      }
+    },
+    {
+      "name": "Germaine Pratt",
+      "position": "LB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "totalTackles": "143",
+        "totalTackles_raw": 143.0
+      }
+    },
+    {
+      "name": "Jordyn Brooks",
+      "position": "LB",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "stats": {
+        "totalTackles": "143",
+        "totalTackles_raw": 143.0
+      }
+    },
+    {
+      "name": "E.J. Speed",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "stats": {
+        "totalTackles": "142",
+        "totalTackles_raw": 142.0
+      }
+    },
+    {
+      "name": "Eric Kendricks",
+      "position": "LB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "stats": {
+        "totalTackles": "138",
+        "totalTackles_raw": 138.0
+      }
+    },
+    {
+      "name": "Ernest Jones IV",
+      "position": "LB",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "totalTackles": "138",
+        "totalTackles_raw": 138.0
+      }
+    },
+    {
+      "name": "Kyzir White",
+      "position": "LB",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "stats": {
+        "totalTackles": "137",
+        "totalTackles_raw": 137.0
+      }
+    },
+    {
+      "name": "Demario Davis",
+      "position": "LB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "stats": {
+        "totalTackles": "136",
+        "totalTackles_raw": 136.0
+      }
+    },
+    {
+      "name": "Christian Rozeboom",
+      "position": "LB",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "stats": {
+        "totalTackles": "135",
+        "totalTackles_raw": 135.0
+      }
+    },
+    {
+      "name": "Bobby Wagner",
+      "position": "LB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "totalTackles": "132",
+        "totalTackles_raw": 132.0
+      }
+    },
+    {
+      "name": "Fred Warner",
+      "position": "LB",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "stats": {
+        "totalTackles": "131",
+        "totalTackles_raw": 131.0
+      }
+    },
+    {
+      "name": "Jack Campbell",
+      "position": "LB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "totalTackles": "131",
+        "totalTackles_raw": 131.0
+      }
+    },
+    {
+      "name": "Trey Hendrickson",
+      "position": "LB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "sacks": "18",
+        "sacks_raw": 17.5
+      }
+    },
+    {
+      "name": "Myles Garrett",
+      "position": "DE",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "stats": {
+        "sacks": "14",
+        "sacks_raw": 14.0
+      }
+    },
+    {
+      "name": "Nik Bonitto",
+      "position": "LB",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "stats": {
+        "sacks": "14",
+        "sacks_raw": 13.5
+      }
+    },
+    {
+      "name": "Kyle Van Noy",
+      "position": "LB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 12.5
+      }
+    },
+    {
+      "name": "Danielle Hunter",
+      "position": "DE",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 12.0
+      }
+    },
+    {
+      "name": "Jonathan Greenard",
+      "position": "LB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 12.0
+      }
+    },
+    {
+      "name": "Micah Parsons",
+      "position": "DE",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 12.0
+      }
+    },
+    {
+      "name": "T.J. Watt",
+      "position": "LB",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 11.5
+      }
+    },
+    {
+      "name": "Andrew Van Ginkel",
+      "position": "LB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "sacks": "12",
+        "sacks_raw": 11.5
+      }
+    },
+    {
+      "name": "Leonard Williams",
+      "position": "DT",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "sacks": "11",
+        "sacks_raw": 11.0
+      }
+    },
+    {
+      "name": "Will Anderson Jr.",
+      "position": "DE",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "sacks": "11",
+        "sacks_raw": 11.0
+      }
+    },
+    {
+      "name": "Dante Fowler Jr.",
+      "position": "DE",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.5
+      }
+    },
+    {
+      "name": "Jonathon Cooper",
+      "position": "LB",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.5
+      }
+    },
+    {
+      "name": "Will McDonald IV",
+      "position": "DE",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.5
+      }
+    },
+    {
+      "name": "Travon Walker",
+      "position": "DE",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.5
+      }
+    },
+    {
+      "name": "Zach Sieler",
+      "position": "DT",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.0
+      }
+    },
+    {
+      "name": "Odafe Oweh",
+      "position": "LB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "sacks": "10",
+        "sacks_raw": 10.0
+      }
+    },
+    {
+      "name": "Za'Darius Smith",
+      "position": "DE",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "sacks": "9",
+        "sacks_raw": 9.0
+      }
+    },
+    {
+      "name": "Harold Landry III",
+      "position": "LB",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "stats": {
+        "sacks": "9",
+        "sacks_raw": 9.0
+      }
+    },
+    {
+      "name": "Dexter Lawrence II",
+      "position": "DT",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "stats": {
+        "sacks": "9",
+        "sacks_raw": 9.0
+      }
+    },
+    {
+      "name": "Kerby Joseph",
+      "position": "S",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "interceptions": "9",
+        "interceptions_raw": 9.0,
+        "passesDefended": "12",
+        "passesDefended_raw": 12.0
+      }
+    },
+    {
+      "name": "Xavier McKinney",
+      "position": "S",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "stats": {
+        "interceptions": "8",
+        "interceptions_raw": 8.0
+      }
+    },
+    {
+      "name": "Marlon Humphrey",
+      "position": "CB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "interceptions": "6",
+        "interceptions_raw": 6.0,
+        "passesDefended": "15",
+        "passesDefended_raw": 15.0
+      }
+    },
+    {
+      "name": "C.J. Gardner-Johnson",
+      "position": "S",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "interceptions": "6",
+        "interceptions_raw": 6.0,
+        "passesDefended": "12",
+        "passesDefended_raw": 12.0
+      }
+    },
+    {
+      "name": "Byron Murphy Jr.",
+      "position": "CB",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "interceptions": "6",
+        "interceptions_raw": 6.0,
+        "passesDefended": "14",
+        "passesDefended_raw": 14.0
+      }
+    },
+    {
+      "name": "Donte Jackson",
+      "position": "CB",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "stats": {
+        "interceptions": "5",
+        "interceptions_raw": 5.0
+      }
+    },
+    {
+      "name": "Amani Hooker",
+      "position": "S",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "stats": {
+        "interceptions": "5",
+        "interceptions_raw": 5.0
+      }
+    },
+    {
+      "name": "Derek Stingley Jr.",
+      "position": "CB",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "interceptions": "5",
+        "interceptions_raw": 5.0,
+        "passesDefended": "18",
+        "passesDefended_raw": 18.0
+      }
+    },
+    {
+      "name": "Calen Bullock",
+      "position": "S",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "stats": {
+        "interceptions": "5",
+        "interceptions_raw": 5.0
+      }
+    },
+    {
+      "name": "Jessie Bates III",
+      "position": "S",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Geno Stone",
+      "position": "S",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Reed Blankenship",
+      "position": "S",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Beanie Bishop",
+      "position": "CB",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Pat Surtain II",
+      "position": "CB",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Jaylen McCollough",
+      "position": "S",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Tarheeb Still",
+      "position": "CB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Kamren Kinchens",
+      "position": "S",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0
+      }
+    },
+    {
+      "name": "Brian Branch",
+      "position": "S",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "stats": {
+        "interceptions": "4",
+        "interceptions_raw": 4.0,
+        "passesDefended": "16",
+        "passesDefended_raw": 16.0
+      }
+    },
+    {
+      "name": "Harrison Smith",
+      "position": "S",
+      "team": "Minnesota Vikings",
+      "teamAbbr": "MIN",
+      "stats": {
+        "interceptions": "3",
+        "interceptions_raw": 3.0
+      }
+    },
+    {
+      "name": "Tyrann Mathieu",
+      "position": "S",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "stats": {
+        "interceptions": "3",
+        "interceptions_raw": 3.0
+      }
+    },
+    {
+      "name": "Denzel Ward",
+      "position": "CB",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "stats": {
+        "passesDefended": "19",
+        "passesDefended_raw": 19.0
+      }
+    },
+    {
+      "name": "Mike Jackson",
+      "position": "CB",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "stats": {
+        "passesDefended": "17",
+        "passesDefended_raw": 17.0
+      }
+    },
+    {
+      "name": "Zyon McCollum",
+      "position": "CB",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "stats": {
+        "passesDefended": "17",
+        "passesDefended_raw": 17.0
+      }
+    },
+    {
+      "name": "Jack Jones",
+      "position": "CB",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "stats": {
+        "passesDefended": "16",
+        "passesDefended_raw": 16.0
+      }
+    },
+    {
+      "name": "Cam Taylor-Britt",
+      "position": "CB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "stats": {
+        "passesDefended": "16",
+        "passesDefended_raw": 16.0
+      }
+    },
+    {
+      "name": "Alontae Taylor",
+      "position": "CB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "stats": {
+        "passesDefended": "16",
+        "passesDefended_raw": 16.0
+      }
+    },
+    {
+      "name": "Riq Woolen",
+      "position": "CB",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "passesDefended": "14",
+        "passesDefended_raw": 14.0
+      }
+    },
+    {
+      "name": "Mike Sainristil",
+      "position": "CB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "stats": {
+        "passesDefended": "14",
+        "passesDefended_raw": 14.0
+      }
+    },
+    {
+      "name": "Darius Slay",
+      "position": "CB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "stats": {
+        "passesDefended": "13",
+        "passesDefended_raw": 13.0
+      }
+    },
+    {
+      "name": "Jaycee Horn",
+      "position": "CB",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "stats": {
+        "passesDefended": "13",
+        "passesDefended_raw": 13.0
+      }
+    },
+    {
+      "name": "Trent McDuffie",
+      "position": "CB",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "stats": {
+        "passesDefended": "13",
+        "passesDefended_raw": 13.0
+      }
+    },
+    {
+      "name": "Renardo Green",
+      "position": "CB",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "stats": {
+        "passesDefended": "13",
+        "passesDefended_raw": 13.0
+      }
+    },
+    {
+      "name": "Nate Wiggins",
+      "position": "CB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "stats": {
+        "passesDefended": "13",
+        "passesDefended_raw": 13.0
+      }
+    },
+    {
+      "name": "Julian Love",
+      "position": "S",
+      "team": "Seattle Seahawks",
+      "teamAbbr": "SEA",
+      "stats": {
+        "passesDefended": "12",
+        "passesDefended_raw": 12.0
+      }
+    },
+    {
+      "name": "Isaako Aaitui",
+      "position": "DT",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 76.0,
+      "weight": 307.0,
+      "age": 39,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Manny Abad",
+      "position": "DB",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 71.0,
+      "weight": 184.0,
+      "age": 32,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Mehdi Abdesmad",
+      "position": "DE",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 78.0,
+      "weight": 284.0,
+      "age": 34,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Isa Abdul-Quddus",
+      "position": "S",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "height": 73.0,
+      "weight": 196.0,
+      "age": 36,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Hamza Abdullah",
+      "position": "S",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "height": 74.0,
+      "weight": 216.0,
+      "age": 42,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Husain Abdullah",
+      "position": "DB",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "height": 72.0,
+      "weight": 204.0,
+      "age": 40,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Khalid Abdullah",
+      "position": "LB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "height": 74.0,
+      "weight": 227.0,
+      "age": 47,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Rahim Abdullah",
+      "position": "LB",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 77.0,
+      "weight": 233.0,
+      "age": 50,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Yasir Abdullah",
+      "position": "LB",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "height": 73.0,
+      "weight": 240.0,
+      "age": 26,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Micah Abernathy",
+      "position": "S",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "height": 72.0,
+      "weight": 195.0,
+      "age": 29,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Victor Abiamiri",
+      "position": "DE",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 76.0,
+      "weight": 267.0,
+      "age": 40,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Keith Abney II",
+      "position": "CB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 72.0,
+      "weight": 190.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Clifton Abraham",
+      "position": "DB",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "height": 69.0,
+      "weight": 185.0,
+      "age": 54,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Donnie Abraham",
+      "position": "CB",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "height": 70.0,
+      "weight": 192.0,
+      "age": 52,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "John Abraham",
+      "position": "LB",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "height": 76.0,
+      "weight": 263.0,
+      "age": 48,
+      "experience": 15,
+      "stats": {}
+    },
+    {
+      "name": "Micah Abraham",
+      "position": "CB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "height": 70.0,
+      "weight": 185.0,
+      "age": 25,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Johnathan Abram",
+      "position": "S",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "height": 71.0,
+      "weight": 205.0,
+      "age": 29,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Bobby Abrams",
+      "position": "LB",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 75.0,
+      "weight": 242.0,
+      "age": 59,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Delrick Abrams",
+      "position": "CB",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 75.0,
+      "weight": 180.0,
+      "age": 29,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Kevin Abrams",
+      "position": "CB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 68.0,
+      "weight": 170.0,
+      "age": 52,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Kris Abrams-Draine",
+      "position": "CB",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "height": 71.0,
+      "weight": 178.0,
+      "age": 24,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Emmanuel Acho",
+      "position": "LB",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 74.0,
+      "weight": 240.0,
+      "age": 35,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Sam Acho",
+      "position": "DE",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 75.0,
+      "weight": 259.0,
+      "age": 37,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "Kenneth Acker",
+      "position": "CB",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "height": 72.0,
+      "weight": 195.0,
+      "age": 34,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "DeMarkus Acy",
+      "position": "CB",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "height": 74.0,
+      "weight": 195.0,
+      "age": 28,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Andrew Adams",
+      "position": "S",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "height": 71.0,
+      "weight": 202.0,
+      "age": 33,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Anthony Adams",
+      "position": "DT",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "height": 72.0,
+      "weight": 310.0,
+      "age": 45,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "BJ Adams",
+      "position": "CB",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "height": 75.0,
+      "weight": 190.0,
+      "age": 22,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Blue Adams",
+      "position": "DB",
+      "team": "Cincinnati Bengals",
+      "teamAbbr": "CIN",
+      "height": 70.0,
+      "weight": 187.0,
+      "age": 46,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Gaines Adams",
+      "position": "DE",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "height": 77.0,
+      "weight": 258.0,
+      "age": 26,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Jamal Adams",
+      "position": "LB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 73.0,
+      "weight": 213.0,
+      "age": 30,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "Jamar Adams",
+      "position": "S",
+      "team": "Philadelphia Eagles",
+      "teamAbbr": "PHI",
+      "height": 74.0,
+      "weight": 215.0,
+      "age": 40,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Johnny Adams",
+      "position": "DB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 71.0,
+      "weight": 177.0,
+      "age": 36,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Keion Adams",
+      "position": "LB",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 74.0,
+      "weight": 240.0,
+      "age": 30,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Keith Adams",
+      "position": "LB",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 71.0,
+      "weight": 223.0,
+      "age": 46,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Kendrick Adams",
+      "position": "DE",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 77.0,
+      "weight": 250.0,
+      "age": 37,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Matthew Adams",
+      "position": "LB",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 72.0,
+      "weight": 230.0,
+      "age": 30,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Michael Adams",
+      "position": "DB",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 68.0,
+      "weight": 181.0,
+      "age": 40,
+      "experience": 7,
+      "stats": {}
+    },
+    {
+      "name": "Mike Adams",
+      "position": "S",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "height": 71.0,
+      "weight": 205.0,
+      "age": 45,
+      "experience": 16,
+      "stats": {}
+    },
+    {
+      "name": "Montravius Adams",
+      "position": "DT",
+      "team": "Pittsburgh Steelers",
+      "teamAbbr": "PIT",
+      "height": 76.0,
+      "weight": 304.0,
+      "age": 30,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Myles Adams",
+      "position": "DE",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 74.0,
+      "weight": 299.0,
+      "age": 28,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Nelson Adams",
+      "position": "DE",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "height": 75.0,
+      "weight": 289.0,
+      "age": 32,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Phillip Adams",
+      "position": "CB",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "height": 71.0,
+      "weight": 195.0,
+      "age": 37,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Royce Adams",
+      "position": "DB",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 72.0,
+      "weight": 190.0,
+      "age": 38,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Sam Adams",
+      "position": "DT",
+      "team": "Denver Broncos",
+      "teamAbbr": "DEN",
+      "height": 75.0,
+      "weight": 350.0,
+      "age": 52,
+      "experience": 14,
+      "stats": {}
+    },
+    {
+      "name": "Titus Adams",
+      "position": "DT",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 76.0,
+      "weight": 305.0,
+      "age": 43,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Tony Adams",
+      "position": "S",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "height": 71.0,
+      "weight": 203.0,
+      "age": 27,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Tyrell Adams",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 74.0,
+      "weight": 228.0,
+      "age": 34,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Vashone Adams",
+      "position": "DB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "height": 70.0,
+      "weight": "",
+      "age": 52,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Will Adams",
+      "position": "CB",
+      "team": "WSH",
+      "teamAbbr": "WSH",
+      "height": 74.0,
+      "weight": 192.0,
+      "age": 28,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Jahleel Addae",
+      "position": "S",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 70.0,
+      "weight": 195.0,
+      "age": 36,
+      "experience": 9,
+      "stats": {}
+    },
+    {
+      "name": "Nasir Adderley",
+      "position": "S",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 72.0,
+      "weight": 206.0,
+      "age": 28,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Mario Addison",
+      "position": "DE",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "height": 75.0,
+      "weight": 260.0,
+      "age": 38,
+      "experience": 12,
+      "stats": {}
+    },
+    {
+      "name": "Adetomiwa Adebawore",
+      "position": "DT",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 74.0,
+      "weight": 282.0,
+      "age": 25,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Paulson Adebo",
+      "position": "CB",
+      "team": "New Orleans Saints",
+      "teamAbbr": "NO",
+      "height": 73.0,
+      "weight": 192.0,
+      "age": 26,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Jayson Ademilola",
+      "position": "LB",
+      "team": "Jacksonville Jaguars",
+      "teamAbbr": "JAX",
+      "height": 75.0,
+      "weight": 285.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Ola Adeniyi",
+      "position": "LB",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 73.0,
+      "weight": 248.0,
+      "age": 28,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Aaron Adeoye",
+      "position": "DE",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "height": 78.0,
+      "weight": 250.0,
+      "age": 32,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Aaron Adeoye",
+      "position": "LB",
+      "team": "Green Bay Packers",
+      "teamAbbr": "GB",
+      "height": 78.0,
+      "weight": 260.0,
+      "age": 32,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Tenny Adewusi",
+      "position": "S",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 71.0,
+      "weight": 199.0,
+      "age": 29,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Victor Adeyanju",
+      "position": "DE",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 76.0,
+      "weight": 284.0,
+      "age": 43,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Kenton Adeyemi",
+      "position": "DL",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 76.0,
+      "weight": 267.0,
+      "age": 34,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Xavier Adibi",
+      "position": "LB",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 74.0,
+      "weight": 242.0,
+      "age": 41,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Jude Adjei-Barimah",
+      "position": "CB",
+      "team": "Tampa Bay Buccaneers",
+      "teamAbbr": "TB",
+      "height": 71.0,
+      "weight": 200.0,
+      "age": 33,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Spencer Adkins",
+      "position": "LB",
+      "team": "New York Giants",
+      "teamAbbr": "NYG",
+      "height": 71.0,
+      "weight": 236.0,
+      "age": 39,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Daniel Adongo",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 77.0,
+      "weight": 270.0,
+      "age": 36,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Patrick Afriyie",
+      "position": "DE",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "height": 74.0,
+      "weight": 240.0,
+      "age": 29,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Mel Agee",
+      "position": "DT",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "height": 77.0,
+      "weight": 300.0,
+      "age": 57,
+      "experience": 4,
+      "stats": {}
+    },
+    {
+      "name": "Tanner Agen",
+      "position": "DL",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "height": 75.0,
+      "weight": 275.0,
+      "age": 0,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "McTelvin Agim",
+      "position": "DT",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 75.0,
+      "weight": 300.0,
+      "age": 28,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Ray Agnew",
+      "position": "DT",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 75.0,
+      "weight": 285.0,
+      "age": 58,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Theo Agnew",
+      "position": "DE",
+      "team": "Atlanta Falcons",
+      "teamAbbr": "ATL",
+      "height": 76.0,
+      "weight": 280.0,
+      "age": 34,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Vince Agnew",
+      "position": "CB",
+      "team": "Kansas City Chiefs",
+      "teamAbbr": "KC",
+      "height": 70.0,
+      "weight": 196.0,
+      "age": 38,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "David Ebuka Agoha",
+      "position": "DE",
+      "team": "Las Vegas Raiders",
+      "teamAbbr": "LV",
+      "height": 76.0,
+      "weight": 252.0,
+      "age": 24,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Mitchell Agude",
+      "position": "LB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 76.0,
+      "weight": 262.0,
+      "age": 27,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "C.J. Ah You",
+      "position": "DE",
+      "team": "Los Angeles Rams",
+      "teamAbbr": "LAR",
+      "height": 76.0,
+      "weight": 270.0,
+      "age": 43,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Chidi Ahanotu",
+      "position": "DE",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "height": 74.0,
+      "weight": 285.0,
+      "age": 55,
+      "experience": 12,
+      "stats": {}
+    },
+    {
+      "name": "Junior Aho",
+      "position": "DT",
+      "team": "Carolina Panthers",
+      "teamAbbr": "CAR",
+      "height": 76.0,
+      "weight": 272.0,
+      "age": 27,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Walt Aikens",
+      "position": "S",
+      "team": "Miami Dolphins",
+      "teamAbbr": "MIA",
+      "height": 73.0,
+      "weight": 200.0,
+      "age": 34,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "James Aiono",
+      "position": "DE",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 75.0,
+      "weight": 305.0,
+      "age": 37,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Victor Aiyewa",
+      "position": "LB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "height": 73.0,
+      "weight": 219.0,
+      "age": 37,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Solomon Ajayi",
+      "position": "LB",
+      "team": "Cleveland Browns",
+      "teamAbbr": "CLE",
+      "height": 72.0,
+      "weight": 222.0,
+      "age": 28,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Austin Ajiake",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 73.0,
+      "weight": 223.0,
+      "age": 25,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Hakim Akbar",
+      "position": "DB",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 72.0,
+      "weight": 222.0,
+      "age": 45,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Tommy Akingbesote",
+      "position": "DT",
+      "team": "Buffalo Bills",
+      "teamAbbr": "BUF",
+      "height": 76.0,
+      "weight": 316.0,
+      "age": 23,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Freedom Akinmoladun",
+      "position": "DT",
+      "team": "New York Jets",
+      "teamAbbr": "NYJ",
+      "height": 75.0,
+      "weight": 286.0,
+      "age": 30,
+      "experience": 1,
+      "stats": {}
+    },
+    {
+      "name": "Chris Akins",
+      "position": "DB",
+      "team": "New England Patriots",
+      "teamAbbr": "NE",
+      "height": 71.0,
+      "weight": 200.0,
+      "age": 49,
+      "experience": 6,
+      "stats": {}
+    },
+    {
+      "name": "Curtis Akins",
+      "position": "LB",
+      "team": "Buffalo Bills",
+      "teamAbbr": "BUF",
+      "height": 73.0,
+      "weight": 229.0,
+      "age": 30,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Derek Akunne",
+      "position": "LB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "height": 72.0,
+      "weight": 242.0,
+      "age": 32,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Azeez Al-Shaair",
+      "position": "LB",
+      "team": "Houston Texans",
+      "teamAbbr": "HOU",
+      "height": 74.0,
+      "weight": 228.0,
+      "age": 28,
+      "experience": 8,
+      "stats": {}
+    },
+    {
+      "name": "Otaro Alaka",
+      "position": "LB",
+      "team": "Baltimore Ravens",
+      "teamAbbr": "BAL",
+      "height": 75.0,
+      "weight": 239.0,
+      "age": 29,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Ikaika Alama-Francis",
+      "position": "DE",
+      "team": "San Francisco 49ers",
+      "teamAbbr": "SF",
+      "height": 77.0,
+      "weight": 290.0,
+      "age": 41,
+      "experience": 5,
+      "stats": {}
+    },
+    {
+      "name": "Trev Alberts",
+      "position": "LB",
+      "team": "Indianapolis Colts",
+      "teamAbbr": "IND",
+      "height": 76.0,
+      "weight": 245.0,
+      "age": 55,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Alex Albright",
+      "position": "LB",
+      "team": "Dallas Cowboys",
+      "teamAbbr": "DAL",
+      "height": 77.0,
+      "weight": 254.0,
+      "age": 38,
+      "experience": 3,
+      "stats": {}
+    },
+    {
+      "name": "Bryson Albright",
+      "position": "DE",
+      "team": "Arizona Cardinals",
+      "teamAbbr": "ARI",
+      "height": 77.0,
+      "weight": 235.0,
+      "age": 32,
+      "experience": 2,
+      "stats": {}
+    },
+    {
+      "name": "Christian Albright",
+      "position": "LB",
+      "team": "Chicago Bears",
+      "teamAbbr": "CHI",
+      "height": 74.0,
+      "weight": 239.0,
+      "age": 27,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Allen Aldridge",
+      "position": "LB",
+      "team": "Detroit Lions",
+      "teamAbbr": "DET",
+      "height": 73.0,
+      "weight": 255.0,
+      "age": 53,
+      "experience": 8,
+      "stats": {}
+    },
+    {
+      "name": "Kevin Aldridge",
+      "position": "DE",
+      "team": "Tennessee Titans",
+      "teamAbbr": "TEN",
+      "height": 73.0,
+      "weight": 271.0,
+      "age": 46,
+      "experience": 0,
+      "stats": {}
+    },
+    {
+      "name": "Arnold Ale",
+      "position": "LB",
+      "team": "Los Angeles Chargers",
+      "teamAbbr": "LAC",
+      "height": 74.0,
+      "weight": 230.0,
+      "age": 55,
+      "experience": 2,
+      "stats": {}
+    }
+  ]
+}

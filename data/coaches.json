@@ -1,0 +1,162 @@
+{
+  "ARI": {
+    "HC": "Jonathan Gannon",
+    "OC": "Drew Petzing",
+    "DC": "Nick Rallis"
+  },
+  "ATL": {
+    "HC": "Raheem Morris",
+    "OC": "Zac Robinson",
+    "DC": "Jimmy Lake"
+  },
+  "BAL": {
+    "HC": "John Harbaugh",
+    "OC": "Todd Monken",
+    "DC": "Zach Orr"
+  },
+  "BUF": {
+    "HC": "Sean McDermott",
+    "OC": "Joe Brady",
+    "DC": "Bobby Babich"
+  },
+  "CAR": {
+    "HC": "Dave Canales",
+    "OC": "Brad Idzik",
+    "DC": "Ejiro Evero"
+  },
+  "CHI": {
+    "HC": "Ben Johnson",
+    "OC": "Declan Doyle",
+    "DC": "Dennis Allen"
+  },
+  "CIN": {
+    "HC": "Zac Taylor",
+    "OC": "Dan Pitcher",
+    "DC": "Al Golden"
+  },
+  "CLE": {
+    "HC": "Kevin Stefanski",
+    "OC": "Kevin Stefanski",
+    "DC": "Jim Schwartz"
+  },
+  "DAL": {
+    "HC": "Brian Schottenheimer",
+    "OC": "Klayton Adams",
+    "DC": "Matt Eberflus"
+  },
+  "DEN": {
+    "HC": "Sean Payton",
+    "OC": "Joe Lombardi",
+    "DC": "Vance Joseph"
+  },
+  "DET": {
+    "HC": "Dan Campbell",
+    "OC": "Ben Johnson (prev)/John Morton",
+    "DC": "Aaron Glenn"
+  },
+  "GB": {
+    "HC": "Matt LaFleur",
+    "OC": "Adam Stenavich",
+    "DC": "Jeff Hafley"
+  },
+  "HOU": {
+    "HC": "DeMeco Ryans",
+    "OC": "Bobby Slowik",
+    "DC": "Matt Burke"
+  },
+  "IND": {
+    "HC": "Shane Steichen",
+    "OC": "Shane Steichen",
+    "DC": "Lou Anarumo"
+  },
+  "JAX": {
+    "HC": "Liam Coen",
+    "OC": "Liam Coen",
+    "DC": "Anthony Campanile"
+  },
+  "KC": {
+    "HC": "Andy Reid",
+    "OC": "Matt Nagy",
+    "DC": "Steve Spagnuolo"
+  },
+  "LV": {
+    "HC": "Klint Kubiak (interim)",
+    "OC": "Scott Turner",
+    "DC": "Patrick Graham"
+  },
+  "LAC": {
+    "HC": "Jim Harbaugh",
+    "OC": "Greg Roman",
+    "DC": "Jesse Minter"
+  },
+  "LAR": {
+    "HC": "Sean McVay",
+    "OC": "Mike LaFleur",
+    "DC": "Chris Shula"
+  },
+  "MIA": {
+    "HC": "Mike McDaniel",
+    "OC": "Mike McDaniel",
+    "DC": "Anthony Weaver"
+  },
+  "MIN": {
+    "HC": "Kevin O'Connell",
+    "OC": "Wes Phillips",
+    "DC": "Brian Flores"
+  },
+  "NE": {
+    "HC": "Mike Vrabel",
+    "OC": "Josh McDaniels",
+    "DC": "Terrell Williams"
+  },
+  "NO": {
+    "HC": "Kellen Moore",
+    "OC": "Kellen Moore (call plays)",
+    "DC": "Brandon Staley"
+  },
+  "NYG": {
+    "HC": "Brian Daboll",
+    "OC": "Mike Kafka",
+    "DC": "Shane Bowen"
+  },
+  "NYJ": {
+    "HC": "Aaron Glenn",
+    "OC": "Tanner Engstrand",
+    "DC": "Steve Wilks"
+  },
+  "PHI": {
+    "HC": "Nick Sirianni",
+    "OC": "Kellen Moore",
+    "DC": "Vic Fangio"
+  },
+  "PIT": {
+    "HC": "Mike Tomlin",
+    "OC": "Arthur Smith",
+    "DC": "Teryl Austin"
+  },
+  "SEA": {
+    "HC": "Mike Macdonald",
+    "OC": "Ryan Grubb",
+    "DC": "Aden Durde"
+  },
+  "SF": {
+    "HC": "Kyle Shanahan",
+    "OC": "Kyle Shanahan",
+    "DC": "Nick Sorensen"
+  },
+  "TB": {
+    "HC": "Todd Bowles",
+    "OC": "Liam Coen (prev)/Josh Grizzard",
+    "DC": "Todd Bowles"
+  },
+  "TEN": {
+    "HC": "Brian Callahan",
+    "OC": "Nick Holz",
+    "DC": "Dennard Wilson"
+  },
+  "WAS": {
+    "HC": "Dan Quinn",
+    "OC": "Kliff Kingsbury",
+    "DC": "Joe Whitt Jr."
+  }
+}
