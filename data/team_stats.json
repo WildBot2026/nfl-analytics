@@ -10431,6 +10431,650 @@
    }
   }
  },
+ "LV": {
+  "passing": {
+   "completionPct": {
+    "total": 66,
+    "pg": 66.105
+   },
+   "completions": {
+    "total": 340,
+    "pg": 20
+   },
+   "interceptionPct": {
+    "total": 3.69,
+    "pg": 3.881
+   },
+   "interceptions": {
+    "total": 19,
+    "pg": 1
+   },
+   "longPassing": {
+    "total": 61,
+    "pg": 30
+   },
+   "netPassingYards": {
+    "total": 2851,
+    "pg": 167
+   },
+   "netPassingYardsPerGame": {
+    "total": 167.7,
+    "pg": 0
+   },
+   "passingAttempts": {
+    "total": 515,
+    "pg": 30
+   },
+   "passingTouchdownPct": {
+    "total": 3.88,
+    "pg": 3.333
+   },
+   "passingTouchdowns": {
+    "total": 20,
+    "pg": 1
+   },
+   "QBRating": {
+    "total": 81.1,
+    "pg": 78.761
+   },
+   "sacks": {
+    "total": 64,
+    "pg": 3
+   },
+   "sackYardsLost": {
+    "total": 464,
+    "pg": 27
+   },
+   "yardsPerPassAttempt": {
+    "total": 6.4,
+    "pg": 6.396
+   },
+   "passingYards": {
+    "total": 3270,
+    "pg": 192
+   },
+   "passingFumblesLost": {
+    "total": 1,
+    "pg": 0
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "yardsPerGame": {
+    "total": 269.8,
+    "pg": 0
+   },
+   "totalPointsPerGame": {
+    "total": 14.2,
+    "pg": 0
+   },
+   "totalPoints": {
+    "total": 241,
+    "pg": 13
+   },
+   "totalTouchdowns": {
+    "total": 25,
+    "pg": 1
+   },
+   "passingYardsPerGame": {
+    "total": 192.4,
+    "pg": 0
+   },
+   "completionAttempts": {
+    "total": 340,
+    "pg": 0
+   },
+   "sacksYardsLost": {
+    "total": 64,
+    "pg": 0
+   }
+  },
+  "rushing": {
+   "rushingAttempts": {
+    "total": 369,
+    "pg": 21
+   },
+   "rushingYards": {
+    "total": 1317,
+    "pg": 77
+   },
+   "yardsPerRushAttempt": {
+    "total": 3.6,
+    "pg": 3.381
+   },
+   "longRushing": {
+    "total": 64,
+    "pg": 17
+   },
+   "rushingBigPlays": {
+    "total": 5,
+    "pg": 0
+   },
+   "rushingTouchdowns": {
+    "total": 5,
+    "pg": 0
+   },
+   "rushingYardsPerGame": {
+    "total": 77.5,
+    "pg": 0
+   },
+   "rushingFumbles": {
+    "total": 5,
+    "pg": 0
+   },
+   "rushingFumblesLost": {
+    "total": 1,
+    "pg": 0
+   },
+   "rushingFirstDowns": {
+    "total": 67,
+    "pg": 3
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "totalYards": {
+    "total": 4632,
+    "pg": 245
+   },
+   "totalOffensivePlays": {
+    "total": 948,
+    "pg": 54
+   },
+   "totalPointsPerGame": {
+    "total": 14.2,
+    "pg": 0
+   },
+   "totalPoints": {
+    "total": 241,
+    "pg": 13
+   },
+   "totalTouchdowns": {
+    "total": 25,
+    "pg": 1
+   }
+  },
+  "receiving": {
+   "receptions": {
+    "total": 340,
+    "pg": 20
+   },
+   "receivingTargets": {
+    "total": 494,
+    "pg": 29
+   },
+   "receivingYards": {
+    "total": 3315,
+    "pg": 195
+   },
+   "receivingTouchdowns": {
+    "total": 20,
+    "pg": 1
+   },
+   "longReception": {
+    "total": 60,
+    "pg": 29
+   },
+   "receivingBigPlays": {
+    "total": 37,
+    "pg": 0
+   },
+   "receivingYardsPerGame": {
+    "total": 195,
+    "pg": 0
+   },
+   "receivingFumbles": {
+    "total": 5,
+    "pg": 0
+   },
+   "receivingFumblesLost": {
+    "total": 1,
+    "pg": 0
+   },
+   "receivingYardsAfterCatch": {
+    "total": 1804,
+    "pg": 106
+   },
+   "receivingFirstDowns": {
+    "total": 161,
+    "pg": 0
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "yardsPerReception": {
+    "total": 9.6,
+    "pg": 9.601
+   },
+   "totalPointsPerGame": {
+    "total": 14.2,
+    "pg": 0
+   },
+   "totalPoints": {
+    "total": 241,
+    "pg": 13
+   },
+   "totalTouchdowns": {
+    "total": 25,
+    "pg": 1
+   }
+  },
+  "miscellaneous": {
+   "firstDowns": {
+    "total": 256,
+    "pg": 15
+   },
+   "firstDownsRushing": {
+    "total": 67,
+    "pg": 3
+   },
+   "firstDownsPassing": {
+    "total": 161,
+    "pg": 9
+   },
+   "firstDownsPenalty": {
+    "total": 28,
+    "pg": 1
+   },
+   "thirdDownConvs": {
+    "total": 72,
+    "pg": 4
+   },
+   "thirdDownAttempts": {
+    "total": 213,
+    "pg": 12
+   },
+   "thirdDownConvPct": {
+    "total": 33.8,
+    "pg": 32.803
+   },
+   "fourthDownConvs": {
+    "total": 13,
+    "pg": 0
+   },
+   "fourthDownAttempts": {
+    "total": 32,
+    "pg": 1
+   },
+   "fourthDownConvPct": {
+    "total": 40.63,
+    "pg": 31.176
+   },
+   "totalPenalties": {
+    "total": 108,
+    "pg": 6
+   },
+   "totalPenaltyYards": {
+    "total": 901,
+    "pg": 53
+   },
+   "possessionTimeSeconds": {
+    "total": 28609,
+    "pg": 1682
+   },
+   "redzoneFieldGoalPct": {
+    "total": 27.78,
+    "pg": 0
+   },
+   "redzoneScoringPct": {
+    "total": 77.78,
+    "pg": 52
+   },
+   "redzoneEfficiencyPct": {
+    "total": 61.9,
+    "pg": 0
+   },
+   "redzoneTouchdownPct": {
+    "total": 50,
+    "pg": 0
+   },
+   "totalTakeaways": {
+    "total": 16,
+    "pg": 0
+   },
+   "totalGiveaways": {
+    "total": 23,
+    "pg": 0
+   },
+   "turnOverDifferential": {
+    "total": -7,
+    "pg": 0
+   },
+   "fumblesLost": {
+    "total": 4,
+    "pg": 0
+   },
+   "thirdDownEff": {
+    "total": 72,
+    "pg": 0
+   },
+   "fourthDownEff": {
+    "total": 13,
+    "pg": 0
+   },
+   "totalPenaltiesYards": {
+    "total": 108,
+    "pg": 0
+   }
+  },
+  "defensive": {
+   "soloTackles": {
+    "total": 752,
+    "pg": 39
+   },
+   "assistTackles": {
+    "total": 555,
+    "pg": 29
+   },
+   "totalTackles": {
+    "total": 1307,
+    "pg": 68
+   },
+   "sacks": {
+    "total": 37,
+    "pg": 2.176
+   },
+   "sackYards": {
+    "total": 227,
+    "pg": 13.353
+   },
+   "stuffs": {
+    "total": 68,
+    "pg": 5
+   },
+   "passesDefended": {
+    "total": 52,
+    "pg": 3
+   },
+   "avgInterceptionYards": {
+    "total": 7.9,
+    "pg": 2.941
+   },
+   "longInterception": {
+    "total": 26,
+    "pg": 0
+   },
+   "tacklesForLoss": {
+    "total": 105,
+    "pg": 6.176
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   }
+  },
+  "defensiveInterceptions": {
+   "interceptions": {
+    "total": 8,
+    "pg": 0
+   },
+   "interceptionYards": {
+    "total": 63,
+    "pg": 3
+   },
+   "totalInterceptionsYards": {
+    "total": 8,
+    "pg": 0
+   }
+  },
+  "general": {
+   "fumbles": {
+    "total": 12,
+    "pg": 0
+   },
+   "fumblesForced": {
+    "total": 10,
+    "pg": 0
+   },
+   "fumblesRecovered": {
+    "total": 8,
+    "pg": 0
+   },
+   "gamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "fumblesAndLost": {
+    "total": 12,
+    "pg": 0
+   }
+  },
+  "returning": {
+   "kickReturns": {
+    "total": 68,
+    "pg": 4
+   },
+   "kickReturnYards": {
+    "total": 1845,
+    "pg": 108
+   },
+   "yardsPerKickReturn": {
+    "total": 27.1,
+    "pg": 27
+   },
+   "longKickReturn": {
+    "total": 54,
+    "pg": 31
+   },
+   "puntReturns": {
+    "total": 29,
+    "pg": 1
+   },
+   "puntReturnYards": {
+    "total": 173,
+    "pg": 10
+   },
+   "yardsPerPuntReturn": {
+    "total": 6,
+    "pg": 10
+   },
+   "longPuntReturn": {
+    "total": 25,
+    "pg": 7
+   },
+   "puntReturnFairCatches": {
+    "total": 14,
+    "pg": 0
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "totalPuntReturnsYards": {
+    "total": 29,
+    "pg": 0
+   }
+  },
+  "kicking": {
+   "fieldGoalsMade": {
+    "total": 22,
+    "pg": 1
+   },
+   "fieldGoalAttempts": {
+    "total": 27,
+    "pg": 1
+   },
+   "fieldGoalPct": {
+    "total": 81.5,
+    "pg": 60.804
+   },
+   "longFieldGoalMade": {
+    "total": 60,
+    "pg": 39
+   },
+   "fieldGoalAttempts20_29": {
+    "total": 5,
+    "pg": 0
+   },
+   "fieldGoalAttempts30_39": {
+    "total": 6,
+    "pg": 0
+   },
+   "fieldGoalAttempts40_49": {
+    "total": 8,
+    "pg": 0
+   },
+   "fieldGoalAttempts50": {
+    "total": 8,
+    "pg": 0
+   },
+   "extraPointsMade": {
+    "total": 21,
+    "pg": 1
+   },
+   "extraPointAttempts": {
+    "total": 22,
+    "pg": 1
+   },
+   "extraPointPct": {
+    "total": 95.5,
+    "pg": 68.647
+   },
+   "fieldGoalsMade20_29": {
+    "total": 5,
+    "pg": 0
+   },
+   "fieldGoalsMade30_39": {
+    "total": 6,
+    "pg": 0
+   },
+   "fieldGoalsMade40_49": {
+    "total": 6,
+    "pg": 0
+   },
+   "fieldGoalsMade50": {
+    "total": 5,
+    "pg": 0
+   },
+   "totalKickingPoints": {
+    "total": 87,
+    "pg": 5
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "touchbackPct": {
+    "total": 17,
+    "pg": 18.725
+   },
+   "avgKickoffReturnYards": {
+    "total": 27.1,
+    "pg": 27.253
+   },
+   "kickoffReturnYards": {
+    "total": 1845,
+    "pg": 108
+   },
+   "kickoffReturns": {
+    "total": 68,
+    "pg": 4
+   },
+   "totalKickoffYards": {
+    "total": 68,
+    "pg": 0
+   },
+   "totalGoalsVsAttemps": {
+    "total": 22,
+    "pg": 0
+   }
+  },
+  "punting": {
+   "punts": {
+    "total": 74,
+    "pg": 4
+   },
+   "puntYards": {
+    "total": 3409,
+    "pg": 200
+   },
+   "longPunt": {
+    "total": 64,
+    "pg": 54
+   },
+   "grossAvgPuntYards": {
+    "total": 46.1,
+    "pg": 47.175
+   },
+   "netAvgPuntYards": {
+    "total": 39.6,
+    "pg": 40.205
+   },
+   "puntsBlocked": {
+    "total": 2,
+    "pg": 0
+   },
+   "puntsInside20": {
+    "total": 24,
+    "pg": 1
+   },
+   "touchbacks": {
+    "total": 4,
+    "pg": 0
+   },
+   "fairCatches": {
+    "total": 13,
+    "pg": 0
+   },
+   "puntReturns": {
+    "total": 33,
+    "pg": 1
+   },
+   "puntReturnYards": {
+    "total": 400,
+    "pg": 23
+   },
+   "avgPuntReturnYards": {
+    "total": 12.1,
+    "pg": 5.329
+   },
+   "teamGamesPlayed": {
+    "total": 17,
+    "pg": 0
+   },
+   "totalPuntsYards": {
+    "total": 74,
+    "pg": 0
+   }
+  },
+  "scoring": {
+   "rushingTouchdowns": {
+    "total": 5,
+    "pg": 0
+   },
+   "receivingTouchdowns": {
+    "total": 20,
+    "pg": 1
+   },
+   "totalTouchdowns": {
+    "total": 25,
+    "pg": 1
+   },
+   "fieldGoals": {
+    "total": 22,
+    "pg": 1
+   },
+   "kickExtraPoints": {
+    "total": 21,
+    "pg": 1
+   },
+   "totalTwoPointConvs": {
+    "total": 1,
+    "pg": 0
+   },
+   "totalPoints": {
+    "total": 241,
+    "pg": 14
+   },
+   "totalPointsPerGame": {
+    "total": 14.2,
+    "pg": 0
+   }
+  }
+ },
  "LAC": {
   "passing": {
    "completionPct": {
@@ -11715,650 +12359,6 @@
    },
    "totalPointsPerGame": {
     "total": 30.5,
-    "pg": 0
-   }
-  }
- },
- "LV": {
-  "passing": {
-   "completionPct": {
-    "total": 66,
-    "pg": 66.105
-   },
-   "completions": {
-    "total": 340,
-    "pg": 20
-   },
-   "interceptionPct": {
-    "total": 3.69,
-    "pg": 3.881
-   },
-   "interceptions": {
-    "total": 19,
-    "pg": 1
-   },
-   "longPassing": {
-    "total": 61,
-    "pg": 30
-   },
-   "netPassingYards": {
-    "total": 2851,
-    "pg": 167
-   },
-   "netPassingYardsPerGame": {
-    "total": 167.7,
-    "pg": 0
-   },
-   "passingAttempts": {
-    "total": 515,
-    "pg": 30
-   },
-   "passingTouchdownPct": {
-    "total": 3.88,
-    "pg": 3.333
-   },
-   "passingTouchdowns": {
-    "total": 20,
-    "pg": 1
-   },
-   "QBRating": {
-    "total": 81.1,
-    "pg": 78.761
-   },
-   "sacks": {
-    "total": 64,
-    "pg": 3
-   },
-   "sackYardsLost": {
-    "total": 464,
-    "pg": 27
-   },
-   "yardsPerPassAttempt": {
-    "total": 6.4,
-    "pg": 6.396
-   },
-   "passingYards": {
-    "total": 3270,
-    "pg": 192
-   },
-   "passingFumblesLost": {
-    "total": 1,
-    "pg": 0
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "yardsPerGame": {
-    "total": 269.8,
-    "pg": 0
-   },
-   "totalPointsPerGame": {
-    "total": 14.2,
-    "pg": 0
-   },
-   "totalPoints": {
-    "total": 241,
-    "pg": 13
-   },
-   "totalTouchdowns": {
-    "total": 25,
-    "pg": 1
-   },
-   "passingYardsPerGame": {
-    "total": 192.4,
-    "pg": 0
-   },
-   "completionAttempts": {
-    "total": 340,
-    "pg": 0
-   },
-   "sacksYardsLost": {
-    "total": 64,
-    "pg": 0
-   }
-  },
-  "rushing": {
-   "rushingAttempts": {
-    "total": 369,
-    "pg": 21
-   },
-   "rushingYards": {
-    "total": 1317,
-    "pg": 77
-   },
-   "yardsPerRushAttempt": {
-    "total": 3.6,
-    "pg": 3.381
-   },
-   "longRushing": {
-    "total": 64,
-    "pg": 17
-   },
-   "rushingBigPlays": {
-    "total": 5,
-    "pg": 0
-   },
-   "rushingTouchdowns": {
-    "total": 5,
-    "pg": 0
-   },
-   "rushingYardsPerGame": {
-    "total": 77.5,
-    "pg": 0
-   },
-   "rushingFumbles": {
-    "total": 5,
-    "pg": 0
-   },
-   "rushingFumblesLost": {
-    "total": 1,
-    "pg": 0
-   },
-   "rushingFirstDowns": {
-    "total": 67,
-    "pg": 3
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "totalYards": {
-    "total": 4632,
-    "pg": 245
-   },
-   "totalOffensivePlays": {
-    "total": 948,
-    "pg": 54
-   },
-   "totalPointsPerGame": {
-    "total": 14.2,
-    "pg": 0
-   },
-   "totalPoints": {
-    "total": 241,
-    "pg": 13
-   },
-   "totalTouchdowns": {
-    "total": 25,
-    "pg": 1
-   }
-  },
-  "receiving": {
-   "receptions": {
-    "total": 340,
-    "pg": 20
-   },
-   "receivingTargets": {
-    "total": 494,
-    "pg": 29
-   },
-   "receivingYards": {
-    "total": 3315,
-    "pg": 195
-   },
-   "receivingTouchdowns": {
-    "total": 20,
-    "pg": 1
-   },
-   "longReception": {
-    "total": 60,
-    "pg": 29
-   },
-   "receivingBigPlays": {
-    "total": 37,
-    "pg": 0
-   },
-   "receivingYardsPerGame": {
-    "total": 195,
-    "pg": 0
-   },
-   "receivingFumbles": {
-    "total": 5,
-    "pg": 0
-   },
-   "receivingFumblesLost": {
-    "total": 1,
-    "pg": 0
-   },
-   "receivingYardsAfterCatch": {
-    "total": 1804,
-    "pg": 106
-   },
-   "receivingFirstDowns": {
-    "total": 161,
-    "pg": 0
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "yardsPerReception": {
-    "total": 9.6,
-    "pg": 9.601
-   },
-   "totalPointsPerGame": {
-    "total": 14.2,
-    "pg": 0
-   },
-   "totalPoints": {
-    "total": 241,
-    "pg": 13
-   },
-   "totalTouchdowns": {
-    "total": 25,
-    "pg": 1
-   }
-  },
-  "miscellaneous": {
-   "firstDowns": {
-    "total": 256,
-    "pg": 15
-   },
-   "firstDownsRushing": {
-    "total": 67,
-    "pg": 3
-   },
-   "firstDownsPassing": {
-    "total": 161,
-    "pg": 9
-   },
-   "firstDownsPenalty": {
-    "total": 28,
-    "pg": 1
-   },
-   "thirdDownConvs": {
-    "total": 72,
-    "pg": 4
-   },
-   "thirdDownAttempts": {
-    "total": 213,
-    "pg": 12
-   },
-   "thirdDownConvPct": {
-    "total": 33.8,
-    "pg": 32.803
-   },
-   "fourthDownConvs": {
-    "total": 13,
-    "pg": 0
-   },
-   "fourthDownAttempts": {
-    "total": 32,
-    "pg": 1
-   },
-   "fourthDownConvPct": {
-    "total": 40.63,
-    "pg": 31.176
-   },
-   "totalPenalties": {
-    "total": 108,
-    "pg": 6
-   },
-   "totalPenaltyYards": {
-    "total": 901,
-    "pg": 53
-   },
-   "possessionTimeSeconds": {
-    "total": 28609,
-    "pg": 1682
-   },
-   "redzoneFieldGoalPct": {
-    "total": 27.78,
-    "pg": 0
-   },
-   "redzoneScoringPct": {
-    "total": 77.78,
-    "pg": 52
-   },
-   "redzoneEfficiencyPct": {
-    "total": 61.9,
-    "pg": 0
-   },
-   "redzoneTouchdownPct": {
-    "total": 50,
-    "pg": 0
-   },
-   "totalTakeaways": {
-    "total": 16,
-    "pg": 0
-   },
-   "totalGiveaways": {
-    "total": 23,
-    "pg": 0
-   },
-   "turnOverDifferential": {
-    "total": -7,
-    "pg": 0
-   },
-   "fumblesLost": {
-    "total": 4,
-    "pg": 0
-   },
-   "thirdDownEff": {
-    "total": 72,
-    "pg": 0
-   },
-   "fourthDownEff": {
-    "total": 13,
-    "pg": 0
-   },
-   "totalPenaltiesYards": {
-    "total": 108,
-    "pg": 0
-   }
-  },
-  "defensive": {
-   "soloTackles": {
-    "total": 752,
-    "pg": 39
-   },
-   "assistTackles": {
-    "total": 555,
-    "pg": 29
-   },
-   "totalTackles": {
-    "total": 1307,
-    "pg": 68
-   },
-   "sacks": {
-    "total": 37,
-    "pg": 2.176
-   },
-   "sackYards": {
-    "total": 227,
-    "pg": 13.353
-   },
-   "stuffs": {
-    "total": 68,
-    "pg": 5
-   },
-   "passesDefended": {
-    "total": 52,
-    "pg": 3
-   },
-   "avgInterceptionYards": {
-    "total": 7.9,
-    "pg": 2.941
-   },
-   "longInterception": {
-    "total": 26,
-    "pg": 0
-   },
-   "tacklesForLoss": {
-    "total": 105,
-    "pg": 6.176
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   }
-  },
-  "defensiveInterceptions": {
-   "interceptions": {
-    "total": 8,
-    "pg": 0
-   },
-   "interceptionYards": {
-    "total": 63,
-    "pg": 3
-   },
-   "totalInterceptionsYards": {
-    "total": 8,
-    "pg": 0
-   }
-  },
-  "general": {
-   "fumbles": {
-    "total": 12,
-    "pg": 0
-   },
-   "fumblesForced": {
-    "total": 10,
-    "pg": 0
-   },
-   "fumblesRecovered": {
-    "total": 8,
-    "pg": 0
-   },
-   "gamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "fumblesAndLost": {
-    "total": 12,
-    "pg": 0
-   }
-  },
-  "returning": {
-   "kickReturns": {
-    "total": 68,
-    "pg": 4
-   },
-   "kickReturnYards": {
-    "total": 1845,
-    "pg": 108
-   },
-   "yardsPerKickReturn": {
-    "total": 27.1,
-    "pg": 27
-   },
-   "longKickReturn": {
-    "total": 54,
-    "pg": 31
-   },
-   "puntReturns": {
-    "total": 29,
-    "pg": 1
-   },
-   "puntReturnYards": {
-    "total": 173,
-    "pg": 10
-   },
-   "yardsPerPuntReturn": {
-    "total": 6,
-    "pg": 10
-   },
-   "longPuntReturn": {
-    "total": 25,
-    "pg": 7
-   },
-   "puntReturnFairCatches": {
-    "total": 14,
-    "pg": 0
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "totalPuntReturnsYards": {
-    "total": 29,
-    "pg": 0
-   }
-  },
-  "kicking": {
-   "fieldGoalsMade": {
-    "total": 22,
-    "pg": 1
-   },
-   "fieldGoalAttempts": {
-    "total": 27,
-    "pg": 1
-   },
-   "fieldGoalPct": {
-    "total": 81.5,
-    "pg": 60.804
-   },
-   "longFieldGoalMade": {
-    "total": 60,
-    "pg": 39
-   },
-   "fieldGoalAttempts20_29": {
-    "total": 5,
-    "pg": 0
-   },
-   "fieldGoalAttempts30_39": {
-    "total": 6,
-    "pg": 0
-   },
-   "fieldGoalAttempts40_49": {
-    "total": 8,
-    "pg": 0
-   },
-   "fieldGoalAttempts50": {
-    "total": 8,
-    "pg": 0
-   },
-   "extraPointsMade": {
-    "total": 21,
-    "pg": 1
-   },
-   "extraPointAttempts": {
-    "total": 22,
-    "pg": 1
-   },
-   "extraPointPct": {
-    "total": 95.5,
-    "pg": 68.647
-   },
-   "fieldGoalsMade20_29": {
-    "total": 5,
-    "pg": 0
-   },
-   "fieldGoalsMade30_39": {
-    "total": 6,
-    "pg": 0
-   },
-   "fieldGoalsMade40_49": {
-    "total": 6,
-    "pg": 0
-   },
-   "fieldGoalsMade50": {
-    "total": 5,
-    "pg": 0
-   },
-   "totalKickingPoints": {
-    "total": 87,
-    "pg": 5
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "touchbackPct": {
-    "total": 17,
-    "pg": 18.725
-   },
-   "avgKickoffReturnYards": {
-    "total": 27.1,
-    "pg": 27.253
-   },
-   "kickoffReturnYards": {
-    "total": 1845,
-    "pg": 108
-   },
-   "kickoffReturns": {
-    "total": 68,
-    "pg": 4
-   },
-   "totalKickoffYards": {
-    "total": 68,
-    "pg": 0
-   },
-   "totalGoalsVsAttemps": {
-    "total": 22,
-    "pg": 0
-   }
-  },
-  "punting": {
-   "punts": {
-    "total": 74,
-    "pg": 4
-   },
-   "puntYards": {
-    "total": 3409,
-    "pg": 200
-   },
-   "longPunt": {
-    "total": 64,
-    "pg": 54
-   },
-   "grossAvgPuntYards": {
-    "total": 46.1,
-    "pg": 47.175
-   },
-   "netAvgPuntYards": {
-    "total": 39.6,
-    "pg": 40.205
-   },
-   "puntsBlocked": {
-    "total": 2,
-    "pg": 0
-   },
-   "puntsInside20": {
-    "total": 24,
-    "pg": 1
-   },
-   "touchbacks": {
-    "total": 4,
-    "pg": 0
-   },
-   "fairCatches": {
-    "total": 13,
-    "pg": 0
-   },
-   "puntReturns": {
-    "total": 33,
-    "pg": 1
-   },
-   "puntReturnYards": {
-    "total": 400,
-    "pg": 23
-   },
-   "avgPuntReturnYards": {
-    "total": 12.1,
-    "pg": 5.329
-   },
-   "teamGamesPlayed": {
-    "total": 17,
-    "pg": 0
-   },
-   "totalPuntsYards": {
-    "total": 74,
-    "pg": 0
-   }
-  },
-  "scoring": {
-   "rushingTouchdowns": {
-    "total": 5,
-    "pg": 0
-   },
-   "receivingTouchdowns": {
-    "total": 20,
-    "pg": 1
-   },
-   "totalTouchdowns": {
-    "total": 25,
-    "pg": 1
-   },
-   "fieldGoals": {
-    "total": 22,
-    "pg": 1
-   },
-   "kickExtraPoints": {
-    "total": 21,
-    "pg": 1
-   },
-   "totalTwoPointConvs": {
-    "total": 1,
-    "pg": 0
-   },
-   "totalPoints": {
-    "total": 241,
-    "pg": 14
-   },
-   "totalPointsPerGame": {
-    "total": 14.2,
     "pg": 0
    }
   }
